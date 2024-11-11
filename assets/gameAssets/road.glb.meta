@@ -1,0 +1,143 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "dcf6a092-845f-4a07-a2e6-a2022dddfd19",
+  "files": [],
+  "subMetas": {
+    "99380": {
+      "importer": "gltf-material",
+      "uuid": "dcf6a092-845f-4a07-a2e6-a2022dddfd19@99380",
+      "displayName": "",
+      "id": "99380",
+      "name": "Material.001.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "80c75": {
+      "importer": "gltf-mesh",
+      "uuid": "dcf6a092-845f-4a07-a2e6-a2022dddfd19@80c75",
+      "displayName": "",
+      "id": "80c75",
+      "name": "Mesh.001.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 37008
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "acdd0": {
+      "importer": "gltf-embeded-image",
+      "uuid": "dcf6a092-845f-4a07-a2e6-a2022dddfd19@acdd0",
+      "displayName": "",
+      "id": "acdd0",
+      "name": "closeup-texture-fresh-white-snow-surface.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": false,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e39f7": {
+      "importer": "texture",
+      "uuid": "dcf6a092-845f-4a07-a2e6-a2022dddfd19@e39f7",
+      "displayName": "",
+      "id": "e39f7",
+      "name": "UnnamedTexture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "dcf6a092-845f-4a07-a2e6-a2022dddfd19@acdd0"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "09d61": {
+      "importer": "gltf-scene",
+      "uuid": "dcf6a092-845f-4a07-a2e6-a2022dddfd19@09d61",
+      "displayName": "",
+      "id": "09d61",
+      "name": "road.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "closeup-texture-fresh-white-snow-surface",
+        "uri": "dcf6a092-845f-4a07-a2e6-a2022dddfd19@acdd0"
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "dcf6a092-845f-4a07-a2e6-a2022dddfd19@80c75"
+      ],
+      "skeletons": [],
+      "textures": [
+        "dcf6a092-845f-4a07-a2e6-a2022dddfd19@e39f7"
+      ],
+      "materials": [
+        "dcf6a092-845f-4a07-a2e6-a2022dddfd19@99380"
+      ],
+      "scenes": [
+        "dcf6a092-845f-4a07-a2e6-a2022dddfd19@09d61"
+      ]
+    }
+  }
+}

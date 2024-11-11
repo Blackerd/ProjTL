@@ -1,0 +1,180 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3",
+  "files": [],
+  "subMetas": {
+    "40586": {
+      "importer": "gltf-embeded-image",
+      "uuid": "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@40586",
+      "displayName": "",
+      "id": "40586",
+      "name": "UnnamedImage.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": false,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f4f4": {
+      "importer": "gltf-mesh",
+      "uuid": "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@4f4f4",
+      "displayName": "",
+      "id": "4f4f4",
+      "name": "Object_0.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 110730
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "db32a": {
+      "importer": "gltf-mesh",
+      "uuid": "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@db32a",
+      "displayName": "",
+      "id": "db32a",
+      "name": "Object_1.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 110829
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ba1aa": {
+      "importer": "gltf-mesh",
+      "uuid": "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@ba1aa",
+      "displayName": "",
+      "id": "ba1aa",
+      "name": "Object_2.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 39083
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e39f7": {
+      "importer": "texture",
+      "uuid": "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@e39f7",
+      "displayName": "",
+      "id": "e39f7",
+      "name": "UnnamedTexture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@40586"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec9df": {
+      "importer": "gltf-material",
+      "uuid": "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@ec9df",
+      "displayName": "",
+      "id": "ec9df",
+      "name": "material_0.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "17b8f": {
+      "importer": "gltf-scene",
+      "uuid": "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@17b8f",
+      "displayName": "",
+      "id": "17b8f",
+      "name": "snowy_mountain_-_terrain.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "uri": "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@40586"
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@4f4f4",
+        "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@db32a",
+        "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@ba1aa"
+      ],
+      "skeletons": [],
+      "textures": [
+        "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@e39f7"
+      ],
+      "materials": [
+        "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@ec9df"
+      ],
+      "scenes": [
+        "466f87e6-ed65-4bf8-ab94-8d0eaf6798e3@17b8f"
+      ]
+    }
+  }
+}

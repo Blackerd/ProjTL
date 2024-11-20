@@ -1,0 +1,201 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2",
+  "files": [],
+  "subMetas": {
+    "4f4f4": {
+      "importer": "gltf-mesh",
+      "uuid": "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@4f4f4",
+      "displayName": "",
+      "id": "4f4f4",
+      "name": "Object_0.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 2268
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "db32a": {
+      "importer": "gltf-mesh",
+      "uuid": "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@db32a",
+      "displayName": "",
+      "id": "db32a",
+      "name": "Object_1.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 3300
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ba1aa": {
+      "importer": "gltf-mesh",
+      "uuid": "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@ba1aa",
+      "displayName": "",
+      "id": "ba1aa",
+      "name": "Object_2.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 2720
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9888b": {
+      "importer": "gltf-mesh",
+      "uuid": "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@9888b",
+      "displayName": "",
+      "id": "9888b",
+      "name": "Object_3.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 44
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c163a": {
+      "importer": "gltf-material",
+      "uuid": "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@c163a",
+      "displayName": "",
+      "id": "c163a",
+      "name": "Ornement.001.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8966a": {
+      "importer": "gltf-material",
+      "uuid": "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@8966a",
+      "displayName": "",
+      "id": "8966a",
+      "name": "Ornement.002.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e64f4": {
+      "importer": "gltf-material",
+      "uuid": "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@e64f4",
+      "displayName": "",
+      "id": "e64f4",
+      "name": "Branche.001.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "25f4f": {
+      "importer": "gltf-material",
+      "uuid": "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@25f4f",
+      "displayName": "",
+      "id": "25f4f",
+      "name": "Trunc.001.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "805ec": {
+      "importer": "gltf-scene",
+      "uuid": "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@805ec",
+      "displayName": "",
+      "id": "805ec",
+      "name": "sapin_de_noel.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@4f4f4",
+        "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@db32a",
+        "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@ba1aa",
+        "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@9888b"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@c163a",
+        "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@8966a",
+        "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@e64f4",
+        "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@25f4f"
+      ],
+      "scenes": [
+        "60a2e137-f5b1-4d8f-87ff-de07d9dc7ac2@805ec"
+      ]
+    }
+  }
+}

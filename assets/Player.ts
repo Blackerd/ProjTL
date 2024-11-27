@@ -1,167 +1,163 @@
 import {
-    _decorator, geometry, physics, Component, Collider,
-    Node, Vec3, input, Input, KeyCode, RigidBody,
-    v3, EventKeyboard, SkeletalAnimation, PhysicsSystem,
-    BoxCollider,
-    MeshCollider,
-    Label,
-    instantiate,
-    ITriggerEvent
+    _decorator, Component, Node, Vec3, input, Input, KeyCode,
+    RigidBody, SkeletalAnimation, Collider, EventKeyboard, geometry, PhysicsSystem, ITriggerEvent
 } from 'cc';
+
 const { ccclass, property } = _decorator;
 
 @ccclass('Player')
 export class Player extends Component {
     @property
-    moveSpeed: number = 5; // Tốc độ di chuyển tự động
+    moveSpeed: number = 10; // Tốc độ di chuyển về phía trước
+
+    @property
+    jumpForce: number = 20; // Lực nhảy
+
+    @property
+    roadWidth: number = 30; // Chiều rộng của đường (chia lane)
 
     @property(SkeletalAnimation)
-    skeletalAnimation: SkeletalAnimation = null; // Animation của nhân vật
+    skeletalAnimation: SkeletalAnimation = null; // Thành phần animation
 
-    @property(Node)
-    gameOverLabel: Node = null; // UI thông báo Game Over
-
-    @property(Label)
-    coinLabel: Label = null; // UI hiển thị số coin
-
-    @property(Node) 
-    gameTrack: Node = null; // Node chứa các coin
-
-    @property(Node)
-    coinPrefab: Node = null; // Prefab của coin
-
-    private coinsCollected: number = 0; // Số lượng coin đã thu thập
-
-    private rigidBody: RigidBody;
-    private isMovingLeft: boolean = false; // Trạng thái di chuyển sang trái
-    private isMovingRight: boolean = false; // Trạng thái di chuyển sang phải
-    canJump: boolean = true; // Trạng thái có thể nhảy
-    isOnGround: boolean = false; // Trạng thái đang ở trên mặt đất
+    private rigidBody: RigidBody = null;
+    private currentLane: number = 0; // Lane hiện tại: -1 (trái), 0 (giữa), 1 (phải)
+    private isOnGround: boolean = true; // Trạng thái trên mặt đất
+    private laneWidth: number = 0; // Chiều rộng của một lane
+    private coinsCollected: number = 0; // Số lượng coins đã thu thập
+    private canJump = false;
 
     onLoad() {
-        // Đăng ký sự kiện va chạm
+        this.laneWidth = this.roadWidth / 3; // Tính chiều rộng mỗi lane
+        this.rigidBody = this.getComponent(RigidBody);
+        if (!this.rigidBody) {
+            console.error('RigidBody không được gắn trên Player!');
+        }
+
         const collider = this.getComponent(Collider);
         if (collider) {
             collider.on('onTriggerEnter', this.onCollisionEnter, this);
         }
+
+        // Đăng ký sự kiện bàn phím
+        input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
+        input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
     }
 
     start() {
-        this.rigidBody = this.getComponent(RigidBody);
-        if (!this.rigidBody) {
-            console.error('Không tìm thấy RigidBody');
-        }
-
-        input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
-        input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
-
         this.playSlideAnimation();
-
     }
-    
 
     update(deltaTime: number) {
         this.autoMoveForward();
-        this.handleSideMovement();
         this.checkGround();
-        this.checkForObstacles();
+        this.limitPlayerMovement();
     }
 
-    // Di chuyển tự động về phía trước
+    private limitPlayerMovement() {
+        // Giới hạn di chuyển nhân vật trên trục X trong phạm vi của đường
+        const maxX = this.roadWidth / 2;
+        const minX = -this.roadWidth / 2;
+        if (this.node.position.x > maxX) {
+            this.node.position = new Vec3(maxX, this.node.position.y, this.node.position.z);
+        } else if (this.node.position.x < minX) {
+            this.node.position = new Vec3(minX, this.node.position.y, this.node.position.z);
+        }
+    }
+
+    /** Tự động di chuyển về phía trước */
     private autoMoveForward() {
-        const currentVelocity = new Vec3(this.moveSpeed, 0, 0);
-        this.rigidBody.setLinearVelocity(currentVelocity);
-    }
-
-    // Xử lý di chuyển trái/phải trên trục Z
-    private handleSideMovement() {
-        const currentVelocity = new Vec3();
-        this.rigidBody.getLinearVelocity(currentVelocity);
-
-        // Chỉ thay đổi vận tốc theo trục Z cho di chuyển trái/phải
-        if (this.isMovingLeft) {
-            currentVelocity.z = -this.moveSpeed; // Di chuyển sang trái
-            this.rigidBody.setLinearVelocity(currentVelocity);
-            this.playLeftAnimation();
-        } else if (this.isMovingRight) {
-            currentVelocity.z = this.moveSpeed; // Di chuyển sang phải
-            this.rigidBody.setLinearVelocity(currentVelocity);
-        } else {
-            // Nếu không di chuyển trái/phải, đặt vận tốc trục Z là 0
-            currentVelocity.z = 0;
-            this.rigidBody.setLinearVelocity(currentVelocity);
+        const velocity = new Vec3(0, 0, this.moveSpeed);
+        if (this.rigidBody) {
+            this.rigidBody.setLinearVelocity(velocity);
         }
     }
 
-    // Kiểm tra va chạm với chướng ngại vật theo hướng X
-    private checkForObstacles() {
+    /** Kiểm tra nếu nhân vật ở trên mặt đất */
+    private checkGround() {
         const ray = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z);
-        ray.d.set(1, 0, 0); // Định hướng raycast theo trục X
+        ray.d.set(0, -1, 0); // Ray hướng xuống
 
-        if (PhysicsSystem.instance.raycastClosest(ray, 0.2)) {
-            const result = PhysicsSystem.instance.raycastClosestResult;
-            if (result && result.collider) {
-                this.gameOver(); // Dừng game khi va chạm
-            }
+        this.isOnGround = PhysicsSystem.instance.raycastClosest(ray, 0.5); // Tầm raycast kiểm tra mặt đất
+        if (this.isOnGround && !this.skeletalAnimation.getState('default').isPlaying) {
+            this.canJump = true;
         }
     }
 
-    private gameOver() {
-        this.isMovingLeft = false;
-        this.isMovingRight = false;
-        this.moveSpeed = 0;
-        
-        // Hiển thị thông báo "Game Over"
-        if (this.gameOverLabel) {
-            this.gameOverLabel.active = true;
-            const label = this.gameOverLabel.getComponent(Label);
-            if (label) {
-                label.string = "Game Over!";
+    /** Xử lý nhảy */
+    private jump() {
+        if (this.isOnGround) {
+            const jumpVelocity = new Vec3(0, this.jumpForce, 0); // Lực nhảy trên trục Y
+            this.rigidBody.applyImpulse(jumpVelocity); // Áp dụng lực nhảy
+    
+            if (this.skeletalAnimation) {
+                this.skeletalAnimation.stop();
+                this.skeletalAnimation.play('jump');
             }
+    
+            this.isOnGround = false; // Đánh dấu là không còn trên mặt đất
         }
-
-        // Dừng animation
-        if (this.skeletalAnimation) {
-            this.skeletalAnimation.stop();
+    }
+    
+    /** Chuyển lane */
+    private moveToLane(direction: number) {
+        const newLane = this.currentLane + direction;
+        if (newLane < -1 || newLane > 1) return; // Giới hạn lane trong khoảng (-1, 0, 1)
+    
+        this.currentLane = newLane;
+    
+        // Tính toán vị trí mục tiêu
+        const targetPositionX = this.currentLane * this.laneWidth;
+        const targetPosition = new Vec3(
+            Math.min(Math.max(-this.roadWidth / 2, targetPositionX), this.roadWidth / 2), // Giới hạn trong phạm vi roadWidth
+            this.node.position.y,
+            this.node.position.z
+        );
+        this.node.setPosition(targetPosition);
+    
+        // Chạy animation theo hướng di chuyển
+        if (direction === -1) {
+            this.playLeftAnimation();
+        } else if (direction === 1) {
+            this.playRightAnimation();
         }
+    }
+    
 
-        input.off(Input.EventType.KEY_DOWN, this.onKeyDown, this);
-        input.off(Input.EventType.KEY_UP, this.onKeyUp, this);
+    /** Xử lý khi va chạm với các đối tượng khác */
+    private onCollisionEnter(event: ITriggerEvent) {
+        const otherNode = event.otherCollider.node;
 
-        this.enabled = false;
+        if (otherNode.name === 'coin') {
+            otherNode.destroy(); // Xóa coin khi thu thập
+            this.coinsCollected++;
+        } else if (otherNode.name === 'obstacle') {
+            this.gameOver(); // Dừng game khi va chạm chướng ngại vật
+        }
     }
 
+    /** Xử lý sự kiện phím nhấn xuống */
     private onKeyDown(event: EventKeyboard) {
         switch (event.keyCode) {
-            case KeyCode.KEY_A:
-                this.isMovingLeft = true;
+            case KeyCode.KEY_A: // Di chuyển sang trái
+                this.moveToLane(-1);
                 break;
-            case KeyCode.KEY_D:
-                this.isMovingRight = true;
+            case KeyCode.KEY_D: // Di chuyển sang phải
+                this.moveToLane(1);
                 break;
-            case KeyCode.SPACE:
-                if (this.isOnGround) {
-                    this.jump();
-                }
+            case KeyCode.SPACE: // Nhảy
+                this.jump();
                 break;
         }
     }
 
+    /** Xử lý sự kiện phím nhả ra */
     private onKeyUp(event: EventKeyboard) {
-        switch (event.keyCode) {
-            case KeyCode.KEY_A:
-                this.isMovingLeft = false;
-                break;
-            case KeyCode.KEY_D:
-                this.isMovingRight = false;
-                this.playSlideAnimation();
-                break;
-            case KeyCode.SPACE:
-                this.canJump = false;
-                break;
+        if (event.keyCode === KeyCode.KEY_A || event.keyCode === KeyCode.KEY_D) {
+            this.playSlideAnimation(); // Quay lại trạng thái trượt
         }
     }
 
+    /** Animation trượt */
     private playSlideAnimation() {
         if (this.skeletalAnimation && !this.skeletalAnimation.getState('default').isPlaying) {
             this.skeletalAnimation.stop();
@@ -169,58 +165,31 @@ export class Player extends Component {
         }
     }
 
+    /** Animation di chuyển sang trái */
     private playLeftAnimation() {
-        if (this.skeletalAnimation && !this.skeletalAnimation.getState('left').isPlaying) {
+        if (this.skeletalAnimation) {
             this.skeletalAnimation.stop();
             this.skeletalAnimation.play('left');
         }
     }
 
+    /** Animation di chuyển sang phải */
     private playRightAnimation() {
-        if (this.skeletalAnimation && !this.skeletalAnimation.getState('right').isPlaying) {
+        if (this.skeletalAnimation) {
             this.skeletalAnimation.stop();
             this.skeletalAnimation.play('right');
         }
     }
 
-    private jump() {
-        const jumpVelocity = new Vec3(0, 20, 0);
-        this.rigidBody.applyImpulse(jumpVelocity, Vec3.ZERO);
-
-        if (this.skeletalAnimation && !this.skeletalAnimation.getState('jumpp').isPlaying) {
+    /** Kết thúc game */
+    private gameOver() {
+        this.moveSpeed = 0;
+        if (this.skeletalAnimation) {
             this.skeletalAnimation.stop();
-            this.skeletalAnimation.play('jumpp');
         }
+        input.off(Input.EventType.KEY_DOWN, this.onKeyDown, this);
+        input.off(Input.EventType.KEY_UP, this.onKeyUp, this);
 
-        this.canJump = false;
-    }
-
-    onCollisionEnter(event: ITriggerEvent) {
-        const other = event.otherCollider;
-        if (other.node.name === 'coin') {
-            // Xóa đồng xu khi nhân vật thu thập
-            other.node.destroy();
-    
-            // Cộng thêm số coin
-            this.coinsCollected++;
-    
-            // Cập nhật UI hiển thị số coin
-            this.updateCoinLabel();
-    
-            console.log(`Thu thập coin! Tổng số coin: ${this.coinsCollected}`);
-        }
-    }
-    
-
-    private updateCoinLabel() {
-        if (this.coinLabel) {
-            this.coinLabel.getComponent(Label).string = `Coins: ${this.coinsCollected}`; // Cập nhật số coin lên UI
-        }
-    }
-
-    private checkGround() {
-        const ray = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z);
-        ray.d.set(0, -1, 0); // Ray hướng xuống dưới để kiểm tra mặt đất
-        this.isOnGround = PhysicsSystem.instance.raycastClosest(ray, 1 << 0);
+        console.log('Game Over! Coins collected:', this.coinsCollected);
     }
 }

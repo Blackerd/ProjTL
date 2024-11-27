@@ -94,11 +94,6 @@ export class Coin extends Component {
             if (labelComp) {
                 labelComp.string = `Score: ${this._score}`;
             }
-              // Phát âm thanh thu thập đồng xu
-              if (this.globalCollectSound && !this.globalCollectSound.playing) {
-                this.globalCollectSound.play();
-            }
-
         }
     }
 

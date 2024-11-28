@@ -1606,9 +1606,9 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 1004.665,
+      "x": 1020.811,
       "y": 539.619,
-      "z": 385.506
+      "z": 384.3
     }
   },
   {
@@ -4295,7 +4295,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 540,
+    "_orthoHeight": 595.9819004524886,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -5928,7 +5928,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1920,
+      "width": 1919.9999999999998,
       "height": 1080
     },
     "_anchorPoint": {

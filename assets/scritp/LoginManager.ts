@@ -1,151 +1,78 @@
-import { _decorator, Component, EditBox, director, Color, Sprite, Label, Button } from 'cc';
+import { _decorator, Component, EditBox, Label, Button, director } from 'cc';
+import { WebSocketManager } from './WebSocketManager';
 
 const { ccclass, property } = _decorator;
 
 @ccclass('LoginManager')
 export class LoginManager extends Component {
-    @property(EditBox) usernameInput: EditBox = null; // Ô nhập username
-    @property(EditBox) passwordInput: EditBox = null; // Ô nhập password
-    @property(Button) loginButton: Button = null; // Nút Login
-    @property(Button) registerButton: Button = null; // Nút Register
+    @property(EditBox) 
+    usernameInput: EditBox = null;
+
+    @property(EditBox) 
+    passwordInput: EditBox = null;
+
+    @property(Button) 
+    loginButton: Button = null;
+
+    @property(Label) 
+    errorMessageLabel: Label = null;
 
     start() {
-        // Gắn sự kiện khi nhấn nút Login
         if (this.loginButton) {
             this.loginButton.node.on(Button.EventType.CLICK, this.onLogin, this);
         }
-
-        console.log("Register button setup");
-        // Gắn sự kiện khi nhấn nút Register
-        if (this.registerButton) {
-            this.registerButton.node.on(Button.EventType.CLICK, this.onRegister, this);
-        }
     }
 
-    async onLogin() {
+    onLogin() {
         const username = this.usernameInput.string.trim();
         const password = this.passwordInput.string.trim();
 
         // Reset lỗi trước khi kiểm tra
         this.clearErrors();
 
-        let hasError = false;
-
-        // Kiểm tra lỗi đầu vào từ phía client
-        if (!username) {
-            this.showFieldError(this.usernameInput, 'Username cannot be empty!');
-            hasError = true;
+        if (!username || !password) {
+            this.showFieldError('Username and Password are required');
+            return;
         }
 
-        if (!password) {
-            this.showFieldError(this.passwordInput, 'Password cannot be empty!');
-            hasError = true;
-        }
+        const loginMessage = {
+            type: "LOGIN",
+            data: { username, password },
+        };
 
-        if (hasError) {
-            return; // Không gửi yêu cầu nếu có lỗi
-        }
+        const wsManager = WebSocketManager.getInstance();
+        wsManager.sendMessage(loginMessage);
 
-        try {
-            // Gửi yêu cầu tới API server
-            const response = await fetch('https://your-api-server.com/api/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, password }),
-            });
+        console.log("Login message sent:", loginMessage);
+    }
 
-            if (!response.ok) {
-                throw new Error('Failed to connect to server');
-            }
-
-            const data = await response.json();
-
-            // Xử lý phản hồi từ server
-            if (data.success) {
-                console.log('Login successful!');
-                // Chuyển đến GameScene nếu đăng nhập thành công
-                setTimeout(() => {
-                director.loadScene('GameScene'); // Đảm bảo tên Scene là 'gameScene' trong project
-            }, 100);
-            } else {
-                // Hiển thị lỗi từ server
-                if (data.errorCode === 'INVALID_USERNAME') {
-                    this.showFieldError(this.usernameInput, 'Incorrect username!');
-                } else if (data.errorCode === 'INVALID_PASSWORD') {
-                    this.showFieldError(this.passwordInput, 'Incorrect password!');
-                } else {
-                    this.showFieldError(this.usernameInput, data.message || 'Unknown error occurred!');
-                    console.error('Unknown error:', data.message);
-                }
-            }
-        } catch (error) {
-            console.error('Error during login:', error);
-            this.showFieldError(this.usernameInput, 'Unable to connect to the server!');
+    public handleLoginResponse(response: any) {
+        if (response.success) {
+            console.log("Login successful:", response);
+            director.loadScene("GameScene");
+        } else {
+            console.error("Login failed:", response.message);
+            this.showFieldError(response.message);
         }
     }
 
-    onRegister() {
-        console.log('Register button clicked');
-        setTimeout(() => {
-            director.loadScene('RegisterScene');
-        }, 100);  // Trì hoãn 100ms
+    onEnable() {
+        const wsManager = WebSocketManager.getInstance();
+        wsManager.onLoginResponse = this.handleLoginResponse.bind(this); // Đăng ký hàm xử lý phản hồi
     }
 
-    /**
-     * Hiển thị lỗi trực tiếp trên ô nhập
-     * @param inputField Trường nhập (EditBox)
-     * @param message Thông báo lỗi
-     */
-    private showFieldError(inputField: EditBox, message: string) {
-        const placeholderLabel = inputField.node.getChildByName('PLACEHOLDER');
-        if (placeholderLabel) {
-            const labelComponent = placeholderLabel.getComponent(Label);
-            if (labelComponent) {
-                labelComponent.string = message; // Cập nhật thông báo lỗi
-                labelComponent.color = new Color(255, 0, 0); // Đổi màu placeholder thành đỏ
-            }
-        }
+    onDisable() {
+        const wsManager = WebSocketManager.getInstance();
+        wsManager.onLoginResponse = null; // Xóa hàm xử lý phản hồi
+    }
 
-        const editBoxBackground = inputField.node.getChildByName('Background');
-        if (editBoxBackground) {
-            const sprite = editBoxBackground.getComponent(Sprite);
-            if (sprite) {
-                sprite.color = new Color(255, 200, 200); // Đổi màu nền thành hồng nhạt
-            }
+    private showFieldError(message: string) {
+        if (this.errorMessageLabel) {
+            this.errorMessageLabel.string = message;
         }
     }
 
-    /**
-     * Ẩn lỗi và reset trạng thái placeholder
-     */
     private clearErrors() {
-        this.resetField(this.usernameInput, 'Enter your username');
-        this.resetField(this.passwordInput, 'Enter your password');
-    }
-
-    /**
-     * Reset trạng thái của một ô nhập
-     * @param inputField Trường nhập (EditBox)
-     * @param defaultPlaceholder Nội dung mặc định của placeholder
-     */
-    private resetField(inputField: EditBox, defaultPlaceholder: string) {
-        const placeholderLabel = inputField.node.getChildByName('PLACEHOLDER');
-        if (placeholderLabel) {
-            const labelComponent = placeholderLabel.getComponent(Label);
-            if (labelComponent) {
-                labelComponent.string = defaultPlaceholder; // Cập nhật placeholder mặc định
-                labelComponent.color = new Color(200, 200, 200); // Đổi màu placeholder mặc định
-            }
-        }
-
-        const editBoxBackground = inputField.node.getChildByName('Background');
-        if (editBoxBackground) {
-            const sprite = editBoxBackground.getComponent(Sprite);
-            if (sprite) {
-                sprite.color = new Color(255, 255, 255); // Đổi lại màu nền mặc định
-            }
-        }
+        this.showFieldError("");
     }
 }

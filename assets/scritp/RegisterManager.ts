@@ -1,86 +1,88 @@
-import { _decorator, Component, EditBox, Label, director, Button, Color } from 'cc';
+import { _decorator, Component, Node, EditBox, director, Label } from 'cc';
+import { WebSocketManager } from './WebSocketManager';
+
 const { ccclass, property } = _decorator;
 
 @ccclass('RegisterManager')
 export class RegisterManager extends Component {
-    @property(EditBox) usernameInput: EditBox = null;
-    @property(EditBox) passwordInput: EditBox = null;
-    @property(EditBox) confirmPasswordInput: EditBox = null;
-    @property(Label) errorMessage: Label = null;
-    @property(Button) registerButton: Button = null;
-    @property(Button) backButton: Button = null;
+    @property(EditBox)
+    usernameInput: EditBox | null = null;
 
-    start() {
-        // Gắn sự kiện cho nút Register
-        console.log("có nút đăng ký")
-        if (this.registerButton) {
-            this.registerButton.node.on(Button.EventType.CLICK, this.onRegister, this);
+    @property(EditBox)
+    emailInput: EditBox | null = null;
+
+    @property(EditBox)
+    passwordInput: EditBox | null = null;
+
+    @property(Label)
+    errorMessageLabel: Label | null = null;
+
+    /**
+     * Gọi khi nhấn nút "Đăng ký"
+     */
+    public handleRegister() {
+        if (!this.usernameInput || !this.emailInput || !this.passwordInput) {
+            console.error("Input fields are not set in the editor!");
+            return;
         }
 
-        // Gắn sự kiện cho nút quay lại Login
-        if (this.backButton) {
-            this.backButton.node.on(Button.EventType.CLICK, this.onBackToLogin, this);
+        const username = this.usernameInput.string.trim();
+        const email = this.emailInput.string.trim();
+        const password = this.passwordInput.string.trim();
+
+        // Kiểm tra thông tin nhập hợp lệ
+        if (!username || !email || !password) {
+            console.error("All fields are required!");
+            if (this.errorMessageLabel) {
+                this.errorMessageLabel.string = "All fields are required!";
+            }
+            return;
         }
 
-        // Ẩn thông báo lỗi và thành công ban đầu
-        this.errorMessage.node.active = false;
+        // Gửi yêu cầu đăng ký tới server qua WebSocketManager
+        const registerMessage = {
+            type: "REGISTER",
+            data: { username, email, password },
+        };
+
+        const wsManager = WebSocketManager.getInstance();
+        wsManager.sendMessage(registerMessage);
+
+        console.log("Register message sent:", registerMessage);
     }
 
-    async onRegister() {
-        const username = this.usernameInput.string.trim();
-        const password = this.passwordInput.string.trim();
-        const confirmPassword = this.confirmPasswordInput.string.trim();
-
-        // Kiểm tra các điều kiện đăng ký
-        if (password !== confirmPassword) {
-            this.showError('Passwords do not match!');
-        } else if (username === '' || password === '' || confirmPassword === '') {
-            this.showError('All fields are required!');
+    /**
+     * Xử lý phản hồi đăng ký từ WebSocketManager
+     */
+    public handleRegisterResponse(response: any) {
+        if (response.success) {
+            console.log("Registration successful:", response);
+            if (this.errorMessageLabel) {
+                this.errorMessageLabel.string = "Registration successful!";
+            }
+            // Chuyển sang màn hình đăng nhập
+            director.loadScene("LoginScene");
         } else {
-            try {
-                // Gửi yêu cầu đăng ký tới API server
-                const response = await fetch('https://your-api-server.com/api/register', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ username, password }),
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to connect to the server');
-                }
-
-                const data = await response.json();
-
-                // Kiểm tra phản hồi từ server
-                if (data.success) {
-                    console.log("Đăng ký thành công")
-                    director.loadScene('LoginScene'); // Quay lại LoginScene sau khi đăng ký thành công
-                } else {
-                    this.showError(data.message || 'Đăng ksy thất bại!');
-                }
-            } catch (error) {
-                console.error('Error during registration:', error);
-                this.showError('Unable to connect to the server!');
+            console.error("Registration failed:", response.message);
+            if (this.errorMessageLabel) {
+                this.errorMessageLabel.string = response.message;
             }
         }
     }
 
-    onBackToLogin() {
-        setTimeout(() => {
-            console.log("chuyển sang màn hình Login")
-            director.loadScene('LoginScene');
-        }, 100);  // Trì hoãn 100ms
+    /**
+     * Lắng nghe sự kiện từ WebSocketManager để nhận phản hồi từ server
+     */
+    onEnable() {
+        const wsManager = WebSocketManager.getInstance();
+        wsManager.onRegisterResponse = this.handleRegisterResponse.bind(this);  // Đăng ký hàm xử lý phản hồi
     }
 
     /**
-     * Hiển thị thông báo lỗi
-     * @param message Thông báo lỗi
+     * Hủy bỏ sự kiện khi không còn cần thiết
      */
-    private showError(message: string) {
-        this.errorMessage.string = message;
-        this.errorMessage.node.active = true;
+    onDisable() {
+        const wsManager = WebSocketManager.getInstance();
+        wsManager.onRegisterResponse = null;  // Xóa hàm xử lý phản hồi
     }
-  
 }

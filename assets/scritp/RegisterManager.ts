@@ -70,6 +70,10 @@ export class RegisterManager extends Component {
         }
     }
 
+    public handlerLogin(){
+        director.loadScene("LoginScene")
+    }
+
     /**
      * Lắng nghe sự kiện từ WebSocketManager để nhận phản hồi từ server
      */

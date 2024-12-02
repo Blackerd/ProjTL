@@ -56,6 +56,10 @@ export class LoginManager extends Component {
         }
     }
 
+    public handleRegister(){
+        director.loadScene("RegisterScene");
+    }
+
     onEnable() {
         const wsManager = WebSocketManager.getInstance();
         wsManager.onLoginResponse = this.handleLoginResponse.bind(this); // Đăng ký hàm xử lý phản hồi

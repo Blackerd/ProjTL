@@ -30,23 +30,16 @@ export class Player extends Component {
     private initialPosition: Vec3 = new Vec3(); // Lưu vị trí ban đầu
 
     onLoad() {
-        this.laneWidth = this.roadWidth / 3; // Tính chiều rộng mỗi lane
-
-        this.initialPosition = this.node.getPosition().clone(); // Lưu vị trí ban đầu
-
-        console.log('Initial Position:', this.initialPosition.toString());
-
-        // Kiểm tra xem có RigidBody không cần thiết cho chuyển động này nữa
         this.rigidBody = this.getComponent(RigidBody);
-        if (this.rigidBody) {
-            console.warn('RigidBody không còn cần thiết cho cách di chuyển này');
+        if (!this.rigidBody) {
+            console.error('RigidBody không được gắn vào nhân vật.');
         }
-
+    
         const collider = this.getComponent(Collider);
         if (collider) {
             collider.on('onTriggerEnter', this.onCollisionEnter, this);
         }
-
+    
         // Đăng ký sự kiện bàn phím
         input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
         input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
@@ -61,18 +54,6 @@ export class Player extends Component {
     update(deltaTime: number) {
         this.autoMoveForward(deltaTime);
         this.checkGround();
-        this.limitPlayerMovement();
-    }
-
-    private limitPlayerMovement() {
-        // Giới hạn di chuyển nhân vật trên trục X trong phạm vi của đường
-        const maxX = this.roadWidth / 2;
-        const minX = -this.roadWidth / 2;
-        if (this.node.position.x > maxX) {
-            this.node.position = new Vec3(maxX, this.node.position.y, this.node.position.z);
-        } else if (this.node.position.x < minX) {
-            this.node.position = new Vec3(minX, this.node.position.y, this.node.position.z);
-        }
     }
 
     /** Tự động di chuyển về phía trước với tốc độ cố định */

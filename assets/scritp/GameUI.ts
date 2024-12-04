@@ -26,7 +26,7 @@ export class GameUI extends Component {
 
     private startTime: number = 0; // Thời gian bắt đầu
     private isPaused: boolean = false; // Trạng thái dừng game
-    private coinCount: number = 0; // Số coin hiện tại
+     coinCount: number = 0; // Số coin hiện tại
     private distanceTravelled: number = 0; // Quãng đường đã đi
 
     start() {

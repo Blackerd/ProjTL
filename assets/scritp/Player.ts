@@ -1,65 +1,61 @@
 import {
     _decorator, Component, Node, Vec3, input, Input, KeyCode,
-    RigidBody, SkeletalAnimation, Collider, EventKeyboard, ITriggerEvent,
-    geometry,
-    PhysicsSystem
+    SkeletalAnimation, EventKeyboard, RigidBody, Contact2DType, geometry, PhysicsSystem,CollisionEventType ,
+    Collider,
+    Label
+
 } from 'cc';
+import { GameUI } from './GameUI';
 
 const { ccclass, property } = _decorator;
 
 @ccclass('Player')
 export class Player extends Component {
     @property
-    moveSpeed: number = 10; // Tốc độ di chuyển cố định
+    forwardSpeed: number = 30; // Tốc độ tự động di chuyển về phía trước (trục X)
 
     @property
-    jumpForce: number = 20; // Lực nhảy
-
-    @property
-    roadWidth: number = 30; // Chiều rộng của đường (chia lane)
+    lateralSpeed: number = 100; // Tốc độ di chuyển ngang (trục Z)
 
     @property(SkeletalAnimation)
-    skeletalAnimation: SkeletalAnimation = null; // Thành phần animation
+    skeletalAnimation: SkeletalAnimation = null; // Animation
 
-    private rigidBody: RigidBody = null;
-    private currentLane: number = 0; // Lane hiện tại: -1 (trái), 0 (giữa), 1 (phải)
-    private isOnGround: boolean = true; // Trạng thái trên mặt đất
-    private laneWidth: number = 0; // Chiều rộng của một lane
-    private coinsCollected: number = 0; // Số lượng coins đã thu thập
-    private canJump = false;
-    private initialPosition: Vec3 = new Vec3(); // Lưu vị trí ban đầu
+    @property(RigidBody)
+    rigidBody: RigidBody = null; // RigidBody của nhân vật
+
+    @property(Collider)
+    collider: Collider = null; // Collider của nhân vật
+
+    @property
+    jumpForce: number = 10; // Lực nhảy
+
+
+    private moveDirection: number = 0; // Hướng di chuyển ngang (-1: trái, 0: không di chuyển, 1: phải)
+    private canJump: boolean = false; // Kiểm tra trạng thái nhảy
+    private isOnGround: boolean = false; // Kiểm tra xem nhân vật có đang đứng trên mặt đất không
+
 
     onLoad() {
-        this.rigidBody = this.getComponent(RigidBody);
-        if (!this.rigidBody) {
-            console.error('RigidBody không được gắn vào nhân vật.');
-        }
-    
-        const collider = this.getComponent(Collider);
-        if (collider) {
-            collider.on('onTriggerEnter', this.onCollisionEnter, this);
-        }
-    
-        // Đăng ký sự kiện bàn phím
+        // Đăng ký sự kiện phím
         input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
         input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
+
+
     }
 
+    
+
     start() {
-        // Không cần đặt lại vị trí nhân vật vì vị trí đã được lưu
-        console.log('Start Position:', this.node.getPosition().toString());
-        this.playSlideAnimation();
+        this.playSlideAnimation(); // Chạy animation mặc định
     }
 
     update(deltaTime: number) {
-        this.autoMoveForward(deltaTime);
-        this.checkGround();
-    }
+        this.moveForward(deltaTime); // Di chuyển tự động về phía trước
+        this.updateLateralMovement(deltaTime); // Cập nhật di chuyển ngang
 
-    /** Tự động di chuyển về phía trước với tốc độ cố định */
-    private autoMoveForward(deltaTime: number) {
-        const move = new Vec3(0, 0, this.moveSpeed * deltaTime); // Điều chỉnh di chuyển phía trước với tốc độ cố định (tỉ lệ với deltaTime)
-        this.node.setPosition(this.node.position.add(move)); // Cập nhật vị trí
+
+         // Kiểm tra trạng thái mặt đất
+         this.checkGround();
     }
 
     /** Kiểm tra nếu nhân vật ở trên mặt đất */
@@ -83,12 +79,12 @@ export class Player extends Component {
         }
     }
 
-    /** Xử lý nhảy */
     private jump() {
-        if (this.isOnGround) {
+        if (this.canJump) {  // Kiểm tra nếu có thể nhảy
             const jumpVelocity = new Vec3(0, this.jumpForce, 0); // Lực nhảy trên trục Y
             this.rigidBody.applyImpulse(jumpVelocity); // Áp dụng lực nhảy
-
+    
+            // Chạy animation nhảy
             if (this.skeletalAnimation) {
                 const jumpState = this.skeletalAnimation.getState('jump');
                 if (!jumpState || !jumpState.isPlaying) {
@@ -97,59 +93,56 @@ export class Player extends Component {
                     this.skeletalAnimation.once(SkeletalAnimation.EventType.FINISHED, this.playSlideAnimation, this);
                 }
             }
-
+    
             this.isOnGround = false; // Đánh dấu là không còn trên mặt đất
         }
     }
+    
 
-    /** Chuyển lane */
-    private moveToLane(direction: number) {
-        const newLane = this.currentLane + direction;
-        if (newLane < -1 || newLane > 1) return; // Giới hạn lane trong khoảng (-1, 0, 1)
+    /** Tự động di chuyển về phía trước trên trục X */
+    private moveForward(deltaTime: number) {
+        if (this.rigidBody) {  // Kiểm tra nếu rigidBody không phải null
+            const currentVelocity = new Vec3();
+            this.rigidBody.getLinearVelocity(currentVelocity);  // Lấy vận tốc hiện tại
 
-        this.currentLane = newLane;
-
-        // Tính toán vị trí mục tiêu
-        const targetPositionX = this.currentLane * this.laneWidth;
-        const targetPosition = new Vec3(
-            targetPositionX, // Chỉ thay đổi trục X
-            this.node.position.y,
-            this.node.position.z
-        );
-        this.node.setPosition(targetPosition);
-
-        // Chạy animation theo hướng di chuyển
-        if (this.skeletalAnimation) {
-            const animationName = direction === -1 ? 'left' : 'right';
-            const animationState = this.skeletalAnimation.getState(animationName);
-            if (!animationState || !animationState.isPlaying) {
-                this.skeletalAnimation.stop();
-                this.skeletalAnimation.play(animationName);
-                this.skeletalAnimation.once(SkeletalAnimation.EventType.FINISHED, this.playSlideAnimation, this);
-            }
+            const forwardVelocity = new Vec3(currentVelocity.x, currentVelocity.y, -this.forwardSpeed);
+            this.rigidBody.setLinearVelocity(forwardVelocity);  // Áp dụng vận tốc mới
+        } else {
+            console.error("RigidBody is null or not initialized.");
         }
     }
 
-    /** Xử lý khi va chạm với các đối tượng khác */
-    private onCollisionEnter(event: ITriggerEvent) {
-        const otherNode = event.otherCollider.node;
+/** Cập nhật di chuyển ngang trên trục Z */
+private updateLateralMovement(deltaTime: number) {
+    if (this.rigidBody) {  // Kiểm tra nếu rigidBody không phải null
+        const currentVelocity = new Vec3();
+        this.rigidBody.getLinearVelocity(currentVelocity);  // Lấy vận tốc hiện tại
 
-        if (otherNode.name === 'coin') {
-            otherNode.destroy(); // Xóa coin khi thu thập
-            this.coinsCollected++;
-        } else if (otherNode.name === 'obstacles') {
-            this.gameOver(); // Dừng game khi va chạm chướng ngại vật
-        }
+        const lateralVelocity = new Vec3(this.moveDirection * this.lateralSpeed, currentVelocity.y, 0);
+
+        // Cập nhật vận tốc mượt mà bằng cách sử dụng Vec3.lerp()
+        const smoothVelocity = new Vec3();
+        Vec3.lerp(smoothVelocity, currentVelocity, lateralVelocity, 0.1);  // Lerp giữa hai Vec3 với tỷ lệ 0.1
+
+        // Cập nhật vận tốc mới
+        this.rigidBody.setLinearVelocity(smoothVelocity);
+    } else {
+        console.error("RigidBody is null or not initialized.");
     }
+}
 
-    /** Xử lý sự kiện phím nhấn xuống */
+
+
+    /** Xử lý sự kiện nhấn phím */
     private onKeyDown(event: EventKeyboard) {
         switch (event.keyCode) {
-            case KeyCode.KEY_A: // Di chuyển sang trái
-                this.moveToLane(-1);
+            case KeyCode.KEY_A: // Di chuyển trái
+                this.moveDirection = -1;
+                this.playTurnAnimation(-1);
                 break;
-            case KeyCode.KEY_D: // Di chuyển sang phải
-                this.moveToLane(1);
+            case KeyCode.KEY_D: // Di chuyển phải
+                this.moveDirection = 1;
+                this.playTurnAnimation(1);
                 break;
             case KeyCode.SPACE: // Nhảy
                 this.jump();
@@ -157,46 +150,49 @@ export class Player extends Component {
         }
     }
 
-    /** Xử lý sự kiện phím nhả ra */
+    /** Xử lý sự kiện thả phím */
     private onKeyUp(event: EventKeyboard) {
-        if (event.keyCode === KeyCode.KEY_A || event.keyCode === KeyCode.KEY_D) {
-            this.playSlideAnimation(); // Quay lại trạng thái trượt
+        switch (event.keyCode) {
+            case KeyCode.KEY_A:
+            case KeyCode.KEY_D:
+                this.moveDirection = 0; // Dừng di chuyển ngang
+                this.playSlideAnimation();
+                break;
         }
     }
 
-    /** Animation trượt */
+    /** Animation trượt mặc định */
     private playSlideAnimation() {
-        if (this.skeletalAnimation && !this.skeletalAnimation.getState('default').isPlaying) {
+        if (this.skeletalAnimation) {
             this.skeletalAnimation.stop();
             this.skeletalAnimation.play('default');
         }
     }
 
-    /** Animation di chuyển sang trái */
-    private playLeftAnimation() {
+    /** Animation chuyển hướng */
+    private playTurnAnimation(direction: number) {
         if (this.skeletalAnimation) {
+            const animationName = direction === -1 ? 'right' : 'right';
+
             this.skeletalAnimation.stop();
-            this.skeletalAnimation.play('left');
+
+            this.skeletalAnimation.play(animationName);
+
+          
+            // Khi animation chuyển hướng kết thúc, quay lại animation mặc định
+            this.skeletalAnimation.once(SkeletalAnimation.EventType.FINISHED, () => {
+                this.playSlideAnimation();
+            }, this);
         }
     }
 
-    /** Animation di chuyển sang phải */
-    private playRightAnimation() {
-        if (this.skeletalAnimation) {
-            this.skeletalAnimation.stop();
-            this.skeletalAnimation.play('right');
-        }
-    }
 
-    /** Kết thúc game */
-    private gameOver() {
-        this.moveSpeed = 0;
-        if (this.skeletalAnimation) {
-            this.skeletalAnimation.stop();
-        }
-        input.off(Input.EventType.KEY_DOWN, this.onKeyDown, this);
-        input.off(Input.EventType.KEY_UP, this.onKeyUp, this);
+    // Xử lý game over khi va chạm với chướng ngại vật
+    private handleGameOver() {
+        // Dừng mọi hoạt động của nhân vật, có thể hiển thị màn hình game over
+        this.rigidBody.setLinearVelocity(new Vec3(0, 0, 0));  // Dừng nhân vật
+        // Tạm dừng game hoặc thực hiện các hành động khác
 
-        console.log('Game Over! Coins collected:', this.coinsCollected);
     }
+ 
 }

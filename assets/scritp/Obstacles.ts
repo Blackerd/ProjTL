@@ -1,49 +1,43 @@
-import { _decorator, Component, Node, Collider, ITriggerEvent, director } from 'cc';
+import { _decorator, Component, Node, Collider, ITriggerEvent, EventTarget } from 'cc';
 const { ccclass, property } = _decorator;
+
+// Tạo EventTarget dùng để phát và lắng nghe sự kiện
+const eventTarget = new EventTarget();
 
 @ccclass('Obstacles')
 export class Obstacles extends Component {
     @property(Node)
-    player: Node | null = null; // Node của người chơi
-
-    @property(Node)
-    gameOverUI: Node | null = null; // Màn hình Game Over
+    player: Node | null = null; // Node của nhân vật
 
     start() {
-        const collider = this.node.getComponent(Collider);
-        if (collider) {
-            collider.on('onTriggerEnter', this.onObstacleHit, this);
-            collider.isTrigger = true; // Đảm bảo collider là trigger
-        }
+        // Lấy tất cả các Node con (Obstacles)
+        this.node.children.forEach((childNode) => {
+            const collider = childNode.getComponent(Collider);
+            if (collider) {
+                collider.on('onTriggerEnter', this.onObstacleHit, this);
+                collider.isTrigger = true; // Đảm bảo collider là trigger
+            } else {
+                console.warn(`Node ${childNode.name} does not have a Collider component.`);
+            }
+        });
     }
 
-    // Xử lý va chạm với chướng ngại vật
+    /**
+     * Xử lý khi va chạm với bất kỳ chướng ngại vật nào.
+     * @param event Sự kiện va chạm
+     */
     onObstacleHit(event: ITriggerEvent) {
         const otherNode = event.otherCollider.node;
 
-        // Kiểm tra nếu va chạm với player
+        // Kiểm tra nếu va chạm với nhân vật
         if (this.player && otherNode === this.player) {
-            console.log('Game Over!');
-            
-            // Dừng tất cả hành động trong game
-            this.gameOver();
+            console.log('Player hit an obstacle! Emitting gameOver event.');
 
-            // Ẩn nhân vật hoặc làm các hành động khác khi game over
-            this.player.active = false; // Ẩn nhân vật
-
-            // Nếu cần có thêm các thao tác khác (ví dụ: ngừng chuyển động của chướng ngại vật)
-            this.node.active = false; // Ẩn chướng ngại vật hoặc hủy
+            // Phát sự kiện "gameOver" để thông báo cho lớp GameUI
+            eventTarget.emit('gameOver');
         }
-    }
-
-    // Hàm game over
-    gameOver() {
-        // Hiển thị UI game over
-        if (this.gameOverUI) {
-            this.gameOverUI.active = true;
-        }
-
-        // Dừng toàn bộ game
-        director.pause(); // Dừng game
     }
 }
+
+// Xuất EventTarget để GameUI có thể lắng nghe
+export { eventTarget };

@@ -5,7 +5,6 @@ import {
     Label
 
 } from 'cc';
-import { GameUI } from './GameUI';
 
 const { ccclass, property } = _decorator;
 
@@ -40,10 +39,7 @@ export class Player extends Component {
         input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
         input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
 
-
     }
-
-    
 
     start() {
         this.playSlideAnimation(); // Chạy animation mặc định

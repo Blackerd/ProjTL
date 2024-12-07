@@ -2,7 +2,8 @@ import {
     _decorator, Component, Node, Vec3, input, Input, KeyCode,
     SkeletalAnimation, EventKeyboard, RigidBody, Contact2DType, geometry, PhysicsSystem,CollisionEventType ,
     Collider,
-    Label
+    Label,
+    Quat
 
 } from 'cc';
 
@@ -28,13 +29,21 @@ export class Player extends Component {
     @property
     jumpForce: number = 10; // Lực nhảy
 
+    @property
+    laneTransitionSpeed: number = 10; // Tốc độ chuyển lane
+
 
     private moveDirection: number = 0; // Hướng di chuyển ngang (-1: trái, 0: không di chuyển, 1: phải)
     private canJump: boolean = false; // Kiểm tra trạng thái nhảy
     private isOnGround: boolean = false; // Kiểm tra xem nhân vật có đang đứng trên mặt đất không
 
+    private lanes = [-90, 0, 90]; // Xác định ba lane (trục Z)
+    private currentLaneIndex = 1; // Vị trí mặc định ban đầu (giữa lane)
+    private initialRotation: Quat = new Quat();
+
 
     onLoad() {
+
         // Đăng ký sự kiện phím
         input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
         input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
@@ -43,6 +52,10 @@ export class Player extends Component {
 
     start() {
         this.playSlideAnimation(); // Chạy animation mặc định
+
+        const laneWidth = Math.abs(this.lanes[1] - this.lanes[0]); // Đoạn cách giữa lane 0 và lane 1
+        console.log(`Lane width: ${laneWidth}`);
+
     }
 
     update(deltaTime: number) {
@@ -54,6 +67,19 @@ export class Player extends Component {
          this.checkGround();
     }
 
+    private updateLateralMovement(deltaTime: number) {
+        // Xác định vị trí mục tiêu dựa trên currentLaneIndex
+        const targetZ = this.lanes[this.currentLaneIndex];
+        const currentPosition = this.node.getPosition();
+
+          // Sử dụng Lerp để làm mượt quá trình chuyển lane
+
+    
+        // Cập nhật vị trí mới ngay lập tức
+        const newPosition = new Vec3(currentPosition.x, currentPosition.y, targetZ);
+        this.node.setPosition(newPosition);
+    }
+    
     /** Kiểm tra nếu nhân vật ở trên mặt đất */
     private checkGround() {
         try {
@@ -94,51 +120,35 @@ export class Player extends Component {
         }
     }
     
-
-    /** Tự động di chuyển về phía trước trên trục X */
-    private moveForward(deltaTime: number) {
-        if (this.rigidBody) {  // Kiểm tra nếu rigidBody không phải null
-            const currentVelocity = new Vec3();
-            this.rigidBody.getLinearVelocity(currentVelocity);  // Lấy vận tốc hiện tại
-
-            const forwardVelocity = new Vec3(currentVelocity.x, currentVelocity.y, -this.forwardSpeed);
-            this.rigidBody.setLinearVelocity(forwardVelocity);  // Áp dụng vận tốc mới
-        } else {
-            console.error("RigidBody is null or not initialized.");
-        }
-    }
-
-/** Cập nhật di chuyển ngang trên trục Z */
-private updateLateralMovement(deltaTime: number) {
-    if (this.rigidBody) {  // Kiểm tra nếu rigidBody không phải null
-        const currentVelocity = new Vec3();
-        this.rigidBody.getLinearVelocity(currentVelocity);  // Lấy vận tốc hiện tại
-
-        const lateralVelocity = new Vec3(this.moveDirection * this.lateralSpeed, currentVelocity.y, 0);
-
-        // Cập nhật vận tốc mượt mà bằng cách sử dụng Vec3.lerp()
-        const smoothVelocity = new Vec3();
-        Vec3.lerp(smoothVelocity, currentVelocity, lateralVelocity, 0.1);  // Lerp giữa hai Vec3 với tỷ lệ 0.1
-
-        // Cập nhật vận tốc mới
-        this.rigidBody.setLinearVelocity(smoothVelocity);
+private moveForward(deltaTime: number) {
+    if (this.rigidBody) {
+        // Tính toán vận tốc cố định theo trục X
+        const forwardDirection = new Vec3(1, 0, 0); // Hướng di chuyển mặc định (trục X)
+        Vec3.transformQuat(forwardDirection, forwardDirection, this.node.getRotation()); // Áp dụng phép quay
+        const forwardVelocity = forwardDirection.multiplyScalar(this.forwardSpeed);
+        this.rigidBody.setLinearVelocity(forwardVelocity); // Áp dụng vận tốc
     } else {
         console.error("RigidBody is null or not initialized.");
     }
 }
 
 
-
     /** Xử lý sự kiện nhấn phím */
     private onKeyDown(event: EventKeyboard) {
         switch (event.keyCode) {
             case KeyCode.KEY_A: // Di chuyển trái
-                this.moveDirection = -1;
-                this.playTurnAnimation(-1);
+               // this.moveDirection = -1;
+               // this.playTurnAnimation(-1);
+               if (this.currentLaneIndex > 0) {
+                this.currentLaneIndex--; // Chuyển sang lane trái
+            }
                 break;
             case KeyCode.KEY_D: // Di chuyển phải
-                this.moveDirection = 1;
-                this.playTurnAnimation(1);
+               // this.moveDirection = 1;
+                //this.playTurnAnimation(1);
+                if (this.currentLaneIndex < this.lanes.length - 1) {
+                    this.currentLaneIndex++; // Chuyển sang lane phải
+                }
                 break;
             case KeyCode.SPACE: // Nhảy
                 this.jump();

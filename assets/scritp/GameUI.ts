@@ -28,16 +28,28 @@ export class GameUI extends Component {
     @property(Node)
     backButton: Node = null; // Nút Back trong BXH
 
+    @property(Node)
+    winPanel: Node = null; // Panel hiển thị chiến thắng
+
+    @property(Label)
+    winLabel: Label = null; // Hiển thị thông báo chiến thắng
+
+    @property(Node)
+    backToMenuButton: Node = null; // Nút quay về Menu
+
     private startTime: number = 0; // Thời gian bắt đầu
     private isPaused: boolean = false; // Trạng thái dừng game
      coinCount: number = 0; // Số coin hiện tại
     private distanceTravelled: number = 0; // Quãng đường đã đi
+    private isGameWon: boolean = false; // Trạng thái thắng game
+
 
     start() {
         this.startTime = Date.now(); // Lưu thời gian bắt đầu
         this.resumeButton.active = false; // Ẩn nút tiếp tục ban đầu
         this.bxhNode.active = false;
-
+        this.winPanel.active = false; // Ẩn Panel chiến thắng ban đầu
+        this.backToMenuButton.active = false; // Ẩn nút quay lại menu
 
         // Lắng nghe sự kiện "gameOver" từ Obstacles
         eventTarget.on('gameOver', this.showLeaderboard, this);
@@ -48,6 +60,7 @@ export class GameUI extends Component {
         this.resumeButton.on(Input.EventType.TOUCH_START, this.resumeGame, this);
         this.exitButton.on(Input.EventType.TOUCH_START, this.exitGame, this);
         this.backButton.on(Input.EventType.TOUCH_START, this.returnToMenu, this);
+        this.backToMenuButton.on(Input.EventType.TOUCH_START, this.returnToMenu, this);
 
     }
 
@@ -72,11 +85,26 @@ export class GameUI extends Component {
         this.coinLabel.string = `Coins: ${this.coinCount}`;
     }
 
-    /** Cập nhật quãng đường */
-    public updateDistance() {
-        this.distanceTravelled += 1; // Giả sử nhân vật di chuyển 1m mỗi frame (có thể thay đổi tuỳ theo logic của bạn)
-        this.distanceLabel.string = `Distance: ${this.distanceTravelled}m`;
+  /** Cập nhật quãng đường */
+  public updateDistance() {
+    this.distanceTravelled += 1; // Giả sử nhân vật di chuyển 1m mỗi frame (có thể thay đổi tuỳ theo logic của bạn)
+    this.distanceLabel.string = `Distance: ${this.distanceTravelled}m`;
+
+    // Kiểm tra nếu quãng đường đã đủ 5000m
+    if (this.distanceTravelled >= 5000 && !this.isGameWon) {
+        this.winGame();
     }
+}
+
+   /** Cơ chế win game khi đạt 5000m */
+   private winGame() {
+
+    director.pause();
+    this.isPaused = true;
+    this.isGameWon = true; // Đánh dấu trạng thái đã thắng
+    this.winPanel.active = true; // Hiển thị thông báo chiến thắng
+    this.backToMenuButton.active = true; // Hiển thị nút quay lại menu
+}
 
   /** Tạm dừng trò chơi */
 private pauseGame() {
@@ -85,7 +113,6 @@ private pauseGame() {
         director.pause(); // Dừng toàn bộ trò chơi
         this.resumeButton.active = true; // Hiện nút tiếp tục
         this.pauseButton.active = false; // Ẩn nút tạm dừng
-        console.log('Trò chơi đã bị tạm dừng');
     }
 }
 /** Tiếp tục trò chơi */
@@ -95,19 +122,16 @@ private resumeGame() {
         director.resume(); // Tiếp tục trò chơi từ trạng thái hiện tại
         this.resumeButton.active = false; // Ẩn nút tiếp tục
         this.pauseButton.active = true; // Hiện nút tạm dừng
-        console.log('Trò chơi tiếp tục');
     }
 }
 
     /** Thoát trò chơi */
     private exitGame() {
-        console.log('Thoát game');
         director.loadScene("MenuScene");
     }
 
     /** Hiển thị bảng xếp hạng */
     public showLeaderboard() {
-        console.log('Hiển thị bảng xếp hạng');
         director.pause(); // Dừng trò chơi
         this.isPaused = true; // Đặt trạng thái tạm dừng
         this.pauseButton.active = false; // Ẩn nút tạm dừng
@@ -117,7 +141,6 @@ private resumeGame() {
 
      /** Quay về MenuScene */
      private returnToMenu() {
-        console.log('Quay về MenuScene');
         director.resume(); // Tiếp tục trò chơi trước khi chuyển
         director.loadScene("MenuScene"); // Chuyển về MenuScene
     }

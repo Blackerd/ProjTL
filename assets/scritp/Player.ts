@@ -82,7 +82,7 @@ private jump() {
     const currentTime = Date.now() / 1000; // Thời gian hiện tại tính bằng giây
 
     if (currentTime - this.lastJumpTime >= this.jumpCooldown) {
-        const jumpVelocity = new Vec3(0, this.jumpForce, 0); // Lực nhảy trên trục Y
+        const jumpVelocity = new Vec3(0, this.jumpForce + 50, 0); // Lực nhảy trên trục Y
         this.rigidBody.applyImpulse(jumpVelocity); // Áp dụng lực nhảy
 
         // Cập nhật thời gian nhảy

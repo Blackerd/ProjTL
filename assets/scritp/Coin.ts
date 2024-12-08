@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Collider, ITriggerEvent, Label } from 'cc';
+import { _decorator, Component, Node, Collider, ITriggerEvent, Label, AudioSource } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('CoinController')
@@ -11,6 +11,10 @@ export class CoinController extends Component {
 
     @property(Label)
     scoreLabel: Label | null = null; // Score label để hiển thị điểm
+
+    @property({ type: AudioSource })
+    coinSound: AudioSource = null; // Âm thanh khi thu thập coin
+
 
     private _score: number = 0; // Biến lưu điểm
 
@@ -36,6 +40,13 @@ export class CoinController extends Component {
             // Tăng điểm
             this.addScore(this.scorePerCoin);
 
+
+         // Phát âm thanh khi thu thập coin
+         if (this.coinSound) {
+            this.coinSound.play(); // Phát âm thanh
+        }
+
+
             // Ẩn hoặc hủy node coin
             coinNode.active = false; // Ẩn đồng xu thay vì hủy để tiết kiệm tài nguyên
             // coinNode.destroy(); // Nếu bạn muốn hủy hoàn toàn thì có thể sử dụng dòng này
@@ -45,7 +56,7 @@ export class CoinController extends Component {
     // Hàm tăng điểm
     addScore(amount: number) {
         this._score += amount;
-        console.log(`Current Score: ${this._score}`);
+       // console.log(`Current Score: ${this._score}`);
 
         // Cập nhật điểm vào label UI
         if (this.scoreLabel) {

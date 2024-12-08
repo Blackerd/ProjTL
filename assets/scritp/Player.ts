@@ -36,8 +36,10 @@ export class Player extends Component {
     private moveDirection: number = 0; // Hướng di chuyển ngang (-1: trái, 0: không di chuyển, 1: phải)
     private canJump: boolean = false; // Kiểm tra trạng thái nhảy
     private isOnGround: boolean = false; // Kiểm tra xem nhân vật có đang đứng trên mặt đất không
+    private jumpCooldown: number = 3; // Thời gian cooldown giữa các lần nhảy (3 giây)
+    private lastJumpTime: number = 0; // Thời gian nhảy cuối cùng
 
-    private lanes = [-90, 0, 90]; // Xác định ba lane (trục Z)
+    private lanes = [-70, 0, 70]; // Xác định ba lane (trục Z)
     private currentLaneIndex = 1; // Vị trí mặc định ban đầu (giữa lane)
     private initialRotation: Quat = new Quat();
 
@@ -62,11 +64,7 @@ export class Player extends Component {
         this.moveForward(deltaTime); // Di chuyển tự động về phía trước
         this.updateLateralMovement(deltaTime); // Cập nhật di chuyển ngang
 
-
-         // Kiểm tra trạng thái mặt đất
-         this.checkGround();
     }
-
     private updateLateralMovement(deltaTime: number) {
         // Xác định vị trí mục tiêu dựa trên currentLaneIndex
         const targetZ = this.lanes[this.currentLaneIndex];
@@ -79,46 +77,31 @@ export class Player extends Component {
         const newPosition = new Vec3(currentPosition.x, currentPosition.y, targetZ);
         this.node.setPosition(newPosition);
     }
-    
-    /** Kiểm tra nếu nhân vật ở trên mặt đất */
-    private checkGround() {
-        try {
-            const ray = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z);
-            ray.d.set(0, -1, 0); // Ray hướng xuống
 
-            this.isOnGround = PhysicsSystem.instance.raycastClosest(ray, 0.5); // Tầm raycast kiểm tra mặt đất
+private jump() {
+    const currentTime = Date.now() / 1000; // Thời gian hiện tại tính bằng giây
 
-            const defaultState = this.skeletalAnimation.getState('default');
-            if (this.isOnGround && defaultState && !defaultState.isPlaying) {
-                this.canJump = true;
-            } else {
-                this.canJump = false;
+    if (currentTime - this.lastJumpTime >= this.jumpCooldown) {
+        const jumpVelocity = new Vec3(0, this.jumpForce, 0); // Lực nhảy trên trục Y
+        this.rigidBody.applyImpulse(jumpVelocity); // Áp dụng lực nhảy
+
+        // Cập nhật thời gian nhảy
+        this.lastJumpTime = currentTime;
+
+        // Chạy animation nhảy
+        if (this.skeletalAnimation) {
+            const jumpState = this.skeletalAnimation.getState('jumpp');
+            if (!jumpState || !jumpState.isPlaying) {
+                this.skeletalAnimation.stop();
+                this.skeletalAnimation.play('jumpp');
+                this.skeletalAnimation.once(SkeletalAnimation.EventType.FINISHED, this.playSlideAnimation, this);
             }
-        } catch (error) {
-            console.error('Error checking ground status:', error);
-            this.isOnGround = false;
-            this.canJump = false;
         }
+    } else {
+        console.log("Jump cooldown active. Please wait.");
     }
-
-    private jump() {
-        if (this.canJump) {  // Kiểm tra nếu có thể nhảy
-            const jumpVelocity = new Vec3(0, this.jumpForce, 0); // Lực nhảy trên trục Y
-            this.rigidBody.applyImpulse(jumpVelocity); // Áp dụng lực nhảy
+}
     
-            // Chạy animation nhảy
-            if (this.skeletalAnimation) {
-                const jumpState = this.skeletalAnimation.getState('jump');
-                if (!jumpState || !jumpState.isPlaying) {
-                    this.skeletalAnimation.stop();
-                    this.skeletalAnimation.play('jump');
-                    this.skeletalAnimation.once(SkeletalAnimation.EventType.FINISHED, this.playSlideAnimation, this);
-                }
-            }
-    
-            this.isOnGround = false; // Đánh dấu là không còn trên mặt đất
-        }
-    }
     
 private moveForward(deltaTime: number) {
     if (this.rigidBody) {
@@ -138,14 +121,14 @@ private moveForward(deltaTime: number) {
         switch (event.keyCode) {
             case KeyCode.KEY_A: // Di chuyển trái
                // this.moveDirection = -1;
-               // this.playTurnAnimation(-1);
+               this.playTurnAnimation(-1);
                if (this.currentLaneIndex > 0) {
                 this.currentLaneIndex--; // Chuyển sang lane trái
             }
                 break;
             case KeyCode.KEY_D: // Di chuyển phải
                // this.moveDirection = 1;
-                //this.playTurnAnimation(1);
+                this.playTurnAnimation(1);
                 if (this.currentLaneIndex < this.lanes.length - 1) {
                     this.currentLaneIndex++; // Chuyển sang lane phải
                 }
@@ -184,7 +167,7 @@ private moveForward(deltaTime: number) {
 
             this.skeletalAnimation.play(animationName);
 
-          
+            
             // Khi animation chuyển hướng kết thúc, quay lại animation mặc định
             this.skeletalAnimation.once(SkeletalAnimation.EventType.FINISHED, () => {
                 this.playSlideAnimation();

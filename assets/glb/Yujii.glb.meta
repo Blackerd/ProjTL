@@ -197,7 +197,7 @@
       "name": "around.animation",
       "userData": {
         "gltfIndex": 0,
-        "wrapMode": 2,
+        "wrapMode": 0,
         "sample": 30,
         "span": {
           "from": 0,
@@ -268,7 +268,7 @@
       "name": "jumpp.animation",
       "userData": {
         "gltfIndex": 3,
-        "wrapMode": 2,
+        "wrapMode": 0,
         "sample": 30,
         "span": {
           "from": 0,
@@ -418,7 +418,7 @@
             "name": "around",
             "from": 0,
             "to": 2.5,
-            "wrapMode": 2,
+            "wrapMode": 0,
             "previousId": "d7126",
             "speed": 5
           }
@@ -462,7 +462,7 @@
             "name": "jumpp",
             "from": 0,
             "to": 4.166666507720947,
-            "wrapMode": 2,
+            "wrapMode": 0,
             "previousId": "c6412",
             "speed": 8
           }

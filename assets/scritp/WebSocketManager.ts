@@ -8,9 +8,17 @@ export class WebSocketManager extends Component {
     private serverUrl: string = "ws://localhost:8080/game"; // Địa chỉ WebSocket server
     private isConnected: boolean = false;
 
-  // Hàm callback cho các phản hồi từ server
-  public onRegisterResponse: (response: any) => void = () => {};
-  public onLoginResponse: (response: any) => void = () => {};
+      // Thông tin người chơi
+      public username: string = '';
+      public coinCount: number = 0;
+
+    // Hàm callback cho các phản hồi từ server
+    public onRegisterResponse: (response: any) => void = () => {};
+    public onLoginResponse: (response: any) => void = () => {};
+    public onGetLeaderboardResponse: (response: any) => void = () => {};
+    public onGetUserInfoResponse: (response: any) => void = () => {};
+  
+  
 
 
     /**
@@ -78,6 +86,40 @@ export class WebSocketManager extends Component {
         }, 3000); // Đợi 3 giây trước khi thử kết nối lại
     }
 
+     // Gửi yêu cầu đăng nhập
+     public login(username: string, password: string) {
+        const message = {
+            type: "LOGIN",
+            username: username,
+            password: password
+        };
+        this.sendMessage(message);
+    }
+
+     // Gửi yêu cầu đăng ký
+     public register(username: string, email: string, password: string) {
+        const registerMessage = {
+            type: "REGISTER",
+            data: { username, email, password },
+        };
+        this.sendMessage(registerMessage);
+    }
+
+        // Gửi yêu cầu lấy bảng xếp hạng
+        public getLeaderboard() {
+            const message = { type: "GET_LEADERBOARD" };
+            this.sendMessage(message);
+        }
+    
+         // Gửi yêu cầu lấy thông tin người chơi (username và coin)
+         public getUserInfo() {
+            const request = {
+                type: "GET_USER_INFO",
+                data: {},
+            };
+            this.sendMessage(request);
+        }
+
     /**
      * Gửi tin nhắn tới server.
      * @param message Object tin nhắn cần gửi
@@ -109,6 +151,16 @@ export class WebSocketManager extends Component {
                     this.onLoginResponse(message);
                 }
                 break;
+             case "LEADERBOARD_RESPONSE":
+                    if (this.onGetLeaderboardResponse) {
+                        this.onGetLeaderboardResponse(message);
+                    }
+                    break;
+                    case "USER_INFO_RESPONSE":
+                        if (this.onGetUserInfoResponse) {
+                            this.onGetUserInfoResponse(message); // Gọi callback khi nhận được thông tin người chơi
+                        }
+                        break;
 
             case "ERROR":
                 console.error("Server error:", message.message);

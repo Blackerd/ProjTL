@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.SceneAsset",
-    "_name": "GameScene",
+    "_name": "Level1Scene",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_native": "",
@@ -11,7 +11,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "GameScene",
+    "_name": "Level1Scene",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": null,
@@ -5271,7 +5271,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 679.0610328638497,
+    "_orthoHeight": 653.3611691022965,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -5906,9 +5906,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "Tạm dừng",
@@ -5990,9 +5990,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 14,
+      "g": 58,
+      "b": 83,
       "a": 255
     },
     "_spriteFrame": {
@@ -6232,9 +6232,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "Tiếp tục",
@@ -6316,9 +6316,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 14,
+      "g": 58,
+      "b": 83,
       "a": 255
     },
     "_spriteFrame": {
@@ -6558,9 +6558,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "Thoát",
@@ -6642,9 +6642,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 14,
+      "g": 58,
+      "b": 83,
       "a": 255
     },
     "_spriteFrame": {
@@ -8002,9 +8002,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_string": "Back",
@@ -8086,9 +8086,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 14,
+      "g": 58,
+      "b": 83,
       "a": 255
     },
     "_spriteFrame": {

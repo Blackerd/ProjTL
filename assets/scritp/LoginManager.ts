@@ -49,7 +49,22 @@ export class LoginManager extends Component {
     public handleLoginResponse(response: any) {
         if (response.success) {
             console.log("Login successful:", response);
-            director.loadScene("GameScene");
+
+            // Lưu thông tin người chơi vào director
+            const playerInfo = response.playerInfo;
+            if (playerInfo) {
+                director.once('after-scenes-loaded', () => {
+                    // Chuyển đến MenuScene và truyền dữ liệu người chơi
+                    director.loadScene("MenuScene", () => {
+                        // Truyền thông tin người chơi vào MenuScene
+                        director.getScene().emit('set-player-info', playerInfo);
+                    });
+                });
+            } else {
+                console.error("No player info received");
+            }
+
+            director.loadScene("MenuScene");
         } else {
             console.error("Login failed:", response.message);
             this.showFieldError(response.message);

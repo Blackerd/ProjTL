@@ -1,4 +1,4 @@
-import { _decorator, Component, director } from 'cc';
+import { _decorator, Component, director, error } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('WebSocketManager')

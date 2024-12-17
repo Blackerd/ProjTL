@@ -366,7 +366,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 653.3611691022965,
+    "_orthoHeight": 550.9019607843137,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -736,13 +736,13 @@
     },
     "_string": "",
     "_horizontalAlign": 0,
-    "_verticalAlign": 1,
+    "_verticalAlign": 0,
     "_actualFontSize": 40,
     "_fontSize": 20,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 1,
-    "_enableWrapText": false,
+    "_enableWrapText": true,
     "_font": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
@@ -874,7 +874,7 @@
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 1,
-    "_enableWrapText": false,
+    "_enableWrapText": true,
     "_font": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
@@ -997,8 +997,8 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "_inputFlag": 5,
-    "_inputMode": 6,
-    "_maxLength": 8,
+    "_inputMode": 0,
+    "_maxLength": 20,
     "_id": "f2ZauZaIpAUbRaOItgo+M6"
   },
   {
@@ -1413,7 +1413,7 @@
     },
     "_inputFlag": 0,
     "_inputMode": 0,
-    "_maxLength": 8,
+    "_maxLength": 20,
     "_id": "b1dqI6dfJLdJGtSgIs9GLN"
   },
   {
@@ -1828,7 +1828,7 @@
     },
     "_inputFlag": 0,
     "_inputMode": 0,
-    "_maxLength": 8,
+    "_maxLength": 20,
     "_id": "57WUGCkeFHG46snMWMPKqN"
   },
   {
@@ -3291,7 +3291,7 @@
     },
     "_inputFlag": 5,
     "_inputMode": 1,
-    "_maxLength": 8,
+    "_maxLength": 20,
     "_id": "ffe6yXVudAFKxQSpYA0jzQ"
   },
   {

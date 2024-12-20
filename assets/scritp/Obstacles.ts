@@ -1,4 +1,5 @@
 import { _decorator, Component, Node, Collider, ITriggerEvent, EventTarget } from 'cc';
+import { Player } from './Player';
 const { ccclass, property } = _decorator;
 
 // Tạo EventTarget dùng để phát và lắng nghe sự kiện
@@ -19,24 +20,32 @@ export class Obstacles extends Component {
             } else {
                 console.warn(`Node ${childNode.name} does not have a Collider component.`);
             }
-        });
+        }); 
     }
 
-    /**
-     * Xử lý khi va chạm với bất kỳ chướng ngại vật nào.
-     * @param event Sự kiện va chạm
-     */
-    onObstacleHit(event: ITriggerEvent) {
+    private onObstacleHit(event: ITriggerEvent) {
         const otherNode = event.otherCollider.node;
-
-        // Kiểm tra nếu va chạm với nhân vật
+    
         if (this.player && otherNode === this.player) {
-            console.log('Player hit an obstacle! Emitting gameOver event.');
-
-            // Phát sự kiện "gameOver" để thông báo cho lớp GameUI
-            eventTarget.emit('gameOver');
+            const playerComponent = this.player.getComponent(Player);
+            if (playerComponent) {
+                if (playerComponent.isShieldActive) {
+                    console.log('Player hit an obstacle but is protected by the shield!');
+                    event.selfCollider.node.destroy(); // Xóa chướng ngại vật
+                } else if (playerComponent.hasRevive) {
+                    console.log('Player hit an obstacle but revived!');
+                    playerComponent.hasRevive = false; // Sử dụng trạng thái hồi sinh
+                    event.selfCollider.node.destroy(); // Xóa chướng ngại vật
+                } else {
+                    console.log('Player hit an obstacle and has no protection! Game Over!');
+                    eventTarget.emit('gameOver'); // Phát sự kiện gameOver
+                }
+            } else {
+                console.error('Player component not found on node!');
+            }
         }
     }
+    
 }
 
 // Xuất EventTarget để GameUI có thể lắng nghe

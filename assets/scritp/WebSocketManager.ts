@@ -6,7 +6,7 @@ export class WebSocketManager extends Component {
     private static instance: WebSocketManager | null = null;
     private socket: WebSocket | null = null;
     private serverUrl: string = "ws://localhost:8080/game"; // Địa chỉ WebSocket server
-    private isConnected: boolean = false;
+     isConnected: boolean = false;
 
       // Thông tin người chơi
       public username: string = '';
@@ -18,8 +18,6 @@ export class WebSocketManager extends Component {
     public onGetLeaderboardResponse: (response: any) => void = () => {};
     public onGetUserInfoResponse: (response: any) => void = () => {};
   
-  
-
 
     /**
      * Đảm bảo chỉ có một instance WebSocketManager được sử dụng.
@@ -119,6 +117,24 @@ export class WebSocketManager extends Component {
             };
             this.sendMessage(request);
         }
+
+          // Gửi yêu cầu lấy thống kê hệ thống
+    public getSystemStats() {
+        const message = { type: "getSystemStats" };
+        this.sendMessage(message);
+    }
+
+    // Gửi yêu cầu chặn người dùng
+    public blockUser(userId: string) {
+        const message = { type: "blockUser", userId };
+        this.sendMessage(message);
+    }
+
+    // Gửi yêu cầu xem hạng người chơi
+    public viewRank() {
+        const message = { type: "viewRank" };
+        this.sendMessage(message);
+    }
 
     /**
      * Gửi tin nhắn tới server.

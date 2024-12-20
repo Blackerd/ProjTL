@@ -38,13 +38,22 @@
         "__id__": 9021
       },
       {
-        "__id__": 10205
+        "__id__": 10185
+      },
+      {
+        "__id__": 10239
+      },
+      {
+        "__id__": 10349
+      },
+      {
+        "__id__": 10393
       }
     ],
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 10259
+      "__id__": 10408
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -75,7 +84,7 @@
     },
     "autoReleaseAssets": true,
     "_globals": {
-      "__id__": 10262
+      "__id__": 10411
     },
     "_id": "a4f73bb0-d4ab-4000-8049-352db782dc95"
   },
@@ -275,9 +284,9 @@
     "value": {
       "__type__": "cc.Quat",
       "x": 0,
-      "y": 0.7051851007644147,
+      "y": 0,
       "z": 0,
-      "w": 0.7090232532575235
+      "w": 1
     }
   },
   {
@@ -297,7 +306,7 @@
     "value": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 89.689,
+      "y": 0,
       "z": 0
     }
   },
@@ -430,16 +439,16 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -5.719,
-      "y": 2.316,
-      "z": 0.434
+      "x": -3.32,
+      "y": 1.842,
+      "z": 0.034
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": -0.05243244029718173,
-      "y": -0.7077797856831654,
-      "z": -0.04861912057972548,
-      "w": 0.7028049482586394
+      "x": -0.10157944310749263,
+      "y": -0.7026291081223279,
+      "z": -0.0981243105803834,
+      "w": 0.6973991488597604
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -451,7 +460,7 @@
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": -8.194,
+      "x": -16.235,
       "y": -90.38,
       "z": 0.337
     },
@@ -649,7 +658,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": -7.854,
-      "z": -13.56
+      "z": -16.122
     }
   },
   {
@@ -1190,7 +1199,7 @@
     "value": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0.274,
+      "y": 0.784,
       "z": -0.177
     }
   },
@@ -5766,7 +5775,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 652.0754716981132,
+    "_orthoHeight": 540,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -10193,7 +10202,7 @@
   {
     "__type__": "cc.Node",
     "_name": "CoinController",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "__editorExtras__": {},
     "_parent": {
       "__id__": 1
@@ -11742,9 +11751,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f5H0wjMZJFsb9LEJecDW15"
   },
   {
@@ -11941,9 +11953,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2dsRC2vyJO6IczIysNBzmY"
   },
   {
@@ -12342,9 +12357,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d79a4+yB1KvIE3VFo4q395"
   },
   {
@@ -12642,9 +12660,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "58VfZBuHhHEbC4TnPoW8YG"
   },
   {
@@ -12942,9 +12963,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a873RZOZFJ3YppjnQ8qXt2"
   },
   {
@@ -13242,9 +13266,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "20le/sstFEXYaNAlu6bOxy"
   },
   {
@@ -13542,9 +13569,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "02tkrvqehC3Y4E8ijaioZd"
   },
   {
@@ -13842,9 +13872,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "276VkHjhRDm5oJiK5lzhW0"
   },
   {
@@ -14142,9 +14175,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "0eMbmYmo5PWYmUuewWzWik"
   },
   {
@@ -14442,9 +14478,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "bdYe6dMMdAZZ3TIWWl0Qrq"
   },
   {
@@ -14742,9 +14781,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c0/ijOkylFqorz5Vo5vbTp"
   },
   {
@@ -15042,9 +15084,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "99HHvroBZM74G6+shw+wc0"
   },
   {
@@ -15342,9 +15387,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "8a4jsYjG1FUKfA7s/jm8/O"
   },
   {
@@ -15642,9 +15690,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7fp4JaOc5GNJxLGaGoi2xU"
   },
   {
@@ -15942,9 +15993,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "0bblNRyadOu5RMzftSDbRB"
   },
   {
@@ -16242,9 +16296,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "40doywrpFCDZiGqXKdPHUo"
   },
   {
@@ -16542,9 +16599,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5aIWzxPT9KqJV0WkGSfivh"
   },
   {
@@ -16842,9 +16902,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f4L7RgAyRFS7Jo8K0H3K4V"
   },
   {
@@ -17142,9 +17205,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "12kHpbBBlEO5NDWW7gXCvv"
   },
   {
@@ -17442,9 +17508,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "cce+5PrX9GQrrWeoWjh63l"
   },
   {
@@ -17742,9 +17811,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "62swsOgsVGjYImSN70twGQ"
   },
   {
@@ -18042,9 +18114,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "4dkGgDhshGGqpN/a42aevl"
   },
   {
@@ -18342,9 +18417,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "29qNyJHUZEDY7arifiHDJ4"
   },
   {
@@ -18642,9 +18720,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e1lY3gRY9LiL7Q7Vwm/TpC"
   },
   {
@@ -18942,9 +19023,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "bbknlVMRVJMa4p5pfKrQep"
   },
   {
@@ -19242,9 +19326,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "26YgxO7jxBD7f7mQl9TZOu"
   },
   {
@@ -19542,9 +19629,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e5cCvDkwNP0qNA5KBHsJTB"
   },
   {
@@ -19842,9 +19932,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "11+lwqKv5JAJ2ZhLanZwHp"
   },
   {
@@ -20142,9 +20235,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9braGytpVKBbW6i8j7Y6Vy"
   },
   {
@@ -20442,9 +20538,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "005S/WWzxAO501QWmbm3pO"
   },
   {
@@ -20742,9 +20841,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2aF0tZyjNFy5j/r4zvfoRM"
   },
   {
@@ -21042,9 +21144,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "afpClsCRFL2bXD9AzjfX6o"
   },
   {
@@ -21342,9 +21447,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "97shLhuYZDzJpqwfbBrHTJ"
   },
   {
@@ -21642,9 +21750,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "fdC/MP/AlB8Z8Ra9wd6b70"
   },
   {
@@ -21942,9 +22053,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e535CkHAdP0J8sVsk+FSGL"
   },
   {
@@ -22242,9 +22356,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "53erC1wQ5GY6s+rWmdwr6e"
   },
   {
@@ -22542,9 +22659,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "26PVVrP8ZMyqLnDoBQZNIs"
   },
   {
@@ -22842,9 +22962,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "040XO5VL9G9K1anIv1MjdV"
   },
   {
@@ -23142,9 +23265,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "cfVtNFlF9Dv7bFyIItetku"
   },
   {
@@ -23442,9 +23568,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ff9/u5lxRE47ye70gDVjnX"
   },
   {
@@ -23742,9 +23871,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "49KGBujgtO8p+YEGmeTTDD"
   },
   {
@@ -24042,9 +24174,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "51OWpKJlJHdLC0OGV/EjcJ"
   },
   {
@@ -24342,9 +24477,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "67OLJgjhlLAq5UnqZiulzF"
   },
   {
@@ -24642,9 +24780,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "aaxSYcF3hBG7N4lrpvqJf0"
   },
   {
@@ -24942,9 +25083,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "12z+TWHD9CaaULWtuXL8ai"
   },
   {
@@ -25242,9 +25386,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d3kNyWLiJB9q3Y7KAFEO+2"
   },
   {
@@ -25542,9 +25689,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a3TgtVpBxKqY/VN7jQckSb"
   },
   {
@@ -25842,9 +25992,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a12502uBhNkKETrHQkGZNp"
   },
   {
@@ -26142,9 +26295,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "90AGJkZPFLaqFSjRk9ygJ1"
   },
   {
@@ -26442,9 +26598,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b2b4izN65L+6EDo3yUD/El"
   },
   {
@@ -26742,9 +26901,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7eF3iIqYlDJLsM7YUlS89e"
   },
   {
@@ -27042,9 +27204,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2ei+8BagROMpjqmrzfkt9c"
   },
   {
@@ -27342,9 +27507,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c3DDE2oRpFPJP3DATHPDiq"
   },
   {
@@ -27642,9 +27810,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "52CmDFmtRL65xUrt+Xvyas"
   },
   {
@@ -27942,9 +28113,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "696a26M2NBfpsb7C/s34le"
   },
   {
@@ -28242,9 +28416,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c4J8PMSPVDy5wASeF1IhaA"
   },
   {
@@ -28542,9 +28719,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "19DHbw4yxP7LQNRgkFhqDo"
   },
   {
@@ -28842,9 +29022,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "66w5dS+KJEB5Nc2CAaRSbO"
   },
   {
@@ -29142,9 +29325,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "beFz0WLX1Bqod+8Sw4J5t3"
   },
   {
@@ -29442,9 +29628,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2b7YmMjIVDSojjAvkpYWpJ"
   },
   {
@@ -29742,9 +29931,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "4fzC1AdAJDfYm+pF+WQG4p"
   },
   {
@@ -30042,9 +30234,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a7Z6/XkKxDLoFbf+yznrZj"
   },
   {
@@ -30342,9 +30537,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2eaOBjoEVCHomN1OvdyumS"
   },
   {
@@ -30642,9 +30840,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e4XnEWbf5JIocdWebtQUyA"
   },
   {
@@ -30942,9 +31143,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "4bRrm2OtJEEoHuEOBiOY+8"
   },
   {
@@ -31242,9 +31446,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c3ATqIrkRAYZhA+qLDR/Ou"
   },
   {
@@ -31542,9 +31749,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "82Q/QsccVDe4NYY1jDHZzv"
   },
   {
@@ -31842,9 +32052,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f3XyX1TehEg4hvFoFKx95c"
   },
   {
@@ -32142,9 +32355,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "00k0mYxNNLiIzIow6V0jFP"
   },
   {
@@ -32442,9 +32658,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "fdrLSwMgRO5IXUHLc9cGxb"
   },
   {
@@ -32742,9 +32961,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6fI70a2KxLybx7BCGLHaDu"
   },
   {
@@ -33042,9 +33264,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "62yz9ILMVHFLNXOBdOr234"
   },
   {
@@ -33342,9 +33567,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "eeUuqk10dD3pJgx0TID19M"
   },
   {
@@ -33642,9 +33870,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "83CSm16BBJUL3f0skwgCKL"
   },
   {
@@ -33942,9 +34173,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "bc26xK+rBGr7PIUnIUR02/"
   },
   {
@@ -34242,9 +34476,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6bpemQ0pJAsb5pVTE2yoDj"
   },
   {
@@ -34542,9 +34779,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "40RbVy2aZCkb4iUfM+O6gd"
   },
   {
@@ -34842,9 +35082,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7fAvYMM61NjYC6Qevdwx+m"
   },
   {
@@ -35142,9 +35385,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d4KTbOT6xPwrz3diz1YFrE"
   },
   {
@@ -35442,9 +35688,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "09ER9mCTRN2KmTpNIOg0Qb"
   },
   {
@@ -35742,9 +35991,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3c03aMoflONZCgO0/cjOFJ"
   },
   {
@@ -36042,9 +36294,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2d/nnfNtJCfr8PpwE7uybE"
   },
   {
@@ -36342,9 +36597,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "56EtdjctNEPpM7eg5hXiAt"
   },
   {
@@ -36642,9 +36900,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "acmRy5vktKIZ0EiXO4TZce"
   },
   {
@@ -36942,9 +37203,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e82M/YTypNMqH1rsYq/3TO"
   },
   {
@@ -37242,9 +37506,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2bqY2KCr1JIZdofXLTlAlY"
   },
   {
@@ -37542,9 +37809,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "10Qx/kaQdFIJfiB+ophbND"
   },
   {
@@ -37842,9 +38112,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e2Id9mbKxGnIKZIjLa2Np4"
   },
   {
@@ -38142,9 +38415,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "195Q1HP61MlYyKckq6O0nH"
   },
   {
@@ -38442,9 +38718,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "807vIKIndIZJXpiJ+V8ow2"
   },
   {
@@ -38742,9 +39021,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "dehojiYrVNm4PYoBWXJcZH"
   },
   {
@@ -39042,9 +39324,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3dXzrNpu1OcZKF7/Q1Mi6y"
   },
   {
@@ -39342,9 +39627,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5feywWlXZH85Ymc3QUtPpC"
   },
   {
@@ -39642,9 +39930,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "04XIc3FJNJgYQhntN2L4AE"
   },
   {
@@ -39942,9 +40233,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7e7UtVt/ROmb2zmHZOFtGe"
   },
   {
@@ -40242,9 +40536,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "0akcZiTABGO6rtYDzysuUw"
   },
   {
@@ -40542,9 +40839,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9dA0UjVN5LyJSBDIQ8H1iv"
   },
   {
@@ -40842,9 +41142,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "77i2uVigxOQKS8i+skyecJ"
   },
   {
@@ -41142,9 +41445,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "770JZW2ItPLZj6sjjghTVn"
   },
   {
@@ -41442,9 +41748,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "46PfQ4H0BESZOnwCYii7rE"
   },
   {
@@ -41742,9 +42051,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "34UoUI3jNJ5Yc458oTVq2D"
   },
   {
@@ -42042,9 +42354,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "55BCeAgMZO5pUBrvj5+NE0"
   },
   {
@@ -42342,9 +42657,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "1d14Yw4i1DzacCUbXgC5DZ"
   },
   {
@@ -42642,9 +42960,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b8R8mFyphOLJo9WqLu+h8B"
   },
   {
@@ -42942,9 +43263,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f2kdVoo9lL5ZEAmnnoi19i"
   },
   {
@@ -43242,9 +43566,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "25PbblImhFNJsF9uyVOM2A"
   },
   {
@@ -43542,9 +43869,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "48QMkbv+xNd6ZYHKhMqCWP"
   },
   {
@@ -43842,9 +44172,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "25xlvvkhtDpo21sgHOZxfu"
   },
   {
@@ -44142,9 +44475,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7b30WGcRpMyLatBqnczr96"
   },
   {
@@ -44442,9 +44778,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3f9jODuj1J07owYdoteEt2"
   },
   {
@@ -44742,9 +45081,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "92rPuC/tJFxaGn7HRYim85"
   },
   {
@@ -45042,9 +45384,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e3jx3X4KFJRIcqYHkA6ui0"
   },
   {
@@ -45342,9 +45687,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "852VI69btK47R1EPwewjlh"
   },
   {
@@ -45642,9 +45990,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5fHHoUCQVOw5L/Xg5Dqs94"
   },
   {
@@ -45942,9 +46293,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "bap9RZOh1Pv5o+oXgewvUh"
   },
   {
@@ -46242,9 +46596,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "cbRASXD/tAubF8+6wVjFHK"
   },
   {
@@ -46542,9 +46899,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "82+mF/xMFJ2abRoRalyeze"
   },
   {
@@ -46842,9 +47202,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "42+snv+shDuLtuDs4Azjcz"
   },
   {
@@ -47142,9 +47505,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c47G6kHklLJou+Xz0aCnmL"
   },
   {
@@ -47442,9 +47808,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "13+G8sJaBLqbArsEbNcP7I"
   },
   {
@@ -47742,9 +48111,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "07003hU5RL/ozbywZHIqUh"
   },
   {
@@ -48042,9 +48414,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "caQzmnKJZLIJEGPLYX3fZP"
   },
   {
@@ -48342,9 +48717,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "1c7eGWVjtPZ5KcDbUBQoWC"
   },
   {
@@ -48642,9 +49020,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "39mWNK4LpDpLcnkBBqMBhH"
   },
   {
@@ -48942,9 +49323,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "efqL9YOa9JzZG7BHqqwWPc"
   },
   {
@@ -49242,9 +49626,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "92I23LRcJBe48y04/+Lxz3"
   },
   {
@@ -49542,9 +49929,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b37MRJxXhIp57xiwo0VNDW"
   },
   {
@@ -49842,9 +50232,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "46KFStHpBAVLiE1zQtspf8"
   },
   {
@@ -50142,9 +50535,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "92KE7mUnNPBIg6V6qtKe9Z"
   },
   {
@@ -50442,9 +50838,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "919v2RiWpPEp9fmrpojC3p"
   },
   {
@@ -50742,9 +51141,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6b2X1nWLpOhb7BDkTuckhM"
   },
   {
@@ -51042,9 +51444,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e4eoIfgipAV56UIOTPIREN"
   },
   {
@@ -51342,9 +51747,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9aRGRDK7BCG7Qt8flruvEH"
   },
   {
@@ -51642,9 +52050,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "0bFMRU0ytL/ruvKBberDu8"
   },
   {
@@ -51942,9 +52353,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "98zVlzeslFg4WzY0MJx5PT"
   },
   {
@@ -52242,9 +52656,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e8uZIqLWxBC6PE3BpfAcT6"
   },
   {
@@ -52542,9 +52959,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6cjdhU1ExKFaPpGuKOZ7XF"
   },
   {
@@ -52842,9 +53262,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e3Za9Hp/VN+4as8WoxiyS5"
   },
   {
@@ -53142,9 +53565,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c42G4dw/pJW4jjkMPeStVd"
   },
   {
@@ -53442,9 +53868,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "89Ect0ssZGm7ECmqDU5m7o"
   },
   {
@@ -53742,9 +54171,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d3X2OvXGhM5bwwM1N7rBY/"
   },
   {
@@ -54042,9 +54474,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ba0dd39HRAj6eTPomAeqqP"
   },
   {
@@ -54342,9 +54777,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "45sY6FwrVMPYvgd8S6WxV3"
   },
   {
@@ -54642,9 +55080,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "1cobUGeR5IVr+v4HYJoU3V"
   },
   {
@@ -54942,9 +55383,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "79ZnUac2xJI6FO4dXMZFDG"
   },
   {
@@ -55242,9 +55686,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f1GucEduVLia+isSbKrhAt"
   },
   {
@@ -55542,9 +55989,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9cOHp8KYVKWJGCoQkez26f"
   },
   {
@@ -55842,9 +56292,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "163l9Z1lhFE4hy/oF8J2TQ"
   },
   {
@@ -56142,9 +56595,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "66u7oLceFHHI7+05tbaM82"
   },
   {
@@ -56442,9 +56898,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "bb6j+C811IIZ4hVfD0p+SD"
   },
   {
@@ -56742,9 +57201,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "38LslCyrVGWb0RVxRgBa6h"
   },
   {
@@ -57042,9 +57504,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3a1k1xi/lA/6I2PVQa7iLt"
   },
   {
@@ -57342,9 +57807,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "60g09qiLZD66qhCDckHBzE"
   },
   {
@@ -57642,9 +58110,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "8fh5vr3JBOSZPvl3F5j+R+"
   },
   {
@@ -57942,9 +58413,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "26M7y5LvlFc7rSKtVh3Mcf"
   },
   {
@@ -58242,9 +58716,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d8OhNmQ55FF7NDYDQt1Fo1"
   },
   {
@@ -58542,9 +59019,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "623JYtQc9GP74z2ZIoam93"
   },
   {
@@ -58842,9 +59322,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "98ZTImlxJHpb+HsJ53Usva"
   },
   {
@@ -59142,9 +59625,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5ePfAmkJ1CL7BF8xurkyrE"
   },
   {
@@ -59442,9 +59928,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "1ecCfuZ5lJZZVblOPzKhGv"
   },
   {
@@ -59742,9 +60231,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3bUy3X68FBGIYHsRdkCdMS"
   },
   {
@@ -60042,9 +60534,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f26VsljcNA86mUg1WysMpA"
   },
   {
@@ -60342,9 +60837,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "45SyMw6LtICbbWX9BIEh4a"
   },
   {
@@ -60642,9 +61140,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b8cIq+mTlPN5nH5xrtgbSj"
   },
   {
@@ -60942,9 +61443,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "87tqEls7tIQ6tP+FFUILgE"
   },
   {
@@ -61242,9 +61746,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "18xYeAKcVJY7G+oktL1GTg"
   },
   {
@@ -61542,9 +62049,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "75O7VPei9PLZJFnNY52leg"
   },
   {
@@ -61842,9 +62352,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "78S2lb+cRL9qtAEg+9IWgl"
   },
   {
@@ -62142,9 +62655,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f9oAel7NdG6ZNd6RTgyRPX"
   },
   {
@@ -62442,9 +62958,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c0qt9rADdIV72fvZ3FunHd"
   },
   {
@@ -62742,9 +63261,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "83+ovlNxpLCblNXDob0HbQ"
   },
   {
@@ -63042,9 +63564,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "67bVeM4ZpNSqDeg+KkdeRD"
   },
   {
@@ -63342,9 +63867,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "31ofp9McFN37Og/S8UGAjP"
   },
   {
@@ -63642,9 +64170,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "75Cntx0DFGRIxzgVNyxyL7"
   },
   {
@@ -63942,9 +64473,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f8O1AHrbdMn7uYbi12QQhl"
   },
   {
@@ -64242,9 +64776,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b5qqkCIDVNgruL6/YBdxq8"
   },
   {
@@ -64542,9 +65079,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5aAo0rmL9CGrqH1oEg5tgD"
   },
   {
@@ -64842,9 +65382,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "20lwb5RcNJfLxhzGOwuYxp"
   },
   {
@@ -65142,9 +65685,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "4aE2krcAtAJ6EwO5EX0UgW"
   },
   {
@@ -65442,9 +65988,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6dIzl0JTFMzY2Srh2A2QEj"
   },
   {
@@ -65742,9 +66291,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "50X5L8KsdMT4LRqpb7pjhj"
   },
   {
@@ -66042,9 +66594,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ffskk4zbRKV5dsAKFBFOiU"
   },
   {
@@ -66342,9 +66897,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "09OB4XLFtIsqbbQrOX28vz"
   },
   {
@@ -66642,9 +67200,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "fbgO+a/qlJEasxQQlj5rqS"
   },
   {
@@ -66942,9 +67503,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ffC9TqD+REH7/XXXAZ5EMH"
   },
   {
@@ -67242,9 +67806,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "92P7ZpR5hAFriWuifAf7Ei"
   },
   {
@@ -67542,9 +68109,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "91PxdcVrtD55RwDWyyeWjK"
   },
   {
@@ -67842,9 +68412,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a9QxYlURZJLLxNLF5/yqDQ"
   },
   {
@@ -68142,9 +68715,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "baXXu3w3BCNZ1xhnpBKvmi"
   },
   {
@@ -68442,9 +69018,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "69jIuBc6VN6KUvNmuKeGKY"
   },
   {
@@ -68742,9 +69321,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "8711D0wIFIz4mt9TFQBLBe"
   },
   {
@@ -69042,9 +69624,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c5LOX/pkVPE7rzfJ1YAnsg"
   },
   {
@@ -69342,9 +69927,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "19GpTvA1BGMq8RiNnmJKZX"
   },
   {
@@ -69642,9 +70230,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "64RJdLIM9CVL43rQDcKz6P"
   },
   {
@@ -69942,9 +70533,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f46BLjcupI3rB7RY1urlCK"
   },
   {
@@ -70242,9 +70836,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "93p1QLabRGSIvT28msBlJV"
   },
   {
@@ -70542,9 +71139,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "27gcxy0gJOuYelg7aoALMN"
   },
   {
@@ -70842,9 +71442,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "70NveEyXVAy7BO7PsjBMPW"
   },
   {
@@ -71142,9 +71745,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "8aPyfda8xJcrkfaC/u/HJM"
   },
   {
@@ -71442,9 +72048,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5dFfoy8aZDAIOkaDarc51H"
   },
   {
@@ -71742,9 +72351,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "598wS3oOlLvo5TC+CS043W"
   },
   {
@@ -72042,9 +72654,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e5qAq5phVF+YUEXNcrIR2f"
   },
   {
@@ -72342,9 +72957,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "beIbSdqB9HR6EWud1HmouM"
   },
   {
@@ -72642,9 +73260,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "29PinwWTBMKYqAkQ0Dc9FG"
   },
   {
@@ -72942,9 +73563,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "32f1+O3k9OJ6Hd2uosl0E6"
   },
   {
@@ -73242,9 +73866,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3dn1SsgglNhZT6NTlde80a"
   },
   {
@@ -73542,9 +74169,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9eqr0CQhBHNon5N14WQ2a1"
   },
   {
@@ -73842,9 +74472,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b2p9nGvu9ALYG6cpUDLycg"
   },
   {
@@ -74142,9 +74775,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "abKxTKjcJGMJ4Z9zw4qOUD"
   },
   {
@@ -74442,9 +75078,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "92niGgGn9KIa0hntcegO/j"
   },
   {
@@ -74742,9 +75381,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c3/OgB9iJBS7pLj1Sr42kG"
   },
   {
@@ -75042,9 +75684,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9bhgqkw5hNlrYmSchVbeCW"
   },
   {
@@ -75342,9 +75987,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f47E1fLMJBaYF1Cc/gEmzw"
   },
   {
@@ -75642,9 +76290,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f7HZoWREJHQb++Q7+gEuB7"
   },
   {
@@ -75942,9 +76593,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "56wV6NRddHH4Th4ZrUS1rK"
   },
   {
@@ -76242,9 +76896,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9cW3wYucVNwbCFohv48T4l"
   },
   {
@@ -76542,9 +77199,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "efW3rvoNVI+rwo0FwtJVYl"
   },
   {
@@ -76842,9 +77502,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "40mk1Ru3pJGq/Braq+ZLet"
   },
   {
@@ -77142,9 +77805,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9cTSgdMLZG5aZZVjGvkSE8"
   },
   {
@@ -77442,9 +78108,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "damuBWVXtJWZC35H6KaQAs"
   },
   {
@@ -77742,9 +78411,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "4bXzXI6odGgL5frlFd0OJI"
   },
   {
@@ -78042,9 +78714,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "04VZQtYEhH0YMlgJvtT26O"
   },
   {
@@ -78342,9 +79017,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e6zV69a3lALZjkJ+BK1y/i"
   },
   {
@@ -78642,9 +79320,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5eEZsVsqBIqZINboxm1xFt"
   },
   {
@@ -78942,9 +79623,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ecwfGMp+NMaLyWME5xgoqd"
   },
   {
@@ -79242,9 +79926,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b8NHfWUW1LObvMAgcMF8Bn"
   },
   {
@@ -79542,9 +80229,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5cHd1kB6tHZ69SGtjDV/oS"
   },
   {
@@ -79842,9 +80532,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3d9Y7Io0RIqpXaaHuLcOcb"
   },
   {
@@ -80142,9 +80835,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "82g9TxkHJMdaU7f+JthfU8"
   },
   {
@@ -80442,9 +81138,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b5qTpM2xdLWJuk0CTM99MH"
   },
   {
@@ -80742,9 +81441,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ff7bXAAGhIrbUWtsYHBMZY"
   },
   {
@@ -81042,9 +81744,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "30vwWFRwhHNI/CZ3CCznKq"
   },
   {
@@ -81342,9 +82047,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b56rDu5qBP8Y1wpv/5DPSS"
   },
   {
@@ -81642,9 +82350,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "25RvNn2kFAS4cdawEZDQsx"
   },
   {
@@ -81942,9 +82653,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "63wk5GJ9tPZogJ+MKoi2pb"
   },
   {
@@ -82242,9 +82956,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "42oWB+G+9GrKzFo0Zv9SuH"
   },
   {
@@ -82542,9 +83259,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "71GrtmzFtAmpF31x3f+hG2"
   },
   {
@@ -82842,9 +83562,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ac8l644XFMkq3MAkkGdAU7"
   },
   {
@@ -83142,9 +83865,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "38BCFFLs5JmKwJ8gAOT5Ds"
   },
   {
@@ -83442,9 +84168,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "09lSiKEpxL8qbI5nhDuS5/"
   },
   {
@@ -83742,9 +84471,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ecXWYJ9rlMdp5f5R2g24AZ"
   },
   {
@@ -84042,9 +84774,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3bHLzZeRhEQ5Dr/D/8bFVx"
   },
   {
@@ -84342,9 +85077,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5eHbayS5ZNnof66bZ1jWVv"
   },
   {
@@ -84642,9 +85380,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "cd6RRjWYVJvICWsKqkuVk/"
   },
   {
@@ -84942,9 +85683,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "21ZiFneBpGv7kg4G2Ktqf2"
   },
   {
@@ -85242,9 +85986,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "47YXjWeDNGBKVLllxHPpsf"
   },
   {
@@ -85542,9 +86289,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7a88UcxFBLFrDYIGn/NxX2"
   },
   {
@@ -85842,9 +86592,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c31xvNt0dE3bsEqzseOjHs"
   },
   {
@@ -86142,9 +86895,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "0bBvGcGSdIp7nPnrW10GL8"
   },
   {
@@ -86442,9 +87198,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "07PEml0P9PH6Lw/E6U8X21"
   },
   {
@@ -86742,9 +87501,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "14Rwmv+HhAu7yVaB57iKJv"
   },
   {
@@ -87042,9 +87804,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ceSmgz8atBY4ZHsc/bLGZ1"
   },
   {
@@ -87342,9 +88107,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "abkffT/ABBbZPjn+N9UsRN"
   },
   {
@@ -87642,9 +88410,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a7OBvRNrBDc7XZOUBhKuH2"
   },
   {
@@ -87942,9 +88713,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "34UmTHweRB+4hbvg6uNAmL"
   },
   {
@@ -88242,9 +89016,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3eN19mo0ZMUrbRS+5J0dq4"
   },
   {
@@ -88542,9 +89319,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "1dgwPQSLpJ5710ZoxjHqx8"
   },
   {
@@ -88842,9 +89622,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "50kP2MpLxKJYtYGibfnUaP"
   },
   {
@@ -89142,9 +89925,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "50Vm1+KIpF54QhaX2adu2s"
   },
   {
@@ -89442,9 +90228,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "caL7fRda1Ja7w0Vi9uO+Nb"
   },
   {
@@ -89742,9 +90531,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "488bCSXNBGtJ+foT/qvJS0"
   },
   {
@@ -90042,9 +90834,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "62omOpPDRCIpdlsC5tDwNt"
   },
   {
@@ -90342,9 +91137,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "aev8wIxn5Ckozr/X/+qc1j"
   },
   {
@@ -90642,9 +91440,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "402YTJ36JAwbqIxe76DOjQ"
   },
   {
@@ -90942,9 +91743,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6fpK7nwaNMJqAfYiqGLPJw"
   },
   {
@@ -91242,9 +92046,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "67Pcf/0ZFGtaptcFJjW7uh"
   },
   {
@@ -91542,9 +92349,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "4aODUvZiBKzZbit9gsWySh"
   },
   {
@@ -91842,9 +92652,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c6hD+y91VPZbbzV+cXpdPT"
   },
   {
@@ -92142,9 +92955,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c4tJX87TNGIZ/4AvMnofAX"
   },
   {
@@ -92442,9 +93258,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "fbwt6/c4ZKcb5VJuzRgAo6"
   },
   {
@@ -92742,9 +93561,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e8RLayGPdKyqPAquf6//u3"
   },
   {
@@ -93042,9 +93864,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5eJZ343HlOhJupJa/KrjaL"
   },
   {
@@ -93342,9 +94167,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6aTA8f3WFJVJndn3HpihTR"
   },
   {
@@ -93642,9 +94470,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d4f/6fXa5Hj4aX9zNlyy7+"
   },
   {
@@ -93942,9 +94773,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3fMPucoEVIWLlLrMPxDbXZ"
   },
   {
@@ -94242,9 +95076,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d2vRRZdyRM/plPvHahkukK"
   },
   {
@@ -94542,9 +95379,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ac1pcUFf9I4rWrqdvQ2b3U"
   },
   {
@@ -94842,9 +95682,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "062lhq+MlI6IPp2YOZwJJ6"
   },
   {
@@ -95142,9 +95985,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9cLjVEjMFIrYjVUU9DDVQq"
   },
   {
@@ -95442,9 +96288,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "01enot4k9KpY6hdOzBY7/i"
   },
   {
@@ -95742,9 +96591,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "dfvkoJh0ZCg4xPVxytHsDq"
   },
   {
@@ -96042,9 +96894,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "abiiqtDsxNxoT0wqmr9Rzd"
   },
   {
@@ -96342,9 +97197,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "15b5zuhwlD5aVPAVwjk6yD"
   },
   {
@@ -96642,9 +97500,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "62JU0QhApBU7U6HwiEXltS"
   },
   {
@@ -96942,9 +97803,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "64ZJSgvedObLoPsWiWi8yw"
   },
   {
@@ -97242,9 +98106,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "20d+BSsZhDA4tYjeidq4gf"
   },
   {
@@ -97542,9 +98409,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "46cA9Cx2RIyqLfr29spY0m"
   },
   {
@@ -97842,9 +98712,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "20IS57ND5D6YX1AD9zCUC2"
   },
   {
@@ -98142,9 +99015,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "56WFMfPyFIg7ZPmo1K/P9X"
   },
   {
@@ -98442,9 +99318,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "39Tk6iZ5pPzLtClvFiXK2Q"
   },
   {
@@ -98742,9 +99621,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "12PN2ItAZHdIZSoNVnmN7j"
   },
   {
@@ -99042,9 +99924,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f8ANBwZkNLq6fd3vafDceE"
   },
   {
@@ -99342,9 +100227,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "06+63VQKND5rxXAH7Osj0e"
   },
   {
@@ -99642,9 +100530,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "94PfKk0otCbooUphcBx536"
   },
   {
@@ -99942,9 +100833,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f5vyD5fvBBMYPSP8gSUWtv"
   },
   {
@@ -100242,9 +101136,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7b/Q5+6+hGnZEP5IVlO751"
   },
   {
@@ -100542,9 +101439,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "0fVWwzSTFOZLy0cWZm1/Ul"
   },
   {
@@ -100842,9 +101742,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "459vU0Tl1Ko4P1Vhcgo1SA"
   },
   {
@@ -101142,9 +102045,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "72bpd3wvJC56HnZuAWzlsi"
   },
   {
@@ -101442,9 +102348,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b4tvdRNw1MKo9ci9dDv+jX"
   },
   {
@@ -101742,9 +102651,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "99CiOAXVhM/aTkXBvuxjFJ"
   },
   {
@@ -102042,9 +102954,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "8cEYTNYhNNXKID5cKv1zBg"
   },
   {
@@ -102342,9 +103257,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a3MDbG+klNX6mY7R0PJ8t2"
   },
   {
@@ -102642,9 +103560,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "541B/v5N9G5oK9xtxoulHJ"
   },
   {
@@ -102942,9 +103863,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c2KgVUJbJPnLWDlCoZ5gfb"
   },
   {
@@ -103242,9 +104166,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "0fnoqLGyBCzKyqU+3hhKmm"
   },
   {
@@ -103542,9 +104469,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "33kM5stqRNf6TQ0lHQdfqJ"
   },
   {
@@ -103842,9 +104772,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f0cFg5aXxBureTUbvF+iUq"
   },
   {
@@ -104142,9 +105075,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "afck4QEfVORIaTxgq3Y2e4"
   },
   {
@@ -104442,9 +105378,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "14niuH8/xEc5GygQ3z8hdQ"
   },
   {
@@ -104742,9 +105681,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "71iJpyOqFIBrJSFF7LN9aw"
   },
   {
@@ -105042,9 +105984,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9bWJLDBDJPw7YN/FRXrHoH"
   },
   {
@@ -105342,9 +106287,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d5IJprwhFA5qeOFceEPznO"
   },
   {
@@ -105642,9 +106590,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "545mQuEIBM8KAF8AzWyw9k"
   },
   {
@@ -105942,9 +106893,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "fcWSrBypJEzp+9BF9aOP0B"
   },
   {
@@ -106242,9 +107196,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6c52rTZWBM2ZAmfJL1YoOY"
   },
   {
@@ -106542,9 +107499,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6dCSfUCa5LEqrSCup6+ztv"
   },
   {
@@ -106842,9 +107802,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3caIhftblGX5RnbWdAYwKH"
   },
   {
@@ -107142,9 +108105,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f2w/FVbDJFpaPkH32UnEb7"
   },
   {
@@ -107442,9 +108408,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c7XY5ql+lMuZVoWtXqTdrx"
   },
   {
@@ -107742,9 +108711,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "55ca6JYHFMZqB+DZujGyXe"
   },
   {
@@ -108042,9 +109014,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "dadgmFN8NFLa1Htf9VFNJa"
   },
   {
@@ -108342,9 +109317,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "39oSVxW0RGm5R3aURz3tqD"
   },
   {
@@ -108642,9 +109620,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d9mry+0xNIzrpHYGPWqk7z"
   },
   {
@@ -108942,9 +109923,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "cf9jo1u5lLzJI1Jb27shll"
   },
   {
@@ -109242,9 +110226,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3dL3ICwYpOT6JZukMCTJjw"
   },
   {
@@ -109542,9 +110529,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "211g3KI5ZKl5+ATFuGAxpw"
   },
   {
@@ -109842,9 +110832,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "43hT/WF3hGi6mBZZ9DcQvw"
   },
   {
@@ -110142,9 +111135,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5edjBei5dOYZjeh9UnmJwO"
   },
   {
@@ -110442,9 +111438,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "52u0kbdDdDsqW+wn5o+5jA"
   },
   {
@@ -110742,9 +111741,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "45Ta9OPzVGhpENRcV7iOg+"
   },
   {
@@ -111042,9 +112044,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c0JjxxcblIhKK2rBOGAOoO"
   },
   {
@@ -111342,9 +112347,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3e29P6IBZI+r+kxQK04SyR"
   },
   {
@@ -111642,9 +112650,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "35uBeNGD1ERaxu8s3xp3d9"
   },
   {
@@ -111942,9 +112953,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f86WVbJslCBIuPlqY/Wne2"
   },
   {
@@ -112242,9 +113256,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e8clE+CTdB8LI1srcHNyeF"
   },
   {
@@ -112542,9 +113559,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d9b4u/3v9HMKOpWf2mtwLQ"
   },
   {
@@ -112842,9 +113862,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f3QVf4dopONoqbHXW9O4fq"
   },
   {
@@ -113142,9 +114165,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "fbA4af8m9OcYoyULXgSQr7"
   },
   {
@@ -113442,9 +114468,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2eRGQ2NelNWrDB4G+swsDp"
   },
   {
@@ -113742,9 +114771,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2bhEp77RlO+qFydACzNjXU"
   },
   {
@@ -114042,9 +115074,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "26gKA/fdpPr73mVWoUcZ3g"
   },
   {
@@ -114342,9 +115377,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "41awzSNrRAiJIouvC3Y312"
   },
   {
@@ -114642,9 +115680,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "56Px7yiphF9LxCWxYpxYUH"
   },
   {
@@ -114942,9 +115983,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "21LGcbS8NIVJVP1NJy8rsm"
   },
   {
@@ -115242,9 +116286,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7brSG6IiFETbqsNz9xn40w"
   },
   {
@@ -115542,9 +116589,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d03h6v74VFdp0RYf2WKI2E"
   },
   {
@@ -115842,9 +116892,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d0WBKiUQlI+4DP+iavp2P4"
   },
   {
@@ -116142,9 +117195,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "4cz0/lH6VOlrjYeCBS4o+b"
   },
   {
@@ -116442,9 +117498,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "0eNl72qcZBZ477e34/84x5"
   },
   {
@@ -116742,9 +117801,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7fa8GlG/VGG7P/0TvJxH5v"
   },
   {
@@ -117042,9 +118104,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a7Flo7iBxH+KvivmgLyujj"
   },
   {
@@ -117342,9 +118407,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "aeyBX7pVtDVKh9nf5v2hDv"
   },
   {
@@ -117642,9 +118710,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "52Az1h2edH0L9pkasQLZf/"
   },
   {
@@ -117942,9 +119013,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b0LKb/x8xKarvxCo9l1mVI"
   },
   {
@@ -118242,9 +119316,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "46S1n6SERHp7gWFVWwDaXX"
   },
   {
@@ -118542,9 +119619,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f5EMUgNI9MGaC2iCjbRplW"
   },
   {
@@ -118842,9 +119922,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a3xpMFGslBL6ssdDFkFcIh"
   },
   {
@@ -119142,9 +120225,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "197gJoxcRJzpmwaf/jSHou"
   },
   {
@@ -119442,9 +120528,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a83/FfHjNG171Y8rM3Tjl+"
   },
   {
@@ -119742,9 +120831,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3fZ29JR7lOEp9hX9lYYE5N"
   },
   {
@@ -120042,9 +121134,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "13ryAd2cZB+Z7FfsJzbspF"
   },
   {
@@ -120342,9 +121437,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "dcuPeVC65NRrBo7EJF0R/q"
   },
   {
@@ -120642,9 +121740,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "87xwOLCaJCF4OQPQejlmgk"
   },
   {
@@ -120942,9 +122043,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "43c+ML0udIAKBR2ymoy+PQ"
   },
   {
@@ -121242,9 +122346,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "15CWTTVyBP1p1ZLv2VRqSu"
   },
   {
@@ -121542,9 +122649,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "06myE4bhVNoqE71O2aHbkp"
   },
   {
@@ -121842,9 +122952,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ebDYcUKEhB0rfcRbxgdHdy"
   },
   {
@@ -122142,9 +123255,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2bD3Qehk5LG4rzg2yejPOg"
   },
   {
@@ -122442,9 +123558,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "619Oj+KsRJL4bVOhq0BsaB"
   },
   {
@@ -122742,9 +123861,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "07sto2NF1IgI0ucZfKcuMj"
   },
   {
@@ -123042,9 +124164,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a1S7bsa09CI7b5UaiVpYqR"
   },
   {
@@ -123342,9 +124467,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "eena8HttJE3rxIonNhRYDO"
   },
   {
@@ -123642,9 +124770,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b61I+q/YZOM6t0Smeleprk"
   },
   {
@@ -123942,9 +125073,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "bcL4pVW0xMyKdGNzEntMWz"
   },
   {
@@ -124242,9 +125376,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "48axmOLKJIIJ2bQmQ+wls6"
   },
   {
@@ -124542,9 +125679,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c8Y8sZS/lJTbPCmGrbCIRm"
   },
   {
@@ -124842,9 +125982,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "15JM0HuP9Gb4KUbKaueAZx"
   },
   {
@@ -125142,9 +126285,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "47OJBLKF5PlL60uf4GpEWw"
   },
   {
@@ -125442,9 +126588,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "cfkNoLmQFGd56+yOIuvENG"
   },
   {
@@ -125742,9 +126891,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "483EF+RHBBp7qWMUg5ju6e"
   },
   {
@@ -126042,9 +127194,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "21QqjotgRNzIQPMb6SeGSb"
   },
   {
@@ -126342,9 +127497,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "cdJwD5BiJJI7Hf5d6f059N"
   },
   {
@@ -126642,9 +127800,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "66Tw2CoblONI3x4xrCCN0I"
   },
   {
@@ -126942,9 +128103,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f6yVBa/g9O+omyWvfMZ2aU"
   },
   {
@@ -127242,9 +128406,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6bdUujVFBBb6+Yovyajm2T"
   },
   {
@@ -127542,9 +128709,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "81zxU9qeBM6KdCN+5cfgxW"
   },
   {
@@ -127842,9 +129012,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "27UhpaktNDx6pS3s7u22Of"
   },
   {
@@ -128142,9 +129315,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "0dOcNtMyFH95U5pdXpwcun"
   },
   {
@@ -128442,9 +129618,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "1f8UEQp1NPwo9w+/fnADx/"
   },
   {
@@ -128742,9 +129921,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "33h4wOKilJ1ahIVFX2Kp6z"
   },
   {
@@ -129042,9 +130224,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "6a/1DcZf9E76LzlzBvkui5"
   },
   {
@@ -129342,9 +130527,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "1cdq0kDORG9rBVy71YQOxo"
   },
   {
@@ -129642,9 +130830,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "22zsumI5tLt4Lg/wGZYmAM"
   },
   {
@@ -129942,9 +131133,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a9LmjIeRlDRJEAVgkh+JnG"
   },
   {
@@ -130242,9 +131436,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "40DCAFcd1IVZfmYMF5SWp0"
   },
   {
@@ -130542,9 +131739,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "15BRJz3BZP3Yy2+ho7V7FT"
   },
   {
@@ -130842,9 +132042,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "5dmitW5y5AEaSNhBeF5Jg4"
   },
   {
@@ -131142,9 +132345,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "59oq/7VPxEH7HBOhUcaQVu"
   },
   {
@@ -131442,9 +132648,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d21PIbi/pMWJpU0m865PY/"
   },
   {
@@ -131742,9 +132951,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7cogCS15FBt55uL3xVT3K0"
   },
   {
@@ -132042,9 +133254,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2coWTmBiRJeIqQLxLtI5Zy"
   },
   {
@@ -132342,9 +133557,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "9d4/vrf2BNuaXwspwemWQn"
   },
   {
@@ -132642,9 +133860,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "97zZI5fxRKR7c5bg+MhQsa"
   },
   {
@@ -132942,9 +134163,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b9TtHIIOxBw79JpfEh+jOW"
   },
   {
@@ -133242,9 +134466,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "ed2O+I1bpN15TJ+dbQOHlZ"
   },
   {
@@ -133542,9 +134769,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "549xELHWdE6ZTLw5GXWI94"
   },
   {
@@ -133842,9 +135072,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "37ZMMQditCU5PFkzddo8G5"
   },
   {
@@ -134142,9 +135375,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "51cVWFW8pFX4w4I85j24N3"
   },
   {
@@ -134442,9 +135678,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "8a61OF7nlL1paLXCUt8DrH"
   },
   {
@@ -134742,9 +135981,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "8c9v0XbAlOPoDpZJG3MWaE"
   },
   {
@@ -135042,9 +136284,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "87KEPsauxPtrfs0BU6kkux"
   },
   {
@@ -135342,9 +136587,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "bbOvEFiWBAxakg2ATtzplB"
   },
   {
@@ -135642,9 +136890,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f4aoXrtfVBNbXYcvFXSFmY"
   },
   {
@@ -135942,9 +137193,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "32wuZD289PRouUx/X+A31n"
   },
   {
@@ -136242,9 +137496,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7cgE0/cqpHypnHmVhLFbI9"
   },
   {
@@ -136542,9 +137799,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "78I7GyTUdNe63hfoL1WrNI"
   },
   {
@@ -136842,9 +138102,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "2bjfkqhBhEV68lI4h1QIP/"
   },
   {
@@ -137142,9 +138405,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "a4jXyRgKNLa6SoVn+I/+tv"
   },
   {
@@ -137442,9 +138708,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "683dnd8XpJ1om7Hv+r9RDN"
   },
   {
@@ -137742,9 +139011,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "30acjLmWdF5K1RaNdRk+Bj"
   },
   {
@@ -138042,9 +139314,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c1TgWbO49D85crbKHq9N1G"
   },
   {
@@ -138342,9 +139617,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f7NQcCFwFFgZqi2He9jKU3"
   },
   {
@@ -138642,9 +139920,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "dftziOYUZIvrqDWrAEWXkN"
   },
   {
@@ -138942,9 +140223,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "26hCV/LdZLA6gH73JSgsR7"
   },
   {
@@ -139242,9 +140526,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f4BcNpb21Jz6GhY51j5qUw"
   },
   {
@@ -139542,9 +140829,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "52iZKbxj9Pep1mCVj15JHi"
   },
   {
@@ -139842,9 +141132,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "e0M/GbfYpIXoudmCOmPMAQ"
   },
   {
@@ -140142,9 +141435,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "59sSOkSX5GSb8akKe50owB"
   },
   {
@@ -140442,9 +141738,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "3eapu0OFlLc5j04ZyVjy9+"
   },
   {
@@ -140742,9 +142041,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "1662Vj4blF8qFSMhwUOQpa"
   },
   {
@@ -141042,9 +142344,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "95LdiZnQRPob0GqEC/Wv/w"
   },
   {
@@ -141342,9 +142647,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c5ehtZ6ERAnYYdT7CBRp4C"
   },
   {
@@ -141642,9 +142950,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "83VWEtOotDpp231EvjsHFo"
   },
   {
@@ -141942,9 +143253,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "50fhf84YxON53tso/y7yhd"
   },
   {
@@ -142242,9 +143556,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "efApfWwpBDVISyDPidWL7W"
   },
   {
@@ -142542,9 +143859,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "c7tBWWNSFOa419O0WLYTuB"
   },
   {
@@ -142842,9 +144162,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "7cpgaeq5xB07Nbvz6eob7z"
   },
   {
@@ -143142,9 +144465,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b32JIUO9NE1apI5gl7fBVK"
   },
   {
@@ -143442,9 +144768,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "b0eCfhK+lODpeT6DexdncZ"
   },
   {
@@ -143742,9 +145071,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "18P/GUWClGobmxsHKjgE/A"
   },
   {
@@ -144042,9 +145374,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "93nnrRCu5EkoZPuPq86Mmu"
   },
   {
@@ -144342,9 +145677,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "39v6iPzjdIDpiSxDW6YG+W"
   },
   {
@@ -144642,9 +145980,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "d82ktzaOVLuYq/NxUWfVSU"
   },
   {
@@ -144942,9 +146283,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 573
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "77dSH6VkNLLq9PICPu0FIj"
   },
   {
@@ -145088,9 +146432,12 @@
     "scoreLabel": {
       "__id__": 454
     },
+    "collectDistance": 100,
     "coinSound": {
       "__id__": 592
     },
+    "magnetRadius": 100,
+    "magnetPullSpeed": 5,
     "_id": "f9/Fs4MTpMUr8JWPQC/nUn"
   },
   {
@@ -145281,15 +146628,12 @@
       },
       {
         "__id__": 10164
-      },
-      {
-        "__id__": 10184
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 10204
+        "__id__": 10184
       }
     ],
     "_prefab": null,
@@ -161887,7 +163231,7 @@
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "73OXMRERRIuJFjWw7TOiRh",
+    "fileId": "d8tk+h5aZOVZa0oTW+ZByz",
     "prefabRootNode": null,
     "mountedChildren": [],
     "mountedComponents": [
@@ -161973,7 +163317,7 @@
       "y": 1,
       "z": 1
     },
-    "_id": "ecBCNPWtRMKLE4MZ1+RhkJ"
+    "_id": "28dpBTn2BKS7/5FDynQdab"
   },
   {
     "__type__": "cc.BoxCollider",
@@ -162003,7 +163347,7 @@
       "y": 4,
       "z": 2
     },
-    "_id": "65G0YrCGtLhp6RGUoshhhM"
+    "_id": "72JgPPmhJMd6Z5JR8E/OJP"
   },
   {
     "__type__": "dbb3bUFmsZMqJakjUNqTzrJ",
@@ -162022,7 +163366,7 @@
     "player": {
       "__id__": 18
     },
-    "_id": "3aslExHldFja04R0AOFQNy"
+    "_id": "27JXutR+dIGZBJCwm4+yNt"
   },
   {
     "__type__": "CCPropertyOverrideInfo",
@@ -162032,7 +163376,7 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "obstacles-059"
+    "value": "obstacles-060"
   },
   {
     "__type__": "cc.TargetInfo",
@@ -162050,9 +163394,9 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 42.91200000000151,
-      "y": -217.123,
-      "z": -6804.335
+      "x": -13.635999999998322,
+      "y": -2.763,
+      "z": -7553.389
     }
   },
   {
@@ -162147,294 +163491,6 @@
     ]
   },
   {
-    "__type__": "cc.Node",
-    "_objFlags": 512,
-    "_parent": {
-      "__id__": 9021
-    },
-    "_prefab": {
-      "__id__": 10185
-    },
-    "__editorExtras__": {}
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 10184
-    },
-    "asset": {
-      "__uuid__": "00400dd7-f326-4e33-9298-00a662617e0d@314d3",
-      "__expectedType__": "cc.Prefab"
-    },
-    "fileId": "3cD8rY7fFdnaal5kWLQ++B",
-    "instance": {
-      "__id__": 10186
-    },
-    "targetOverrides": null,
-    "nestedPrefabInstanceRoots": null
-  },
-  {
-    "__type__": "cc.PrefabInstance",
-    "fileId": "d8tk+h5aZOVZa0oTW+ZByz",
-    "prefabRootNode": null,
-    "mountedChildren": [],
-    "mountedComponents": [
-      {
-        "__id__": 10187
-      }
-    ],
-    "propertyOverrides": [
-      {
-        "__id__": 10192
-      },
-      {
-        "__id__": 10194
-      },
-      {
-        "__id__": 10196
-      },
-      {
-        "__id__": 10198
-      },
-      {
-        "__id__": 10200
-      },
-      {
-        "__id__": 10202
-      }
-    ],
-    "removedComponents": []
-  },
-  {
-    "__type__": "cc.MountedComponentsInfo",
-    "targetInfo": {
-      "__id__": 10188
-    },
-    "components": [
-      {
-        "__id__": 10189
-      },
-      {
-        "__id__": 10190
-      },
-      {
-        "__id__": 10191
-      }
-    ]
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "3cD8rY7fFdnaal5kWLQ++B"
-    ]
-  },
-  {
-    "__type__": "cc.RigidBody",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {
-      "mountedRoot": {
-        "__id__": 10184
-      }
-    },
-    "node": {
-      "__id__": 10184
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_group": 1,
-    "_type": 2,
-    "_mass": 1,
-    "_allowSleep": true,
-    "_linearDamping": 0.1,
-    "_angularDamping": 0.1,
-    "_useGravity": true,
-    "_linearFactor": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_angularFactor": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_id": "28dpBTn2BKS7/5FDynQdab"
-  },
-  {
-    "__type__": "cc.BoxCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {
-      "mountedRoot": {
-        "__id__": 10184
-      }
-    },
-    "node": {
-      "__id__": 10184
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_material": null,
-    "_isTrigger": true,
-    "_center": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 2,
-      "z": 0
-    },
-    "_size": {
-      "__type__": "cc.Vec3",
-      "x": 2,
-      "y": 4,
-      "z": 2
-    },
-    "_id": "72JgPPmhJMd6Z5JR8E/OJP"
-  },
-  {
-    "__type__": "dbb3bUFmsZMqJakjUNqTzrJ",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {
-      "mountedRoot": {
-        "__id__": 10184
-      }
-    },
-    "node": {
-      "__id__": 10184
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "player": {
-      "__id__": 18
-    },
-    "_id": "27JXutR+dIGZBJCwm4+yNt"
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 10193
-    },
-    "propertyPath": [
-      "_name"
-    ],
-    "value": "obstacles-060"
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "3cD8rY7fFdnaal5kWLQ++B"
-    ]
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 10195
-    },
-    "propertyPath": [
-      "_lpos"
-    ],
-    "value": {
-      "__type__": "cc.Vec3",
-      "x": -13.635999999998322,
-      "y": -2.763,
-      "z": -7553.389
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "3cD8rY7fFdnaal5kWLQ++B"
-    ]
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 10197
-    },
-    "propertyPath": [
-      "_lrot"
-    ],
-    "value": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0.008726535498373935,
-      "z": 0,
-      "w": 0.9999619230641713
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "3cD8rY7fFdnaal5kWLQ++B"
-    ]
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 10199
-    },
-    "propertyPath": [
-      "_euler"
-    ],
-    "value": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 1,
-      "z": 0
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "3cD8rY7fFdnaal5kWLQ++B"
-    ]
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 10201
-    },
-    "propertyPath": [
-      "_lscale"
-    ],
-    "value": {
-      "__type__": "cc.Vec3",
-      "x": 10,
-      "y": 10,
-      "z": 10
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "3cD8rY7fFdnaal5kWLQ++B"
-    ]
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 10203
-    },
-    "propertyPath": [
-      "_lpos"
-    ],
-    "value": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "f7zjHScv9dfoJ97gSPyXOK"
-    ]
-  },
-  {
     "__type__": "dbb3bUFmsZMqJakjUNqTzrJ",
     "_name": "",
     "_objFlags": 0,
@@ -162459,25 +163515,25 @@
     },
     "_children": [
       {
-        "__id__": 10206
+        "__id__": 10186
       },
       {
-        "__id__": 10218
+        "__id__": 10198
       },
       {
-        "__id__": 10231
+        "__id__": 10211
       },
       {
-        "__id__": 10244
+        "__id__": 10224
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 10257
+        "__id__": 10237
       },
       {
-        "__id__": 10258
+        "__id__": 10238
       }
     ],
     "_prefab": null,
@@ -162514,17 +163570,17 @@
     "__type__": "cc.Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 10205
+      "__id__": 10185
     },
     "_prefab": {
-      "__id__": 10207
+      "__id__": 10187
     },
     "__editorExtras__": {}
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 10206
+      "__id__": 10186
     },
     "asset": {
       "__uuid__": "fde742a9-3cd9-458e-8d42-145af937077a@19347",
@@ -162532,7 +163588,7 @@
     },
     "fileId": "497bVx4eVX/4+jNoKV5KMG",
     "instance": {
-      "__id__": 10208
+      "__id__": 10188
     },
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -162545,19 +163601,19 @@
     "mountedComponents": [],
     "propertyOverrides": [
       {
-        "__id__": 10209
+        "__id__": 10189
       },
       {
-        "__id__": 10211
+        "__id__": 10191
       },
       {
-        "__id__": 10213
+        "__id__": 10193
       },
       {
-        "__id__": 10215
+        "__id__": 10195
       },
       {
-        "__id__": 10217
+        "__id__": 10197
       }
     ],
     "removedComponents": []
@@ -162565,7 +163621,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10210
+      "__id__": 10190
     },
     "propertyPath": [
       "_name"
@@ -162581,7 +163637,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10212
+      "__id__": 10192
     },
     "propertyPath": [
       "_lpos"
@@ -162602,7 +163658,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10214
+      "__id__": 10194
     },
     "propertyPath": [
       "_lrot"
@@ -162624,7 +163680,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10216
+      "__id__": 10196
     },
     "propertyPath": [
       "_euler"
@@ -162645,7 +163701,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10216
+      "__id__": 10196
     },
     "propertyPath": [
       "_lscale"
@@ -162661,17 +163717,17 @@
     "__type__": "cc.Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 10205
+      "__id__": 10185
     },
     "_prefab": {
-      "__id__": 10219
+      "__id__": 10199
     },
     "__editorExtras__": {}
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 10218
+      "__id__": 10198
     },
     "asset": {
       "__uuid__": "fde742a9-3cd9-458e-8d42-145af937077a@19347",
@@ -162679,7 +163735,7 @@
     },
     "fileId": "497bVx4eVX/4+jNoKV5KMG",
     "instance": {
-      "__id__": 10220
+      "__id__": 10200
     },
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -162692,19 +163748,19 @@
     "mountedComponents": [],
     "propertyOverrides": [
       {
-        "__id__": 10221
+        "__id__": 10201
       },
       {
-        "__id__": 10223
+        "__id__": 10203
       },
       {
-        "__id__": 10225
+        "__id__": 10205
       },
       {
-        "__id__": 10227
+        "__id__": 10207
       },
       {
-        "__id__": 10229
+        "__id__": 10209
       }
     ],
     "removedComponents": []
@@ -162712,7 +163768,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10222
+      "__id__": 10202
     },
     "propertyPath": [
       "_name"
@@ -162728,7 +163784,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10224
+      "__id__": 10204
     },
     "propertyPath": [
       "_lpos"
@@ -162749,7 +163805,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10226
+      "__id__": 10206
     },
     "propertyPath": [
       "_lrot"
@@ -162771,7 +163827,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10228
+      "__id__": 10208
     },
     "propertyPath": [
       "_euler"
@@ -162792,7 +163848,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10230
+      "__id__": 10210
     },
     "propertyPath": [
       "_lscale"
@@ -162814,17 +163870,17 @@
     "__type__": "cc.Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 10205
+      "__id__": 10185
     },
     "_prefab": {
-      "__id__": 10232
+      "__id__": 10212
     },
     "__editorExtras__": {}
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 10231
+      "__id__": 10211
     },
     "asset": {
       "__uuid__": "fde742a9-3cd9-458e-8d42-145af937077a@19347",
@@ -162832,7 +163888,7 @@
     },
     "fileId": "497bVx4eVX/4+jNoKV5KMG",
     "instance": {
-      "__id__": 10233
+      "__id__": 10213
     },
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -162845,19 +163901,19 @@
     "mountedComponents": [],
     "propertyOverrides": [
       {
-        "__id__": 10234
+        "__id__": 10214
       },
       {
-        "__id__": 10236
+        "__id__": 10216
       },
       {
-        "__id__": 10238
+        "__id__": 10218
       },
       {
-        "__id__": 10240
+        "__id__": 10220
       },
       {
-        "__id__": 10242
+        "__id__": 10222
       }
     ],
     "removedComponents": []
@@ -162865,7 +163921,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10235
+      "__id__": 10215
     },
     "propertyPath": [
       "_name"
@@ -162881,7 +163937,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10237
+      "__id__": 10217
     },
     "propertyPath": [
       "_lpos"
@@ -162902,7 +163958,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10239
+      "__id__": 10219
     },
     "propertyPath": [
       "_lrot"
@@ -162924,7 +163980,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10241
+      "__id__": 10221
     },
     "propertyPath": [
       "_euler"
@@ -162945,7 +164001,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10243
+      "__id__": 10223
     },
     "propertyPath": [
       "_lscale"
@@ -162967,17 +164023,17 @@
     "__type__": "cc.Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 10205
+      "__id__": 10185
     },
     "_prefab": {
-      "__id__": 10245
+      "__id__": 10225
     },
     "__editorExtras__": {}
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 10244
+      "__id__": 10224
     },
     "asset": {
       "__uuid__": "fde742a9-3cd9-458e-8d42-145af937077a@19347",
@@ -162985,7 +164041,7 @@
     },
     "fileId": "497bVx4eVX/4+jNoKV5KMG",
     "instance": {
-      "__id__": 10246
+      "__id__": 10226
     },
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -162998,19 +164054,19 @@
     "mountedComponents": [],
     "propertyOverrides": [
       {
-        "__id__": 10247
+        "__id__": 10227
       },
       {
-        "__id__": 10249
+        "__id__": 10229
       },
       {
-        "__id__": 10251
+        "__id__": 10231
       },
       {
-        "__id__": 10253
+        "__id__": 10233
       },
       {
-        "__id__": 10255
+        "__id__": 10235
       }
     ],
     "removedComponents": []
@@ -163018,7 +164074,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10248
+      "__id__": 10228
     },
     "propertyPath": [
       "_name"
@@ -163034,7 +164090,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10250
+      "__id__": 10230
     },
     "propertyPath": [
       "_lpos"
@@ -163055,7 +164111,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10252
+      "__id__": 10232
     },
     "propertyPath": [
       "_lrot"
@@ -163077,7 +164133,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10254
+      "__id__": 10234
     },
     "propertyPath": [
       "_euler"
@@ -163098,7 +164154,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 10256
+      "__id__": 10236
     },
     "propertyPath": [
       "_lscale"
@@ -163122,7 +164178,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 10205
+      "__id__": 10185
     },
     "_enabled": true,
     "__prefab": null,
@@ -163153,7 +164209,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 10205
+      "__id__": 10185
     },
     "_enabled": true,
     "__prefab": null,
@@ -163177,6 +164233,2778 @@
     "_id": "71APIiU+JEa7DLD1JUvurn"
   },
   {
+    "__type__": "cc.Node",
+    "_name": "ShildController",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 10240
+      },
+      {
+        "__id__": 10258
+      },
+      {
+        "__id__": 10276
+      },
+      {
+        "__id__": 10294
+      },
+      {
+        "__id__": 10312
+      },
+      {
+        "__id__": 10330
+      }
+    ],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 10348
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_mobility": 0,
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "acXZi26IBCepNspzGKtBPd"
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 10239
+    },
+    "_prefab": {
+      "__id__": 10241
+    },
+    "__editorExtras__": {}
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 10240
+    },
+    "asset": {
+      "__uuid__": "d9ba0fb8-bc6f-4aa1-a4ac-503d70aac356@31841",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fileId": "fd0jKF1llamaqjBlZeyV6l",
+    "instance": {
+      "__id__": 10242
+    },
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.PrefabInstance",
+    "fileId": "aaWEYA3wpL26WPWKDB63i3",
+    "prefabRootNode": null,
+    "mountedChildren": [],
+    "mountedComponents": [
+      {
+        "__id__": 10243
+      }
+    ],
+    "propertyOverrides": [
+      {
+        "__id__": 10248
+      },
+      {
+        "__id__": 10250
+      },
+      {
+        "__id__": 10252
+      },
+      {
+        "__id__": 10254
+      },
+      {
+        "__id__": 10256
+      }
+    ],
+    "removedComponents": []
+  },
+  {
+    "__type__": "cc.MountedComponentsInfo",
+    "targetInfo": {
+      "__id__": 10244
+    },
+    "components": [
+      {
+        "__id__": 10245
+      },
+      {
+        "__id__": 10246
+      },
+      {
+        "__id__": 10247
+      }
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "8da81dsYSZIhrcqjzO7NOAJ",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10240
+      }
+    },
+    "node": {
+      "__id__": 10240
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "_id": "236gevaWRJHJckeyR5rTTV"
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10240
+      }
+    },
+    "node": {
+      "__id__": 10240
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "5frQLm2TlEU7dOva7gYmVh"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10240
+      }
+    },
+    "node": {
+      "__id__": 10240
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_group": 1,
+    "_type": 2,
+    "_mass": 1,
+    "_allowSleep": true,
+    "_linearDamping": 0.1,
+    "_angularDamping": 0.1,
+    "_useGravity": true,
+    "_linearFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_angularFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "adlv1GTHFAt5l60pKMCRCL"
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10249
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "shild"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10251
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 249.575,
+      "y": 0,
+      "z": -62.614
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10253
+    },
+    "propertyPath": [
+      "_lrot"
+    ],
+    "value": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10255
+    },
+    "propertyPath": [
+      "_euler"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10257
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 25,
+      "y": 30,
+      "z": 25
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 10239
+    },
+    "_prefab": {
+      "__id__": 10259
+    },
+    "__editorExtras__": {}
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 10258
+    },
+    "asset": {
+      "__uuid__": "d9ba0fb8-bc6f-4aa1-a4ac-503d70aac356@31841",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fileId": "fd0jKF1llamaqjBlZeyV6l",
+    "instance": {
+      "__id__": 10260
+    },
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.PrefabInstance",
+    "fileId": "857GL7UspPbqSsYpRGebLu",
+    "prefabRootNode": null,
+    "mountedChildren": [],
+    "mountedComponents": [
+      {
+        "__id__": 10261
+      }
+    ],
+    "propertyOverrides": [
+      {
+        "__id__": 10266
+      },
+      {
+        "__id__": 10268
+      },
+      {
+        "__id__": 10270
+      },
+      {
+        "__id__": 10272
+      },
+      {
+        "__id__": 10274
+      }
+    ],
+    "removedComponents": []
+  },
+  {
+    "__type__": "cc.MountedComponentsInfo",
+    "targetInfo": {
+      "__id__": 10262
+    },
+    "components": [
+      {
+        "__id__": 10263
+      },
+      {
+        "__id__": 10264
+      },
+      {
+        "__id__": 10265
+      }
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "8da81dsYSZIhrcqjzO7NOAJ",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10258
+      }
+    },
+    "node": {
+      "__id__": 10258
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "_id": "0dP1WOSdxCJL8TemeUIJEv"
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10258
+      }
+    },
+    "node": {
+      "__id__": 10258
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "ecq9qfGvlIqZAVwUru5RMd"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10258
+      }
+    },
+    "node": {
+      "__id__": 10258
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_group": 1,
+    "_type": 2,
+    "_mass": 1,
+    "_allowSleep": true,
+    "_linearDamping": 0.1,
+    "_angularDamping": 0.1,
+    "_useGravity": true,
+    "_linearFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_angularFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "a6bWSJtdVHXqNM7QzIku7+"
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10267
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "shild-001"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10269
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 1152.02,
+      "y": 0,
+      "z": -66.686
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10271
+    },
+    "propertyPath": [
+      "_lrot"
+    ],
+    "value": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10273
+    },
+    "propertyPath": [
+      "_euler"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10275
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 25,
+      "y": 30,
+      "z": 25
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 10239
+    },
+    "_prefab": {
+      "__id__": 10277
+    },
+    "__editorExtras__": {}
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 10276
+    },
+    "asset": {
+      "__uuid__": "d9ba0fb8-bc6f-4aa1-a4ac-503d70aac356@31841",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fileId": "fd0jKF1llamaqjBlZeyV6l",
+    "instance": {
+      "__id__": 10278
+    },
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.PrefabInstance",
+    "fileId": "052Zv9TmhKXLYPETp3d3XZ",
+    "prefabRootNode": null,
+    "mountedChildren": [],
+    "mountedComponents": [
+      {
+        "__id__": 10279
+      }
+    ],
+    "propertyOverrides": [
+      {
+        "__id__": 10284
+      },
+      {
+        "__id__": 10286
+      },
+      {
+        "__id__": 10288
+      },
+      {
+        "__id__": 10290
+      },
+      {
+        "__id__": 10292
+      }
+    ],
+    "removedComponents": []
+  },
+  {
+    "__type__": "cc.MountedComponentsInfo",
+    "targetInfo": {
+      "__id__": 10280
+    },
+    "components": [
+      {
+        "__id__": 10281
+      },
+      {
+        "__id__": 10282
+      },
+      {
+        "__id__": 10283
+      }
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "8da81dsYSZIhrcqjzO7NOAJ",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10276
+      }
+    },
+    "node": {
+      "__id__": 10276
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "_id": "684AujJYpGyrj2MfSHY3cj"
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10276
+      }
+    },
+    "node": {
+      "__id__": 10276
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "49EkCxD5FCsZVQjwFO5gDt"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10276
+      }
+    },
+    "node": {
+      "__id__": 10276
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_group": 1,
+    "_type": 2,
+    "_mass": 1,
+    "_allowSleep": true,
+    "_linearDamping": 0.1,
+    "_angularDamping": 0.1,
+    "_useGravity": true,
+    "_linearFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_angularFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "a3UyQBqFpMjoUsvYFdbA62"
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10285
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "shild-002"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10287
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 2272.906,
+      "y": 0,
+      "z": 50.974
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10289
+    },
+    "propertyPath": [
+      "_lrot"
+    ],
+    "value": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10291
+    },
+    "propertyPath": [
+      "_euler"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10293
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 25,
+      "y": 30,
+      "z": 25
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 10239
+    },
+    "_prefab": {
+      "__id__": 10295
+    },
+    "__editorExtras__": {}
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 10294
+    },
+    "asset": {
+      "__uuid__": "d9ba0fb8-bc6f-4aa1-a4ac-503d70aac356@31841",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fileId": "fd0jKF1llamaqjBlZeyV6l",
+    "instance": {
+      "__id__": 10296
+    },
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.PrefabInstance",
+    "fileId": "5dgSY8m+1At7xBtwnj78eK",
+    "prefabRootNode": null,
+    "mountedChildren": [],
+    "mountedComponents": [
+      {
+        "__id__": 10297
+      }
+    ],
+    "propertyOverrides": [
+      {
+        "__id__": 10302
+      },
+      {
+        "__id__": 10304
+      },
+      {
+        "__id__": 10306
+      },
+      {
+        "__id__": 10308
+      },
+      {
+        "__id__": 10310
+      }
+    ],
+    "removedComponents": []
+  },
+  {
+    "__type__": "cc.MountedComponentsInfo",
+    "targetInfo": {
+      "__id__": 10298
+    },
+    "components": [
+      {
+        "__id__": 10299
+      },
+      {
+        "__id__": 10300
+      },
+      {
+        "__id__": 10301
+      }
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "8da81dsYSZIhrcqjzO7NOAJ",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10294
+      }
+    },
+    "node": {
+      "__id__": 10294
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "_id": "9dYrCdWoNIpZuH42xdhI1U"
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10294
+      }
+    },
+    "node": {
+      "__id__": 10294
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "12gounB+ZK861OEZU9Mg9j"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10294
+      }
+    },
+    "node": {
+      "__id__": 10294
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_group": 1,
+    "_type": 2,
+    "_mass": 1,
+    "_allowSleep": true,
+    "_linearDamping": 0.1,
+    "_angularDamping": 0.1,
+    "_useGravity": true,
+    "_linearFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_angularFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "3cAzwpXkJOGLx8S9kui/iD"
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10303
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "shild-003"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10305
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 2968.284,
+      "y": 0,
+      "z": -64.4
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10307
+    },
+    "propertyPath": [
+      "_lrot"
+    ],
+    "value": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10309
+    },
+    "propertyPath": [
+      "_euler"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10311
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 25,
+      "y": 30,
+      "z": 25
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 10239
+    },
+    "_prefab": {
+      "__id__": 10313
+    },
+    "__editorExtras__": {}
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 10312
+    },
+    "asset": {
+      "__uuid__": "d9ba0fb8-bc6f-4aa1-a4ac-503d70aac356@31841",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fileId": "fd0jKF1llamaqjBlZeyV6l",
+    "instance": {
+      "__id__": 10314
+    },
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.PrefabInstance",
+    "fileId": "54Rovpe+5PKpWot0TLASzM",
+    "prefabRootNode": null,
+    "mountedChildren": [],
+    "mountedComponents": [
+      {
+        "__id__": 10315
+      }
+    ],
+    "propertyOverrides": [
+      {
+        "__id__": 10320
+      },
+      {
+        "__id__": 10322
+      },
+      {
+        "__id__": 10324
+      },
+      {
+        "__id__": 10326
+      },
+      {
+        "__id__": 10328
+      }
+    ],
+    "removedComponents": []
+  },
+  {
+    "__type__": "cc.MountedComponentsInfo",
+    "targetInfo": {
+      "__id__": 10316
+    },
+    "components": [
+      {
+        "__id__": 10317
+      },
+      {
+        "__id__": 10318
+      },
+      {
+        "__id__": 10319
+      }
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "8da81dsYSZIhrcqjzO7NOAJ",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10312
+      }
+    },
+    "node": {
+      "__id__": 10312
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "_id": "6fatrqAyZE8oOzxBWy3a3P"
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10312
+      }
+    },
+    "node": {
+      "__id__": 10312
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "89rgE+V6xO/JOYKmK8UKOS"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10312
+      }
+    },
+    "node": {
+      "__id__": 10312
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_group": 1,
+    "_type": 2,
+    "_mass": 1,
+    "_allowSleep": true,
+    "_linearDamping": 0.1,
+    "_angularDamping": 0.1,
+    "_useGravity": true,
+    "_linearFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_angularFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "0aXE5GVpZHoZa18OwOOkpa"
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10321
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "shild-004"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10323
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 4869.339,
+      "y": 0,
+      "z": -72.682
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10325
+    },
+    "propertyPath": [
+      "_lrot"
+    ],
+    "value": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10327
+    },
+    "propertyPath": [
+      "_euler"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10329
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 25,
+      "y": 30,
+      "z": 25
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 10239
+    },
+    "_prefab": {
+      "__id__": 10331
+    },
+    "__editorExtras__": {}
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 10330
+    },
+    "asset": {
+      "__uuid__": "d9ba0fb8-bc6f-4aa1-a4ac-503d70aac356@31841",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fileId": "fd0jKF1llamaqjBlZeyV6l",
+    "instance": {
+      "__id__": 10332
+    },
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.PrefabInstance",
+    "fileId": "7bGbE2bgtIoYk+UjPm8Hcu",
+    "prefabRootNode": null,
+    "mountedChildren": [],
+    "mountedComponents": [
+      {
+        "__id__": 10333
+      }
+    ],
+    "propertyOverrides": [
+      {
+        "__id__": 10338
+      },
+      {
+        "__id__": 10340
+      },
+      {
+        "__id__": 10342
+      },
+      {
+        "__id__": 10344
+      },
+      {
+        "__id__": 10346
+      }
+    ],
+    "removedComponents": []
+  },
+  {
+    "__type__": "cc.MountedComponentsInfo",
+    "targetInfo": {
+      "__id__": 10334
+    },
+    "components": [
+      {
+        "__id__": 10335
+      },
+      {
+        "__id__": 10336
+      },
+      {
+        "__id__": 10337
+      }
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "8da81dsYSZIhrcqjzO7NOAJ",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10330
+      }
+    },
+    "node": {
+      "__id__": 10330
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "_id": "f34hpdd1BPOpDyP2QBeeHL"
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10330
+      }
+    },
+    "node": {
+      "__id__": 10330
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "d3DcGJIfhEqLCTsGlbg5kQ"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10330
+      }
+    },
+    "node": {
+      "__id__": 10330
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_group": 1,
+    "_type": 2,
+    "_mass": 1,
+    "_allowSleep": true,
+    "_linearDamping": 0.1,
+    "_angularDamping": 0.1,
+    "_useGravity": true,
+    "_linearFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_angularFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "16toai41lA0Y80EhytQk87"
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10339
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "shild-005"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10341
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 7208.859,
+      "y": 0,
+      "z": 49.475
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10343
+    },
+    "propertyPath": [
+      "_lrot"
+    ],
+    "value": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10345
+    },
+    "propertyPath": [
+      "_euler"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10347
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 25,
+      "y": 30,
+      "z": 25
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "fd0jKF1llamaqjBlZeyV6l"
+    ]
+  },
+  {
+    "__type__": "8da81dsYSZIhrcqjzO7NOAJ",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 10239
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "_id": "a49BucgABBHopva9BtrmzK"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "MagnetController",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 10350
+      },
+      {
+        "__id__": 10364
+      },
+      {
+        "__id__": 10378
+      }
+    ],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 10392
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_mobility": 0,
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "1eN2Re19hJqqnONxWq9cf5"
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 10349
+    },
+    "_prefab": {
+      "__id__": 10351
+    },
+    "__editorExtras__": {}
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 10350
+    },
+    "asset": {
+      "__uuid__": "501fdd40-d618-47fd-87b5-d1dca2aa349e@ab339",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fileId": "d9b9fc6qVY/Ij9opMKkYpA",
+    "instance": {
+      "__id__": 10352
+    },
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.PrefabInstance",
+    "fileId": "f78eWBo85BcKqHk+ZuCpPW",
+    "prefabRootNode": null,
+    "mountedChildren": [],
+    "mountedComponents": [
+      {
+        "__id__": 10353
+      }
+    ],
+    "propertyOverrides": [
+      {
+        "__id__": 10358
+      },
+      {
+        "__id__": 10360
+      },
+      {
+        "__id__": 10361
+      },
+      {
+        "__id__": 10362
+      },
+      {
+        "__id__": 10363
+      }
+    ],
+    "removedComponents": []
+  },
+  {
+    "__type__": "cc.MountedComponentsInfo",
+    "targetInfo": {
+      "__id__": 10354
+    },
+    "components": [
+      {
+        "__id__": 10355
+      },
+      {
+        "__id__": 10356
+      },
+      {
+        "__id__": 10357
+      }
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "d9b9fc6qVY/Ij9opMKkYpA"
+    ]
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10350
+      }
+    },
+    "node": {
+      "__id__": 10350
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "7coWtglW5BYK0sH73Ojrr9"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10350
+      }
+    },
+    "node": {
+      "__id__": 10350
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_group": 1,
+    "_type": 2,
+    "_mass": 1,
+    "_allowSleep": true,
+    "_linearDamping": 0.1,
+    "_angularDamping": 0.1,
+    "_useGravity": true,
+    "_linearFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_angularFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "1eT7FqUBFA+LaPKSlSN7Na"
+  },
+  {
+    "__type__": "2b263t4vHdBva6oZzPP+/tT",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10350
+      }
+    },
+    "node": {
+      "__id__": 10350
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "magnetEffectDuration": 10,
+    "_id": "684tQFcQZGt5wifOW0uJKt"
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10359
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "magnet"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "d9b9fc6qVY/Ij9opMKkYpA"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10359
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 561.473,
+      "y": 0,
+      "z": 62.305
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10359
+    },
+    "propertyPath": [
+      "_lrot"
+    ],
+    "value": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10359
+    },
+    "propertyPath": [
+      "_euler"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10359
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 10,
+      "y": 10,
+      "z": 10
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 10349
+    },
+    "_prefab": {
+      "__id__": 10365
+    },
+    "__editorExtras__": {}
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 10364
+    },
+    "asset": {
+      "__uuid__": "501fdd40-d618-47fd-87b5-d1dca2aa349e@ab339",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fileId": "d9b9fc6qVY/Ij9opMKkYpA",
+    "instance": {
+      "__id__": 10366
+    },
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.PrefabInstance",
+    "fileId": "40mA2tiQ5PlbLRLko3D7IH",
+    "prefabRootNode": null,
+    "mountedChildren": [],
+    "mountedComponents": [
+      {
+        "__id__": 10367
+      }
+    ],
+    "propertyOverrides": [
+      {
+        "__id__": 10372
+      },
+      {
+        "__id__": 10374
+      },
+      {
+        "__id__": 10375
+      },
+      {
+        "__id__": 10376
+      },
+      {
+        "__id__": 10377
+      }
+    ],
+    "removedComponents": []
+  },
+  {
+    "__type__": "cc.MountedComponentsInfo",
+    "targetInfo": {
+      "__id__": 10368
+    },
+    "components": [
+      {
+        "__id__": 10369
+      },
+      {
+        "__id__": 10370
+      },
+      {
+        "__id__": 10371
+      }
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "d9b9fc6qVY/Ij9opMKkYpA"
+    ]
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10364
+      }
+    },
+    "node": {
+      "__id__": 10364
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "0bDbVerX1KKJodQx1aX6dR"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10364
+      }
+    },
+    "node": {
+      "__id__": 10364
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_group": 1,
+    "_type": 2,
+    "_mass": 1,
+    "_allowSleep": true,
+    "_linearDamping": 0.1,
+    "_angularDamping": 0.1,
+    "_useGravity": true,
+    "_linearFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_angularFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "49Y9lMVcpJPo3d7ZtQIPZF"
+  },
+  {
+    "__type__": "2b263t4vHdBva6oZzPP+/tT",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10364
+      }
+    },
+    "node": {
+      "__id__": 10364
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "magnetEffectDuration": 10,
+    "_id": "56rwGZqPFOmo4kjKJGlpd4"
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10373
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "magnet-001"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "d9b9fc6qVY/Ij9opMKkYpA"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10373
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 2957.081,
+      "y": 0,
+      "z": 62.305
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10373
+    },
+    "propertyPath": [
+      "_lrot"
+    ],
+    "value": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10373
+    },
+    "propertyPath": [
+      "_euler"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10373
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 10,
+      "y": 10,
+      "z": 10
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 10349
+    },
+    "_prefab": {
+      "__id__": 10379
+    },
+    "__editorExtras__": {}
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 10378
+    },
+    "asset": {
+      "__uuid__": "501fdd40-d618-47fd-87b5-d1dca2aa349e@ab339",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fileId": "d9b9fc6qVY/Ij9opMKkYpA",
+    "instance": {
+      "__id__": 10380
+    },
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.PrefabInstance",
+    "fileId": "acyw6J8flJ15sv0w+VLgoV",
+    "prefabRootNode": null,
+    "mountedChildren": [],
+    "mountedComponents": [
+      {
+        "__id__": 10381
+      }
+    ],
+    "propertyOverrides": [
+      {
+        "__id__": 10386
+      },
+      {
+        "__id__": 10388
+      },
+      {
+        "__id__": 10389
+      },
+      {
+        "__id__": 10390
+      },
+      {
+        "__id__": 10391
+      }
+    ],
+    "removedComponents": []
+  },
+  {
+    "__type__": "cc.MountedComponentsInfo",
+    "targetInfo": {
+      "__id__": 10382
+    },
+    "components": [
+      {
+        "__id__": 10383
+      },
+      {
+        "__id__": 10384
+      },
+      {
+        "__id__": 10385
+      }
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "d9b9fc6qVY/Ij9opMKkYpA"
+    ]
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10378
+      }
+    },
+    "node": {
+      "__id__": 10378
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "63x9zcbvhLibzER4feUQTU"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10378
+      }
+    },
+    "node": {
+      "__id__": 10378
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_group": 1,
+    "_type": 2,
+    "_mass": 1,
+    "_allowSleep": true,
+    "_linearDamping": 0.1,
+    "_angularDamping": 0.1,
+    "_useGravity": true,
+    "_linearFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_angularFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "e5D3wWRDpA2IQdrS1aQMWh"
+  },
+  {
+    "__type__": "2b263t4vHdBva6oZzPP+/tT",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10378
+      }
+    },
+    "node": {
+      "__id__": 10378
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "magnetEffectDuration": 10,
+    "_id": "57EA+x/hJCq7EYd87yQbQH"
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10387
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "magnet-002"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "d9b9fc6qVY/Ij9opMKkYpA"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10387
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 8131.583,
+      "y": 0,
+      "z": 47.677
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10387
+    },
+    "propertyPath": [
+      "_lrot"
+    ],
+    "value": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10387
+    },
+    "propertyPath": [
+      "_euler"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10387
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 10,
+      "y": 10,
+      "z": 10
+    }
+  },
+  {
+    "__type__": "2b263t4vHdBva6oZzPP+/tT",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 10349
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "magnetEffectDuration": 10,
+    "_id": "ceVjXMJfNIr66SjzkIXLNa"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "ReviveController",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 10394
+      }
+    ],
+    "_active": true,
+    "_components": [],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_mobility": 0,
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "fdrxO4Gp9KBpNNn8w5cNLX"
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 10393
+    },
+    "_prefab": {
+      "__id__": 10395
+    },
+    "__editorExtras__": {}
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 10394
+    },
+    "asset": {
+      "__uuid__": "03ef26ec-f3c6-46c4-b362-16358b00fba5@6cfc9",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fileId": "d0Z7wHkdBSB4/TEKHvphTM",
+    "instance": {
+      "__id__": 10396
+    },
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.PrefabInstance",
+    "fileId": "8dfIgAjfNK4IN3pfCH56DN",
+    "prefabRootNode": null,
+    "mountedChildren": [],
+    "mountedComponents": [
+      {
+        "__id__": 10397
+      }
+    ],
+    "propertyOverrides": [
+      {
+        "__id__": 10402
+      },
+      {
+        "__id__": 10404
+      },
+      {
+        "__id__": 10405
+      },
+      {
+        "__id__": 10406
+      },
+      {
+        "__id__": 10407
+      }
+    ],
+    "removedComponents": []
+  },
+  {
+    "__type__": "cc.MountedComponentsInfo",
+    "targetInfo": {
+      "__id__": 10398
+    },
+    "components": [
+      {
+        "__id__": 10399
+      },
+      {
+        "__id__": 10400
+      },
+      {
+        "__id__": 10401
+      }
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "d0Z7wHkdBSB4/TEKHvphTM"
+    ]
+  },
+  {
+    "__type__": "bc68576vO1NuZ+qbcaHXimg",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10394
+      }
+    },
+    "node": {
+      "__id__": 10394
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "player": {
+      "__id__": 18
+    },
+    "_id": "35tSGpnV5N1an3QUlGk0bN"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10394
+      }
+    },
+    "node": {
+      "__id__": 10394
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_group": 1,
+    "_type": 2,
+    "_mass": 1,
+    "_allowSleep": true,
+    "_linearDamping": 0.1,
+    "_angularDamping": 0.1,
+    "_useGravity": true,
+    "_linearFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_angularFactor": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "f4oZIxSlZKarpFIrDCSPIk"
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "mountedRoot": {
+        "__id__": 10394
+      }
+    },
+    "node": {
+      "__id__": 10394
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": "4f6rV+lHtIK7azrcGuTIaX"
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10403
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "revive"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "d0Z7wHkdBSB4/TEKHvphTM"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10403
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 3869.112,
+      "y": 0,
+      "z": 52.627
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10403
+    },
+    "propertyPath": [
+      "_lrot"
+    ],
+    "value": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10403
+    },
+    "propertyPath": [
+      "_euler"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 10403
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 2,
+      "y": 2,
+      "z": 2
+    }
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": null,
     "asset": null,
@@ -163184,7 +167012,7 @@
     "instance": null,
     "targetOverrides": [
       {
-        "__id__": 10260
+        "__id__": 10409
       }
     ],
     "nestedPrefabInstanceRoots": [
@@ -164797,19 +168625,46 @@
         "__id__": 10164
       },
       {
-        "__id__": 10184
+        "__id__": 10186
       },
       {
-        "__id__": 10206
+        "__id__": 10198
       },
       {
-        "__id__": 10218
+        "__id__": 10211
       },
       {
-        "__id__": 10231
+        "__id__": 10224
       },
       {
-        "__id__": 10244
+        "__id__": 10240
+      },
+      {
+        "__id__": 10258
+      },
+      {
+        "__id__": 10276
+      },
+      {
+        "__id__": 10294
+      },
+      {
+        "__id__": 10312
+      },
+      {
+        "__id__": 10330
+      },
+      {
+        "__id__": 10350
+      },
+      {
+        "__id__": 10364
+      },
+      {
+        "__id__": 10378
+      },
+      {
+        "__id__": 10394
       }
     ]
   },
@@ -164826,7 +168681,7 @@
       "__id__": 18
     },
     "targetInfo": {
-      "__id__": 10261
+      "__id__": 10410
     }
   },
   {
@@ -164838,28 +168693,28 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 10263
+      "__id__": 10412
     },
     "shadows": {
-      "__id__": 10264
+      "__id__": 10413
     },
     "_skybox": {
-      "__id__": 10265
+      "__id__": 10414
     },
     "fog": {
-      "__id__": 10266
+      "__id__": 10415
     },
     "octree": {
-      "__id__": 10267
+      "__id__": 10416
     },
     "skin": {
-      "__id__": 10268
+      "__id__": 10417
     },
     "lightProbeInfo": {
-      "__id__": 10269
+      "__id__": 10418
     },
     "postSettings": {
-      "__id__": 10270
+      "__id__": 10419
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false
@@ -164868,16 +168723,16 @@
     "__type__": "cc.AmbientInfo",
     "_skyColorHDR": {
       "__type__": "cc.Vec4",
-      "x": 1,
-      "y": 1,
-      "z": 1,
+      "x": 0.9450980392156862,
+      "y": 0.8470588235294118,
+      "z": 0.8470588235294118,
       "w": 0.520833125
     },
     "_skyColor": {
       "__type__": "cc.Vec4",
-      "x": 1,
-      "y": 1,
-      "z": 1,
+      "x": 0.9450980392156862,
+      "y": 0.8470588235294118,
+      "z": 0.8470588235294118,
       "w": 0.520833125
     },
     "_skyIllumHDR": 20000,

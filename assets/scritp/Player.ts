@@ -43,12 +43,28 @@ export class Player extends Component {
     private currentLaneIndex = 1; // Vị trí mặc định ban đầu (giữa lane)
     private initialRotation: Quat = new Quat();
 
+    public isShieldActive: boolean = false; // Trạng thái lá chắn
+    private shieldDuration: number = 10; // Thời gian lá chắn hoạt động (giây)
+
+    public isMagnetActive: boolean = false; // Trạng thái hiệu ứng nam châm
+
+    public hasRevive: boolean = false; // Trạng thái hồi sinh
+
 
     onLoad() {
 
         // Đăng ký sự kiện phím
         input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
         input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
+
+         // Lắng nghe sự kiện "shieldActivated"
+        this.node.on('shieldActivated', this.activateShield, this);
+
+         // Lắng nghe sự kiện kích hoạt hiệu ứng nam châm
+         this.node.on('magnetActivated', this.activateMagnet, this);
+
+         // Lắng nghe sự kiện kích hoạt hồi sinh
+        this.node.on('reviveActivated', this.activateRevive, this);
 
     }
 
@@ -64,6 +80,37 @@ export class Player extends Component {
         this.moveForward(deltaTime); // Di chuyển tự động về phía trước
         this.updateLateralMovement(deltaTime); // Cập nhật di chuyển ngang
 
+    }
+
+    private activateRevive() {
+        this.hasRevive = true;
+        console.log('Revive activated! Player can survive one obstacle.');
+    }
+
+    private activateMagnet(duration: number) {
+        this.isMagnetActive = true;
+        console.log('Magnet effect activated!');
+
+        // Tắt hiệu ứng nam châm sau thời gian hiệu lực
+        this.scheduleOnce(() => {
+            this.isMagnetActive = false;
+            console.log('Magnet effect deactivated.');
+        }, duration);
+    }
+
+        /**
+     * Kích hoạt trạng thái lá chắn.
+     */
+     
+    private activateShield() {
+        this.isShieldActive = true;
+        console.log('Shield activated!');
+
+        // Hủy trạng thái lá chắn sau một thời gian
+        this.scheduleOnce(() => {
+            this.isShieldActive = false;
+            console.log('Shield deactivated!');
+        }, this.shieldDuration);
     }
     private updateLateralMovement(deltaTime: number) {
         // Xác định vị trí mục tiêu dựa trên currentLaneIndex
@@ -176,12 +223,14 @@ private moveForward(deltaTime: number) {
     }
 
 
-    // Xử lý game over khi va chạm với chướng ngại vật
-    private handleGameOver() {
-        // Dừng mọi hoạt động của nhân vật, có thể hiển thị màn hình game over
-        this.rigidBody.setLinearVelocity(new Vec3(0, 0, 0));  // Dừng nhân vật
-        // Tạm dừng game hoặc thực hiện các hành động khác
-
+     handleGameOver() {
+        if (this.hasRevive) {
+            console.log('Revive used! Player continues playing.');
+            this.hasRevive = false; // Sử dụng trạng thái hồi sinh
+        } else {
+            console.log('Game Over!');
+            this.rigidBody.setLinearVelocity(new Vec3(0, 0, 0)); // Dừng nhân vật
+        }
     }
  
 }

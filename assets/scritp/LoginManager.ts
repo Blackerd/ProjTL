@@ -18,6 +18,14 @@ export class LoginManager extends Component {
     errorMessageLabel: Label = null;
 
     start() {
+         // Kết nối tới WebSocket server
+         const wsManager = WebSocketManager.getInstance();
+         if (wsManager.isConnected) {
+             console.log("WebSocket already connected.");
+         } else {
+             console.log("Connecting to WebSocket server...");
+         }
+         
         if (this.loginButton) {
             this.loginButton.node.on(Button.EventType.CLICK, this.onLogin, this);
         }

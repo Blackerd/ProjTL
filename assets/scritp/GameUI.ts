@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Label, Button, input, Input, Vec3, director } from 'cc';
+import { _decorator, Component, Node, Label, Button, UITransform, input, Input, Vec3, director, view } from 'cc';
 const { ccclass, property } = _decorator;
 import { eventTarget } from './Obstacles';
 
@@ -62,12 +62,52 @@ export class GameUI extends Component {
         this.backButton.on(Input.EventType.TOUCH_START, this.returnToMenu, this);
         this.backToMenuButton.on(Input.EventType.TOUCH_START, this.returnToMenu, this);
 
+        this.updateResponsiveUI(); // Cập nhật responsive khi khởi chạy
+        view.on('resize', this.updateResponsiveUI, this);
+
     }
 
     update(deltaTime: number) {
         if (!this.isPaused) {
             this.updateTime();
             this.updateDistance();
+        }
+    }
+
+     /** Hàm cập nhật responsive UI */
+     private updateResponsiveUI() {
+        const visibleSize = view.getVisibleSize();
+
+        // Điều chỉnh vị trí và kích thước của các thành phần UI
+        if (this.pauseButton) {
+            const pauseTransform = this.pauseButton.getComponent(UITransform);
+            this.pauseButton.setPosition(
+                visibleSize.width / 2 - pauseTransform.width / 2 - 20, // Căn phải
+                visibleSize.height / 2 - pauseTransform.height / 2 - 20 // Căn trên
+            );
+        }
+
+        if (this.coinLabel) {
+            const coinTransform = this.coinLabel.getComponent(UITransform);
+            this.coinLabel.node.setPosition(
+                -visibleSize.width / 2 + coinTransform.width / 2 + 20, // Căn trái
+                visibleSize.height / 2 - coinTransform.height / 2 - 20 // Căn trên
+            );
+        }
+
+        if (this.timeLabel) {
+            const timeTransform = this.timeLabel.getComponent(UITransform);
+            this.timeLabel.node.setPosition(
+                0, // Ở giữa theo chiều ngang
+                visibleSize.height / 2 - timeTransform.height / 2 - 20 // Căn trên
+            );
+        }
+
+        if (this.winPanel) {
+            const winTransform = this.winPanel.getComponent(UITransform);
+            this.winPanel.setPosition(0, 0); // Giữ panel ở giữa
+            winTransform.width = visibleSize.width * 0.8; // Chiếm 80% chiều rộng
+            winTransform.height = visibleSize.height * 0.5; // Chiếm 50% chiều cao
         }
     }
 

@@ -199,14 +199,14 @@
       "name": "ArmatureAction.animation",
       "userData": {
         "gltfIndex": 0,
-        "wrapMode": 0,
-        "sample": 30,
+        "wrapMode": 2,
+        "sample": 60,
         "span": {
           "from": 0,
           "to": 4.166666507720947
         },
         "events": [],
-        "speed": 5
+        "speed": 2
       },
       "ver": "1.0.17",
       "imported": true,
@@ -270,13 +270,13 @@
       "userData": {
         "gltfIndex": 3,
         "wrapMode": 0,
-        "sample": 30,
+        "sample": 60,
         "span": {
           "from": 0,
           "to": 1.6666666269302368
         },
         "events": [],
-        "speed": 6
+        "speed": 2
       },
       "ver": "1.0.17",
       "imported": true,
@@ -294,12 +294,13 @@
       "userData": {
         "gltfIndex": 4,
         "wrapMode": 2,
-        "sample": 30,
+        "sample": 60,
         "span": {
           "from": 0,
           "to": 2.5
         },
-        "events": []
+        "events": [],
+        "speed": 2
       },
       "ver": "1.0.17",
       "imported": true,
@@ -316,13 +317,14 @@
       "name": "SpaceV1.animation",
       "userData": {
         "gltfIndex": 5,
-        "wrapMode": 2,
-        "sample": 30,
+        "wrapMode": 0,
+        "sample": 60,
         "span": {
           "from": 0,
           "to": 3.3333332538604736
         },
-        "events": []
+        "events": [],
+        "speed": 5
       },
       "ver": "1.0.17",
       "imported": true,
@@ -339,13 +341,14 @@
       "name": "SpaceV2.animation",
       "userData": {
         "gltfIndex": 6,
-        "wrapMode": 2,
-        "sample": 30,
+        "wrapMode": 0,
+        "sample": 60,
         "span": {
           "from": 0,
           "to": 3.3333332538604736
         },
-        "events": []
+        "events": [],
+        "speed": 6
       },
       "ver": "1.0.17",
       "imported": true,
@@ -464,9 +467,10 @@
             "name": "ArmatureAction",
             "from": 0,
             "to": 4.166666507720947,
-            "wrapMode": 0,
+            "wrapMode": 2,
             "previousId": "6420a",
-            "speed": 5
+            "speed": 2,
+            "fps": 60
           }
         ]
       },
@@ -509,7 +513,8 @@
             "to": 1.6666666269302368,
             "wrapMode": 0,
             "previousId": "d01af",
-            "speed": 6
+            "speed": 2,
+            "fps": 60
           }
         ]
       },
@@ -523,7 +528,9 @@
             "from": 0,
             "to": 2.5,
             "wrapMode": 2,
-            "previousId": "e2995"
+            "previousId": "e2995",
+            "speed": 2,
+            "fps": 60
           }
         ]
       },
@@ -536,8 +543,10 @@
             "name": "SpaceV1",
             "from": 0,
             "to": 3.3333332538604736,
-            "wrapMode": 2,
-            "previousId": "791bb"
+            "wrapMode": 0,
+            "previousId": "791bb",
+            "fps": 60,
+            "speed": 5
           }
         ]
       },
@@ -550,8 +559,10 @@
             "name": "SpaceV2",
             "from": 0,
             "to": 3.3333332538604736,
-            "wrapMode": 2,
-            "previousId": "bd781"
+            "wrapMode": 0,
+            "previousId": "bd781",
+            "speed": 6,
+            "fps": 60
           }
         ]
       }

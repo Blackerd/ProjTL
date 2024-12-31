@@ -228,7 +228,12 @@
           "to": 4.166666507720947
         },
         "events": [],
-        "speed": 3
+        "speed": 3,
+        "embeddedPlayers": [],
+        "editorExtras": {
+          "embeddedPlayerGroups": []
+        },
+        "auxiliaryCurves": {}
       },
       "ver": "1.0.17",
       "imported": true,

@@ -17,6 +17,8 @@ export class WebSocketManager extends Component {
     public onLoginResponse: (response: any) => void = () => {};
     public onGetLeaderboardResponse: (response: any) => void = () => {};
     public onGetUserInfoResponse: (response: any) => void = () => {};
+    public onViewRankResponse: (response: any) => void = () => {};
+    public onSaveGameResultResponse: (response: any) => void = () => {};
   
 
     /**
@@ -42,7 +44,7 @@ export class WebSocketManager extends Component {
     /**
      * Kết nối tới WebSocket server.
      */
-    private connectToServer() {
+     connectToServer() {
         if (this.socket) return;
 
         console.log("Connecting to WebSocket server...");
@@ -123,16 +125,70 @@ export class WebSocketManager extends Component {
         const message = { type: "getSystemStats" };
         this.sendMessage(message);
     }
+    // ======= Các phương thức gửi yêu cầu admin =======
 
-    // Gửi yêu cầu chặn người dùng
+    /**
+     * Chặn người dùng.
+     * @param userId ID của người dùng cần chặn.
+     */
     public blockUser(userId: string) {
-        const message = { type: "blockUser", userId };
+        const message = {
+            action: "blockUser",
+            userId: userId
+        };
+        this.sendMessage(message);
+    }
+  
+
+     /**
+     * Mở chặn người dùng.
+     * @param userId ID của người dùng cần mở chặn.
+     */
+     public unblockUser(userId: string) {
+        const message = {
+            action: "unblockUser",
+            userId: userId
+        };
+        this.sendMessage(message);
+    }
+
+      /**
+     * Lấy danh sách tất cả người dùng với phân trang.
+     * @param pageNo Số trang cần lấy.
+     * @param pageSize Số lượng người dùng mỗi trang.
+     */
+      public getAllUsers(pageNo: number, pageSize: number) {
+        const message = {
+            action: "getAllUsers",
+            pageNo: pageNo,
+            pageSize: pageSize
+        };
+        this.sendMessage(message);
+    }
+
+     /**
+     * Lấy bảng xếp hạng.
+     */
+     public getAllLeaderBoards() {
+        const message = {
+            action: "getAllLeaderBoards"
+        };
         this.sendMessage(message);
     }
 
     // Gửi yêu cầu xem hạng người chơi
     public viewRank() {
         const message = { type: "viewRank" };
+        this.sendMessage(message);
+    }
+
+     // Gửi yêu cầu lưu kết quả game
+     public saveGameResult(score: number, duration: number) {
+        const message = {
+            action: "saveGameResult",
+            score: score,
+            duration: duration
+        };
         this.sendMessage(message);
     }
 
@@ -143,10 +199,12 @@ export class WebSocketManager extends Component {
     public sendMessage(message: object) {
         if (this.isConnected && this.socket) {
             this.socket.send(JSON.stringify(message));
+            console.log("Đã gửi tin nhắn tới server:", message);
         } else {
             console.error("Cannot send message, WebSocket not connected.");
         }
     }
+
 
     /**
      * Xử lý các tin nhắn từ server.
@@ -154,6 +212,11 @@ export class WebSocketManager extends Component {
      */
     private handleServerMessage(data: string) {
         const message = JSON.parse(data);
+
+        if (!message.action) {
+            console.warn("Received message without action:", message);
+            return;
+        }
 
         switch (message.type) {
             case "REGISTER_RESPONSE":
@@ -167,16 +230,16 @@ export class WebSocketManager extends Component {
                     this.onLoginResponse(message);
                 }
                 break;
-             case "LEADERBOARD_RESPONSE":
-                    if (this.onGetLeaderboardResponse) {
-                        this.onGetLeaderboardResponse(message);
-                    }
-                    break;
-                    case "USER_INFO_RESPONSE":
-                        if (this.onGetUserInfoResponse) {
-                            this.onGetUserInfoResponse(message); // Gọi callback khi nhận được thông tin người chơi
-                        }
-                        break;
+            case "LEADERBOARD_RESPONSE":
+                if (this.onGetLeaderboardResponse) {
+                    this.onGetLeaderboardResponse(message);
+                }
+                break;
+            case "USER_INFO_RESPONSE":
+                if (this.onGetUserInfoResponse) {
+                    this.onGetUserInfoResponse(message); // Gọi callback khi nhận được thông tin người chơi
+                 }
+                break;
 
             case "ERROR":
                 console.error("Server error:", message.message);

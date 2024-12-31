@@ -1,0 +1,225 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "03ef26ec-f3c6-46c4-b362-16358b00fba5",
+  "files": [],
+  "subMetas": {
+    "e2349": {
+      "importer": "gltf-mesh",
+      "uuid": "03ef26ec-f3c6-46c4-b362-16358b00fba5@e2349",
+      "displayName": "",
+      "id": "e2349",
+      "name": "Mesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 5434
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c0849": {
+      "importer": "gltf-embeded-image",
+      "uuid": "03ef26ec-f3c6-46c4-b362-16358b00fba5@c0849",
+      "displayName": "",
+      "id": "c0849",
+      "name": "Potion of Healing.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": false,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3effa": {
+      "importer": "texture",
+      "uuid": "03ef26ec-f3c6-46c4-b362-16358b00fba5@3effa",
+      "displayName": "",
+      "id": "3effa",
+      "name": "UnnamedTexture-0.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "03ef26ec-f3c6-46c4-b362-16358b00fba5@c0849"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "221a5": {
+      "importer": "texture",
+      "uuid": "03ef26ec-f3c6-46c4-b362-16358b00fba5@221a5",
+      "displayName": "",
+      "id": "221a5",
+      "name": "UnnamedTexture-1.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "03ef26ec-f3c6-46c4-b362-16358b00fba5@c0849"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0089c": {
+      "importer": "texture",
+      "uuid": "03ef26ec-f3c6-46c4-b362-16358b00fba5@0089c",
+      "displayName": "",
+      "id": "0089c",
+      "name": "UnnamedTexture-2.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "03ef26ec-f3c6-46c4-b362-16358b00fba5@c0849"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2665e": {
+      "importer": "gltf-material",
+      "uuid": "03ef26ec-f3c6-46c4-b362-16358b00fba5@2665e",
+      "displayName": "",
+      "id": "2665e",
+      "name": "Glass.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e684d": {
+      "importer": "gltf-material",
+      "uuid": "03ef26ec-f3c6-46c4-b362-16358b00fba5@e684d",
+      "displayName": "",
+      "id": "e684d",
+      "name": "Potion.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f74cc": {
+      "importer": "gltf-material",
+      "uuid": "03ef26ec-f3c6-46c4-b362-16358b00fba5@f74cc",
+      "displayName": "",
+      "id": "f74cc",
+      "name": "Cord.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6cfc9": {
+      "importer": "gltf-scene",
+      "uuid": "03ef26ec-f3c6-46c4-b362-16358b00fba5@6cfc9",
+      "displayName": "",
+      "id": "6cfc9",
+      "name": "revive.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Potion of Healing",
+        "uri": "03ef26ec-f3c6-46c4-b362-16358b00fba5@c0849"
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "03ef26ec-f3c6-46c4-b362-16358b00fba5@e2349"
+      ],
+      "skeletons": [],
+      "textures": [
+        "03ef26ec-f3c6-46c4-b362-16358b00fba5@3effa",
+        "03ef26ec-f3c6-46c4-b362-16358b00fba5@221a5",
+        "03ef26ec-f3c6-46c4-b362-16358b00fba5@0089c"
+      ],
+      "materials": [
+        "03ef26ec-f3c6-46c4-b362-16358b00fba5@2665e",
+        "03ef26ec-f3c6-46c4-b362-16358b00fba5@e684d",
+        "03ef26ec-f3c6-46c4-b362-16358b00fba5@f74cc"
+      ],
+      "scenes": [
+        "03ef26ec-f3c6-46c4-b362-16358b00fba5@6cfc9"
+      ]
+    }
+  }
+}

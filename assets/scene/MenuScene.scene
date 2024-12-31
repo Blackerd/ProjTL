@@ -371,7 +371,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 652.0754716981132,
+    "_orthoHeight": 614.1518578352182,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -567,17 +567,17 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 153,
+      "g": 88,
+      "b": 88,
       "a": 255
     },
     "_spriteFrame": {
       "__uuid__": "e4293c36-66e2-48bf-be5c-709bb9b033b4@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
-    "_type": 0,
-    "_fillType": 0,
+    "_type": 1,
+    "_fillType": 2,
     "_sizeMode": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -2379,8 +2379,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 609.2539999999999,
-      "y": 25.908000000000015,
+      "x": 94.48000000000002,
+      "y": -183.69400000000002,
       "z": 0
     },
     "_lrot": {
@@ -2418,7 +2418,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 306.826171875,
+      "width": 699.404296875,
       "height": 75.6
     },
     "_anchorPoint": {
@@ -2443,12 +2443,12 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 143,
-      "g": 48,
-      "b": 48,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
-    "_string": "Select level",
+    "_string": "Chọn level để chơi nào!!",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 60,
@@ -2461,7 +2461,7 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_isItalic": false,
-    "_isBold": false,
+    "_isBold": true,
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,

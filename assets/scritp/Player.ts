@@ -87,6 +87,7 @@ export class Player extends Component {
 
         const laneWidth = Math.abs(this.lanes[1] - this.lanes[0]); // Đoạn cách giữa lane 0 và lane 1
         console.log(`Lane width: ${laneWidth}`);
+        
 
     }
 

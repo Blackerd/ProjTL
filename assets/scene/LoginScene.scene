@@ -366,7 +366,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 550.9019607843137,
+    "_orthoHeight": 614.1518578352182,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -860,7 +860,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Enter username",
+    "_string": "Enter email",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
     "_actualFontSize": 20,

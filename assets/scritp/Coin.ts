@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Collider, ITriggerEvent, Label, AudioSource, Vec3 } from 'cc';
+import { _decorator, Component, Node, Collider, ITriggerEvent, Label, AudioSource, Vec3, tween } from 'cc';
 import { Player } from './Player';
 const { ccclass, property } = _decorator;
 
@@ -34,8 +34,11 @@ export class CoinController extends Component {
             const collider = coinNode.getComponent(Collider);
             if (collider) {
                 collider.on('onTriggerEnter', this.onCoinCollected, this);
+                 // Làm coin xoay liên tục bằng Tween
+                 this.rotateCoin(coinNode);
             }
         });
+
     }
 
     update(deltaTime: number) {
@@ -71,6 +74,14 @@ export class CoinController extends Component {
                 });
             }
         }
+    }
+
+    private rotateCoin(coinNode: Node) {
+        // Sử dụng tween để xoay coin
+        tween(coinNode)
+            .by(1, { eulerAngles: new Vec3(0, 360, 0) }) // Xoay 360 độ quanh trục Y trong 1 giây
+            .repeatForever() // Lặp lại mãi mãi
+            .start();
     }
 
 

@@ -1,6 +1,6 @@
 // Menu.ts
 import { _decorator, Component, Node, director, Label, Button, Color, Prefab, instantiate } from 'cc';
-import { WebSocketManager } from './WebSocketManager';
+import { WebSocketManager } from '../socket/WebSocketManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('Menu')

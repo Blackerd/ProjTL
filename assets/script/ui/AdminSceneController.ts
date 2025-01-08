@@ -1,5 +1,5 @@
 import { _decorator, Component, EditBox, Button, Label, ScrollView, Prefab, instantiate, systemEvent, Node } from 'cc';
-import { WebSocketManager } from './WebSocketManager';
+import { WebSocketManager } from '../socket/WebSocketManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('AdminSceneController')

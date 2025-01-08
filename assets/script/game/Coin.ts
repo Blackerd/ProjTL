@@ -97,8 +97,8 @@ export class CoinController extends Component {
             this.coinSound.play(); // Phát âm thanh
         }
 
-        // Ẩn hoặc hủy node coin
-        coinNode.active = false; // Ẩn đồng xu thay vì hủy để tiết kiệm tài nguyên
+        // Ẩn  node coin
+        coinNode.active = false; 
     }
 
 
@@ -121,16 +121,14 @@ export class CoinController extends Component {
         }
 
 
-            // Ẩn hoặc hủy node coin
-            coinNode.active = false; // Ẩn đồng xu thay vì hủy để tiết kiệm tài nguyên
-            // coinNode.destroy(); // Nếu bạn muốn hủy hoàn toàn thì có thể sử dụng dòng này
+            // Ẩn  node coin
+            coinNode.active = false;
         }
     }
 
     // Hàm tăng điểm
     addScore(amount: number) {
         this._score += amount;
-       // console.log(`Current Score: ${this._score}`);
 
         // Cập nhật điểm vào label UI
         if (this.scoreLabel) {
@@ -138,3 +136,5 @@ export class CoinController extends Component {
         }
     }
 }
+
+

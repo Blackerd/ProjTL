@@ -123,7 +123,6 @@ export class Player extends Component {
         }
     }
 
-    
 
     private rotateMagnet() {
         if (this.magnetNode) {

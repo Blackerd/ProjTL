@@ -1,5 +1,5 @@
 import { _decorator, Component, EditBox, Label, Button, director } from 'cc';
-import { WebSocketManager } from './WebSocketManager';
+import { WebSocketManager } from '../socket/WebSocketManager';
 
 const { ccclass, property } = _decorator;
 

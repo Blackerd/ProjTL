@@ -1,6 +1,6 @@
 import { _decorator, Component, Node, Label, Button, UITransform, input, Input, Vec3, director, view } from 'cc';
+import { eventTarget } from '../game/Obstacles';
 const { ccclass, property } = _decorator;
-import { eventTarget } from './Obstacles';
 
 @ccclass('GameUI')
 export class GameUI extends Component {
@@ -62,8 +62,6 @@ export class GameUI extends Component {
         this.backButton.on(Input.EventType.TOUCH_START, this.returnToMenu, this);
         this.backToMenuButton.on(Input.EventType.TOUCH_START, this.returnToMenu, this);
 
-        this.updateResponsiveUI(); // Cập nhật responsive khi khởi chạy
-        view.on('resize', this.updateResponsiveUI, this);
 
     }
 

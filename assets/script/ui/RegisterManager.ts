@@ -5,8 +5,6 @@ const { ccclass, property } = _decorator;
 
 @ccclass('RegisterManager')
 export class RegisterManager extends Component {
-    @property(EditBox)
-    usernameInput: EditBox | null = null;
 
     @property(EditBox)
     emailInput: EditBox | null = null;
@@ -21,17 +19,16 @@ export class RegisterManager extends Component {
      * Gọi khi nhấn nút "Đăng ký"
      */
     public handleRegister() {
-        if (!this.usernameInput || !this.emailInput || !this.passwordInput) {
+        if ( !this.emailInput || !this.passwordInput) {
             console.error("Input fields are not set in the editor!");
             return;
         }
 
-        const username = this.usernameInput.string.trim();
         const email = this.emailInput.string.trim();
         const password = this.passwordInput.string.trim();
 
         // Kiểm tra thông tin nhập hợp lệ
-        if (!username || !email || !password) {
+        if ( !email || !password) {
             console.error("All fields are required!");
             if (this.errorMessageLabel) {
                 this.errorMessageLabel.string = "All fields are required!";
@@ -42,7 +39,7 @@ export class RegisterManager extends Component {
         // Gửi yêu cầu đăng ký tới server qua WebSocketManager
         const registerMessage = {
             type: "REGISTER",
-            data: { username, email, password },
+            data: { email, password },
         };
 
         const wsManager = WebSocketManager.getInstance();
@@ -54,20 +51,22 @@ export class RegisterManager extends Component {
     /**
      * Xử lý phản hồi đăng ký từ WebSocketManager
      */
-    public handleRegisterResponse(response: any) {
-        if (response.success) {
-            console.log("Registration successful:", response);
-            if (this.errorMessageLabel) {
-                this.errorMessageLabel.string = "Registration successful!";
-            }
-            // Chuyển sang màn hình đăng nhập
-            director.loadScene("LoginScene");
-        } else {
-            console.error("Registration failed:", response.message);
-            if (this.errorMessageLabel) {
-                this.errorMessageLabel.string = response.message;
-            }
-        }
+    public handleRegisterResponse() {
+        director.loadScene("LoginScene");
+        //     if (response.success) {
+        //         console.log("Registration successful:", response);
+        //         if (this.errorMessageLabel) {
+        //             this.errorMessageLabel.string = "Registration successful!";
+        //         }
+        //         // Chuyển sang màn hình đăng nhập
+        //         director.loadScene("LoginScene");
+        //     } else {
+        //         console.error("Registration failed:", response.message);
+        //         if (this.errorMessageLabel) {
+        //             this.errorMessageLabel.string = response.message;
+        //         }
+        //     }
+        // }
     }
 
     public handlerLogin(){

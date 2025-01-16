@@ -47,7 +47,7 @@ export class WebSocketManager extends Component {
      connectToServer() {
         if (this.socket) return;
 
-        console.log("Connecting to WebSocket server...");
+        console.log("Đang kết nối WebSocket server");
         this.socket = new WebSocket(this.serverUrl);
 
         // Xử lý sự kiện khi kết nối thành công
@@ -87,20 +87,20 @@ export class WebSocketManager extends Component {
     }
 
      // Gửi yêu cầu đăng nhập
-     public login(username: string, password: string) {
+     public login(email: string, password: string) {
         const message = {
             type: "LOGIN",
-            username: username,
+            email: email,
             password: password
         };
         this.sendMessage(message);
     }
 
      // Gửi yêu cầu đăng ký
-     public register(username: string, email: string, password: string) {
+     public register( email: string, password: string) {
         const registerMessage = {
             type: "REGISTER",
-            data: { username, email, password },
+            data: { email, password },
         };
         this.sendMessage(registerMessage);
     }

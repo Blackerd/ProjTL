@@ -1,4 +1,4 @@
-import { _decorator, Component, EditBox, Button, Label, ScrollView, Prefab, instantiate, systemEvent, Node } from 'cc';
+import { _decorator, Component, EditBox, Button, Label, ScrollView, Prefab, instantiate, systemEvent, Node, AudioSource, director } from 'cc';
 import { WebSocketManager } from '../socket/WebSocketManager';
 const { ccclass, property } = _decorator;
 
@@ -15,7 +15,16 @@ export class AdminSceneController extends Component {
     getAllUsersButton: Button = null;
 
     @property(Button)
+    logout: Button = null;
+
+    @property(Button)
     getLeaderBoardsButton: Button = null;
+
+      @property(AudioSource)
+        music: AudioSource = null; 
+    
+        @property(AudioSource)
+        clickMusic: AudioSource = null; 
 
     // ======= Các panel trong khu vực bên phải =======
     @property(Node)
@@ -73,13 +82,17 @@ export class AdminSceneController extends Component {
         // Kết nối WebSocket
         WebSocketManager.getInstance().connectToServer();
 
-        // Đăng ký sự kiện cho các nút
-        this.blockUserButton.node.on(Button.EventType.CLICK, this.onBlockUser, this);
-        this.unblockUserButton.node.on(Button.EventType.CLICK, this.onUnblockUser, this);
-        this.getAllUsersButton.node.on(Button.EventType.CLICK, this.onGetAllUsers, this);
-        this.getLeaderBoardsButton.node.on(Button.EventType.CLICK, this.onGetLeaderBoards, this);
+        this.music.play();
+        this.clickMusic.stop();
 
-        // Ẩn tất cả các panel khi bắt đầu
+        // Đăng ký sự kiện cho các nút
+        this.blockUserButton.node.on(Button.EventType.CLICK, this.handleBlockUser, this);
+        this.unblockUserButton.node.on(Button.EventType.CLICK, this.handleUnblockUser, this);
+        this.getAllUsersButton.node.on(Button.EventType.CLICK, this.handleGetAllUser, this);
+        this.getLeaderBoardsButton.node.on(Button.EventType.CLICK, this.handleGetLeaderBoards, this);
+        this.logout.node.on(Button.EventType.CLICK, this.hanldeLogout, this);
+
+        // Ẩn tất cả các panel khi bắt đầus
         this.hideAllPanels();
 
         // Lắng nghe các sự kiện từ WebSocketManager cho các chức năng admin
@@ -105,7 +118,7 @@ export class AdminSceneController extends Component {
     private hideAllPanels() {
         this.blockUserPanel.active = false;
         this.unblockUserPanel.active = false;
-        this.getAllUsersPanel.active = false;
+        this.getAllUsersPanel.active = true;
         this.leaderBoardsPanel.active = false;
     }
 
@@ -279,5 +292,36 @@ export class AdminSceneController extends Component {
             this.leaderBoardsScrollView.content.addChild(errorItem);
             this.leaderBoardsStatusLabel.string = "Không thể lấy bảng xếp hạng.";
         }
+    }
+    public handleGetAllUser() {
+        this.getAllUsersPanel.active = true;
+        this.leaderBoardsPanel.active = false;
+        this.blockUserPanel.active = false;
+        this.unblockUserPanel.active = false;
+        this.clickMusic.play();
+    }
+    public handleGetLeaderBoards() {
+        this.leaderBoardsPanel.active = true;
+        this.getAllUsersPanel.active = false;
+        this.blockUserPanel.active = false;
+        this.unblockUserPanel.active = false;
+        this.clickMusic.play();
+    }
+    public handleBlockUser() {
+        this.blockUserPanel.active = true;
+        this.unblockUserPanel.active = false;
+        this.leaderBoardsPanel.active = false
+        this.getAllUsersPanel.active = false;
+        this.clickMusic.play();
+    }
+    public handleUnblockUser() {
+        this.blockUserPanel.active = false;
+        this.unblockUserPanel.active = true;
+        this.leaderBoardsPanel.active = false
+        this.getAllUsersPanel.active = false;
+        this.clickMusic.play();
+    }
+    public hanldeLogout() {
+        director.loadScene("LoginScene");
     }
 }

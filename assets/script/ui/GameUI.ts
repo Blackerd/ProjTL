@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Label, Button, UITransform, input, Input, Vec3, director, view } from 'cc';
+import { _decorator, Component, Node, Label, Button, UITransform, input, Input, Vec3, director, view, AudioSource } from 'cc';
 import { eventTarget } from '../game/Obstacles';
 const { ccclass, property } = _decorator;
 
@@ -22,14 +22,26 @@ export class GameUI extends Component {
     @property(Node)
     exitButton: Node = null; // Nút Thoát
 
-    @property(Node)
-    bxhNode: Node = null; // Node BXH
+    
+    @property(AudioSource)
+    music: AudioSource = null; 
 
-    @property(Node)
-    backButton: Node = null; // Nút Back trong BXH
+    @property(AudioSource)
+    musicWin: AudioSource = null; 
+
+    
+    @property(AudioSource)
+    clickMusic: AudioSource = null; 
+
+    @property(AudioSource)
+    musicLoss: AudioSource = null; 
+  
 
     @property(Node)
     winPanel: Node = null; // Panel hiển thị chiến thắng
+
+    @property(Node)
+    lossPanel: Node = null; // Panel hiển thị GAMEOVER
 
     @property(Label)
     winLabel: Label = null; // Hiển thị thông báo chiến thắng
@@ -47,19 +59,21 @@ export class GameUI extends Component {
     start() {
         this.startTime = Date.now(); // Lưu thời gian bắt đầu
         this.resumeButton.active = false; // Ẩn nút tiếp tục ban đầu
-        this.bxhNode.active = false;
         this.winPanel.active = false; // Ẩn Panel chiến thắng ban đầu
+        this.lossPanel.active = false; // Ẩn Panel thua ban đầu
         this.backToMenuButton.active = false; // Ẩn nút quay lại menu
+        this.musicWin.stop();
+        this.musicLoss.stop();
+        this.clickMusic.stop();
 
         // Lắng nghe sự kiện "gameOver" từ Obstacles
-        eventTarget.on('gameOver', this.showLeaderboard, this);
+        eventTarget.on('gameOver', this.showGameOver, this);
 
 
         // Đăng ký sự kiện cho các nút
         this.pauseButton.on(Input.EventType.TOUCH_START, this.pauseGame, this);
         this.resumeButton.on(Input.EventType.TOUCH_START, this.resumeGame, this);
         this.exitButton.on(Input.EventType.TOUCH_START, this.exitGame, this);
-        this.backButton.on(Input.EventType.TOUCH_START, this.returnToMenu, this);
         this.backToMenuButton.on(Input.EventType.TOUCH_START, this.returnToMenu, this);
 
 
@@ -136,12 +150,15 @@ export class GameUI extends Component {
 
    /** Cơ chế win game khi đạt 5000m */
    private winGame() {
-
     director.pause();
     this.isPaused = true;
     this.isGameWon = true; // Đánh dấu trạng thái đã thắng
     this.winPanel.active = true; // Hiển thị thông báo chiến thắng
-    this.backToMenuButton.active = true; // Hiển thị nút quay lại menu
+       this.backToMenuButton.active = true; // Hiển thị nút quay lại menu
+       this.lossPanel.active = false; // Ẩn Panel thua
+       this.music.stop();
+       this.musicWin.play();
+       this.musicLoss.stop();
 }
 
   /** Tạm dừng trò chơi */
@@ -151,6 +168,11 @@ private pauseGame() {
         director.pause(); // Dừng toàn bộ trò chơi
         this.resumeButton.active = true; // Hiện nút tiếp tục
         this.pauseButton.active = false; // Ẩn nút tạm dừng
+        this.music.stop();
+        this.musicWin.stop();
+        this.musicLoss.stop();
+        this.clickMusic.play();
+
     }
 }
 /** Tiếp tục trò chơi */
@@ -160,27 +182,41 @@ private resumeGame() {
         director.resume(); // Tiếp tục trò chơi từ trạng thái hiện tại
         this.resumeButton.active = false; // Ẩn nút tiếp tục
         this.pauseButton.active = true; // Hiện nút tạm dừng
+        this.music.play();
+        this.musicWin.stop();
+        this.musicLoss.stop();
+        this.clickMusic.play();
     }
 }
 
     /** Thoát trò chơi */
     private exitGame() {
         director.loadScene("MenuScene");
+        this.clickMusic.play();
     }
 
-    /** Hiển thị bảng xếp hạng */
-    public showLeaderboard() {
+    public showGameOver() {
         director.pause(); // Dừng trò chơi
         this.isPaused = true; // Đặt trạng thái tạm dừng
         this.pauseButton.active = false; // Ẩn nút tạm dừng
         this.resumeButton.active = false; // Ẩn nút tiếp tục
-        this.bxhNode.active = true; // Hiển thị bảng xếp hạng
+        this.winPanel.active = false; // Ẩn Panel chiến thắng
+        this.lossPanel.active = true; // Hiện Panel thua
+        this.backToMenuButton.active = true; // Hiện nút quay lại menu
+        this.music.destroy();
+        this.musicLoss.play();
+        this.musicWin.stop();
     }
 
      /** Quay về MenuScene */
      private returnToMenu() {
-        director.resume(); // Tiếp tục trò chơi trước khi chuyển
-        director.loadScene("MenuScene"); // Chuyển về MenuScene
+        director.pause(); // Dừng trò chơi
+        this.isPaused = true; // Đặt trạng thái tạm dừng
+         director.loadScene("MenuScene"); // Chuyển về MenuScene
+         this.music.destroy();
+         this.musicLoss.destroy();
+         this.musicWin.destroy();
+         this.clickMusic.play();
     }
 
 }

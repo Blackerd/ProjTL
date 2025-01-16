@@ -366,7 +366,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 614.1518578352182,
+    "_orthoHeight": 728.421052631579,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -582,7 +582,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "UsernameInput",
+    "_name": "EmailInput",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -1733,7 +1733,7 @@
     },
     "component": "",
     "_componentId": "2009cztkExKdb0P+vgYJzHH",
-    "handler": "onLogin",
+    "handler": "handleLoginResponse",
     "customEventData": ""
   },
   {
@@ -2490,7 +2490,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "usernameInput": {
+    "emailInput": {
       "__id__": 23
     },
     "passwordInput": {
